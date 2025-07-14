@@ -121,11 +121,11 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 py-20 text-left relative min-h-[80vh] flex items-center">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="px-6 relative min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 items-center h-full">
             {/* Left Content */}
-            <div className="space-y-8">
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+            <div className="space-y-8 z-10">
+              <h1 className="text-7xl md:text-8xl font-bold leading-tight">
                 <span className="text-white">
                   CHANGE THE WAY YOU
                 </span>
@@ -135,43 +135,45 @@ const Index: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-lg text-white/80 leading-relaxed max-w-md">
+              <p className="text-xl text-white/80 leading-relaxed max-w-lg">
                 Home or away, local or global — move freely between countries and currencies. Sign up for free, in a tap.
               </p>
               
-              <button className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-black/80 transition-colors">
+              <button className="bg-black text-white px-10 py-5 rounded-full font-medium text-lg hover:bg-black/80 transition-colors">
                 Download the app
               </button>
             </div>
 
-            {/* Right Content - Woman Image with Phone UI */}
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
-                alt="Woman in beige jacket" 
-                className="w-full max-w-md mx-auto object-cover"
-              />
-              
-              {/* Floating Phone UI Elements */}
-              <div className="absolute top-1/4 right-8 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl">
-                <div className="text-sm text-gray-600 mb-1">Personal</div>
-                <div className="text-2xl font-bold text-black">£6,012</div>
-              </div>
-              
-              <div className="absolute top-3/4 left-8 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl">
-                <div className="text-xs text-gray-500 mb-1">Accounts</div>
-              </div>
-              
-              <div className="absolute bottom-1/4 right-4 bg-white rounded-2xl p-4 shadow-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">$</span>
+            {/* Right Content - Large Woman Image */}
+            <div className="relative h-screen flex items-end justify-end -mr-6">
+              <div className="relative w-full max-w-2xl h-full">
+                <img 
+                  src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
+                  alt="Woman in beige jacket" 
+                  className="absolute bottom-0 right-0 h-full w-auto object-cover object-bottom"
+                />
+                
+                {/* Floating Phone UI Elements */}
+                <div className="absolute top-1/3 right-20 bg-white/95 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20">
+                  <div className="text-sm text-gray-600 mb-2">Personal</div>
+                  <div className="text-4xl font-bold text-black">£6,012</div>
+                </div>
+                
+                <div className="absolute top-2/3 left-16 bg-white/95 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-2xl border border-white/20">
+                  <div className="text-sm text-gray-600">Accounts</div>
+                </div>
+                
+                <div className="absolute bottom-1/3 right-8 bg-white rounded-3xl p-6 shadow-2xl min-w-[280px]">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-sm font-bold">£</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-lg font-semibold text-black">Salary</div>
+                      <div className="text-sm text-gray-500">Today, 11:28</div>
+                    </div>
+                    <div className="text-lg font-bold text-green-600">+£2,550</div>
                   </div>
-                  <div>
-                    <div className="text-sm font-medium text-black">Salary</div>
-                    <div className="text-xs text-gray-500">Today, 11:28</div>
-                  </div>
-                  <div className="text-sm font-bold text-green-600">+£2,550</div>
                 </div>
               </div>
             </div>
