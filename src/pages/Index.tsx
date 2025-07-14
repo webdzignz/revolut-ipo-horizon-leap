@@ -97,108 +97,82 @@ const Index: React.FC = () => {
 
       <div className="relative z-10">
         {/* Header */}
-        <header className="border-b border-gray-800/50 backdrop-blur-xl bg-black/50 px-6 py-4 sticky top-0 z-50">
+        <header className="backdrop-blur-xl bg-background/80 px-6 py-4 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">R</span>
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <span className="text-background font-bold text-sm">R</span>
                 </div>
-                <h1 className="text-2xl font-bold lowercase">revolut</h1>
+                <h1 className="text-2xl font-bold text-white">Revolut</h1>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="bg-gradient-to-r from-red-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-medium">
-                  BREAKING: IPO News
-                </span>
-              </div>
+              <nav className="hidden md:flex items-center gap-8 text-white/80">
+                <span>Personal</span>
+                <span>Business</span>
+                <span>Revolut &lt;18</span>
+                <span>Company</span>
+              </nav>
             </div>
-            <div className="hidden md:flex items-center gap-6 text-sm text-gray-400">
-              <span>$1B Funding Round</span>
-              <span>•</span>
-              <span>Financial Times Reported</span>
+            <div className="flex items-center gap-4">
+              <button className="text-white/80 hover:text-white transition-colors">Log in</button>
+              <button className="bg-white text-background px-6 py-2 rounded-full font-medium hover:bg-white/90 transition-colors">Sign up</button>
             </div>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 py-20 text-center relative">
-          <div className="max-w-6xl mx-auto">
-            {/* Floating Elements */}
-            <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-2xl backdrop-blur-xl animate-float hidden lg:block"></div>
-            <div className="absolute top-32 right-20 w-16 h-16 bg-purple-500/20 rounded-xl backdrop-blur-xl animate-float delay-1000 hidden lg:block"></div>
-            <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-500/20 rounded-lg backdrop-blur-xl animate-float delay-2000 hidden lg:block"></div>
+        <section className="px-6 py-20 text-left relative min-h-[80vh] flex items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+                <span className="text-white">
+                  CHANGE THE WAY YOU
+                </span>
+                <br />
+                <span className="text-white">
+                  MONEY
+                </span>
+              </h1>
+              
+              <p className="text-lg text-white/80 leading-relaxed max-w-md">
+                Home or away, local or global — move freely between countries and currencies. Sign up for free, in a tap.
+              </p>
+              
+              <button className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-black/80 transition-colors">
+                Download the app
+              </button>
+            </div>
 
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-xl border border-red-500/30 rounded-full px-6 py-2 mb-6">
-                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">BREAKING: $1B Funding Round Announced</span>
+            {/* Right Content - Woman Image with Phone UI */}
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
+                alt="Woman in beige jacket" 
+                className="w-full max-w-md mx-auto object-cover"
+              />
+              
+              {/* Floating Phone UI Elements */}
+              <div className="absolute top-1/4 right-8 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl">
+                <div className="text-sm text-gray-600 mb-1">Personal</div>
+                <div className="text-2xl font-bold text-black">£6,012</div>
               </div>
-            </div>
-
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-                Revolut's Historic
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-gradient-x">
-                $65B IPO Launch
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-              <strong className="text-white">JUST ANNOUNCED:</strong> Revolut is raising $1 billion in its largest funding round, 
-              targeting a historic $65 billion valuation. Be among the first to secure your position in this 
-              <span className="text-orange-400 font-semibold"> game-changing IPO opportunity</span>.
-            </p>
-            
-            {/* Dynamic Stats Display */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                const isActive = index === currentStat;
-                
-                return (
-                  <div 
-                    key={index}
-                    className={`relative p-8 rounded-2xl backdrop-blur-xl border transition-all duration-700 transform ${
-                      isActive 
-                        ? 'bg-gradient-to-br from-white/10 to-white/5 border-white/30 scale-105 shadow-2xl shadow-white/10' 
-                        : 'bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-gray-700/50 hover:scale-105'
-                    }`}
-                  >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-10 rounded-2xl`}></div>
-                    <div className="relative z-10">
-                      <Icon className={`w-8 h-8 mb-4 mx-auto transition-colors duration-500 ${isActive ? 'text-white' : 'text-gray-400'}`} />
-                      <div className={`text-4xl font-bold mb-2 transition-colors duration-500 ${isActive ? 'text-white' : 'text-gray-300'}`}>
-                        {stat.value}
-                      </div>
-                      <div className={`text-sm transition-colors duration-500 ${isActive ? 'text-gray-200' : 'text-gray-500'}`}>
-                        {stat.label}
-                      </div>
-                    </div>
+              
+              <div className="absolute top-3/4 left-8 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl">
+                <div className="text-xs text-gray-500 mb-1">Accounts</div>
+              </div>
+              
+              <div className="absolute bottom-1/4 right-4 bg-white rounded-2xl p-4 shadow-xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">$</span>
                   </div>
-                );
-              })}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/25 hover:scale-105 overflow-hidden">
-                <span className="relative z-10">Secure Your Position</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-              <button className="group flex items-center gap-2 px-8 py-4 border border-gray-600 rounded-xl font-semibold text-lg hover:border-white hover:bg-white/5 transition-all duration-300">
-                <span>Read Financial Times Report</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-            </div>
-            
-            {/* Urgency Banner */}
-            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-xl border border-red-500/30 rounded-2xl p-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-red-400 font-semibold mb-2">⚡ LIMITED TIME OPPORTUNITY</div>
-                <div className="text-gray-300">Pre-IPO registration closes in 72 hours. Minimum investment: $10,000</div>
+                  <div>
+                    <div className="text-sm font-medium text-black">Salary</div>
+                    <div className="text-xs text-gray-500">Today, 11:28</div>
+                  </div>
+                  <div className="text-sm font-bold text-green-600">+£2,550</div>
+                </div>
               </div>
             </div>
           </div>
