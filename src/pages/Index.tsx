@@ -158,26 +158,16 @@ const Index: React.FC = () => {
                   className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-110"
                 />
                 
-                {/* Floating Phone UI Elements */}
+                {/* Floating UI Elements */}
                 <div className="absolute top-1/4 right-16 bg-white/95 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20">
-                  <div className="text-sm text-gray-600 mb-2">Personal</div>
-                  <div className="text-3xl font-bold text-black">£6,012</div>
+                  <div className="text-4xl font-bold text-black">$65 Billion</div>
+                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
                 </div>
                 
-                <div className="absolute top-2/3 left-8 bg-white/95 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-2xl border border-white/20">
-                  <div className="text-sm text-gray-600">Accounts</div>
-                </div>
-                
-                <div className="absolute bottom-1/4 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[260px]">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-sm font-bold">£</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-lg font-semibold text-black">Salary</div>
-                      <div className="text-sm text-gray-500">Today, 11:28</div>
-                    </div>
-                    <div className="text-lg font-bold text-green-600">+£2,550</div>
+                <div className="absolute bottom-1/3 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
+                    <div className="text-sm text-gray-500">Get exclusive updates</div>
                   </div>
                 </div>
               </div>
