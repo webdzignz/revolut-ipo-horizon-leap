@@ -176,14 +176,14 @@ const Index: React.FC = () => {
         </section>
 
         {/* Features Grid */}
-        <section className="px-6 py-20 bg-gradient-to-b from-transparent to-gray-900/30">
+        <section className="px-6 py-20 bg-white">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <span className="text-black">
                 Why Revolut Leads
               </span>
             </h2>
-            <p className="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
               A comprehensive financial ecosystem built for the digital age
             </p>
             
@@ -193,20 +193,20 @@ const Index: React.FC = () => {
                 return (
                   <div 
                     key={index} 
-                    className="group relative p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl border border-gray-700/50 rounded-2xl hover:border-gray-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-white/5"
+                    className="group relative p-8 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                     <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-blue-400" />
+                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-blue-600" />
                       </div>
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors duration-300">
+                      <h3 className="text-xl font-bold mb-3 text-black group-hover:text-blue-600 transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">
+                      <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
                         {feature.description}
                       </p>
-                      <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         {feature.metric}
                       </div>
                     </div>
