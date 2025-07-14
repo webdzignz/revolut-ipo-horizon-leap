@@ -130,8 +130,8 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative h-[1200px] flex items-start pt-20">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start h-full">
+        <section className="px-6 relative h-[1200px] flex items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center h-full">
             {/* Left Content */}
             <div className="space-y-8 z-10">
               <h1 className="text-6xl md:text-7xl font-bold leading-tight">
