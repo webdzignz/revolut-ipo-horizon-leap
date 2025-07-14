@@ -175,75 +175,79 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="px-6 py-20 bg-white mt-16">
+        {/* Combined Features and Timeline Section */}
+        <section className="px-6 py-20 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              <span className="text-black">
-                Why Revolut Leads
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
-              A comprehensive financial ecosystem built for the digital age
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div 
-                    key={index} 
-                    className="group relative p-8 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                    <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-blue-600" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-black group-hover:text-blue-600 transition-colors duration-300">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
-                        {feature.description}
-                      </p>
-                      <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                        {feature.metric}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <section className="px-6 py-20">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Growth Journey
-              </span>
-            </h2>
-            
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                    <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-6">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                      <div className="text-lg font-semibold text-gray-800 mb-2">{milestone.event}</div>
-                      <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                        {milestone.value}
+              {/* Why Revolut Leads - Left Side */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  <span className="text-black">
+                    Why Revolut Leads
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 mb-16 max-w-lg">
+                  A comprehensive financial ecosystem built for the digital age
+                </p>
+                
+                <div className="grid grid-cols-1 gap-8">
+                  {features.map((feature, index) => {
+                    const Icon = feature.icon;
+                    return (
+                      <div 
+                        key={index} 
+                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <Icon className="w-6 h-6 text-blue-600" />
+                          </div>
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-300">
+                            {feature.title}
+                          </h3>
+                          <p className="text-gray-600 mb-3 text-sm group-hover:text-gray-700 transition-colors duration-300">
+                            {feature.description}
+                          </p>
+                          <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            {feature.metric}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-4 border-black shadow-lg"></div>
+                    );
+                  })}
                 </div>
-              ))}
+              </div>
+
+              {/* Growth Journey Timeline - Right Side */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-16">
+                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                    Growth Journey
+                  </span>
+                </h2>
+                
+                <div className="relative">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+                  
+                  {milestones.map((milestone, index) => (
+                    <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                        <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-4">
+                          <div className="text-xl font-bold text-blue-600 mb-1">{milestone.year}</div>
+                          <div className="text-sm font-semibold text-gray-800 mb-1">{milestone.event}</div>
+                          <div className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                            {milestone.value}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
