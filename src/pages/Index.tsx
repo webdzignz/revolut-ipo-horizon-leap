@@ -49,10 +49,10 @@ const Index: React.FC = () => {
   ];
 
   const milestones = [
-    { year: '2015', event: 'Founded in London', value: 'Pre-Seed' },
-    { year: '2018', event: 'Series C', value: '$1.7B Valuation' },
-    { year: '2021', event: 'Series E', value: '$33B Valuation' },
-    { year: '2024', event: 'Pre-IPO', value: '$65B Target' },
+            { year: '2015', event: 'Founded in London', value: 'Startup' },
+            { year: '2021', event: 'Series E Funding', value: '$33B Valuation' },
+            { year: '2024', event: 'Pre-IPO Round', value: '$45B Valuation' },
+            { year: '2024', event: 'IPO Filing', value: '$65B Target' },
   ];
 
   useEffect(() => {
@@ -107,16 +107,16 @@ const Index: React.FC = () => {
                 <h1 className="text-2xl font-bold lowercase">revolut</h1>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-sm font-medium">
-                  IPO Live
+                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                <span className="bg-gradient-to-r from-red-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-medium">
+                  BREAKING: IPO News
                 </span>
               </div>
             </div>
             <div className="hidden md:flex items-center gap-6 text-sm text-gray-400">
-              <span>$65B Target Valuation</span>
+              <span>$1B Funding Round</span>
               <span>•</span>
-              <span>Limited Time Opportunity</span>
+              <span>Financial Times Reported</span>
             </div>
           </div>
         </header>
@@ -130,24 +130,26 @@ const Index: React.FC = () => {
             <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-500/20 rounded-lg backdrop-blur-xl animate-float delay-2000 hidden lg:block"></div>
 
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-blue-500/30 rounded-full px-6 py-2 mb-6">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span className="text-sm">Europe's Most Valuable Fintech</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-xl border border-red-500/30 rounded-full px-6 py-2 mb-6">
+                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">BREAKING: $1B Funding Round Announced</span>
               </div>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-                Revolut IPO
+                Revolut's Historic
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x">
-                Join the Revolution
+              <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-gradient-x">
+                $65B IPO Launch
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-              Be part of the financial technology revolution. Invest in the company that's reshaping global finance with over 50 million customers worldwide.
+              <strong className="text-white">JUST ANNOUNCED:</strong> Revolut is raising $1 billion in its largest funding round, 
+              targeting a historic $65 billion valuation. Be among the first to secure your position in this 
+              <span className="text-orange-400 font-semibold"> game-changing IPO opportunity</span>.
             </p>
             
             {/* Dynamic Stats Display */}
@@ -181,15 +183,23 @@ const Index: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 overflow-hidden">
-                <span className="relative z-10">Register Interest</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/25 hover:scale-105 overflow-hidden">
+                <span className="relative z-10">Secure Your Position</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
               <button className="group flex items-center gap-2 px-8 py-4 border border-gray-600 rounded-xl font-semibold text-lg hover:border-white hover:bg-white/5 transition-all duration-300">
-                <span>View Prospectus</span>
+                <span>Read Financial Times Report</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
+            </div>
+            
+            {/* Urgency Banner */}
+            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-xl border border-red-500/30 rounded-2xl p-6 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-red-400 font-semibold mb-2">⚡ LIMITED TIME OPPORTUNITY</div>
+                <div className="text-gray-300">Pre-IPO registration closes in 72 hours. Minimum investment: $10,000</div>
+              </div>
             </div>
           </div>
         </section>
@@ -273,11 +283,11 @@ const Index: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  Secure Your Position
+                  Join the $65B IPO
                 </span>
               </h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of investors positioning for this historic opportunity
+                Secure your position in the most anticipated fintech IPO of 2024
               </p>
               
               <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
@@ -299,8 +309,8 @@ const Index: React.FC = () => {
             {showSuccess && (
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-xl border border-green-500/30 text-green-100 px-8 py-6 rounded-2xl mb-8 text-center">
                 <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
-                <h3 className="text-lg font-semibold mb-2">Registration Successful!</h3>
-                <p>Our investment team will contact you within 24 hours with exclusive access details.</p>
+                <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
+                <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
               </div>
             )}
 
@@ -435,13 +445,13 @@ const Index: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="group relative w-full bg-gradient-to-r from-blue-500 to-purple-600 py-5 px-8 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  className="group relative w-full bg-gradient-to-r from-red-500 to-orange-600 py-5 px-8 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    Submit Investment Interest
+                    Secure IPO Position Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </form>
             </div>
