@@ -130,7 +130,7 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative h-[1200px] flex items-center">
+        <section className="px-6 relative min-h-screen flex items-center">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center h-full">
             {/* Left Content */}
             <div className="space-y-8 z-10">
@@ -150,7 +150,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-start justify-end">
+            <div className="relative h-[800px] flex items-start justify-end -mt-48">
               <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
@@ -176,7 +176,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Combined Features and Timeline Section */}
-        <section className="px-6 py-20 bg-white -mt-16">
+        <section className="px-6 py-20 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
