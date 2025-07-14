@@ -253,7 +253,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Investment Form */}
-        <section className="px-6 py-20 bg-gradient-to-b from-gray-900/30 to-black">
+        <section className="px-6 py-20">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -261,11 +261,11 @@ const Index: React.FC = () => {
                   Join the $65B IPO
                 </span>
               </h2>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="text-xl text-white/90 mb-8">
                 Secure your position in the most anticipated fintech IPO of 2024
               </p>
               
-              <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+              <div className="flex items-center justify-center gap-8 text-sm text-white/70">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>Secure & Encrypted</span>
@@ -282,18 +282,18 @@ const Index: React.FC = () => {
             </div>
 
             {showSuccess && (
-              <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-xl border border-green-500/30 text-green-100 px-8 py-6 rounded-2xl mb-8 text-center">
+              <div className="bg-white/10 backdrop-blur-xl border border-green-500/30 text-white px-8 py-6 rounded-2xl mb-8 text-center">
                 <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
                 <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
                 <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
               </div>
             )}
 
-            <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 md:p-12">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-white/90">
                       First Name *
                     </label>
                     <input
@@ -303,13 +303,13 @@ const Index: React.FC = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="Enter your first name"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-white/90">
                       Last Name *
                     </label>
                     <input
@@ -319,7 +319,7 @@ const Index: React.FC = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -327,7 +327,7 @@ const Index: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="email" className="block text-sm font-medium text-white/90">
                       Email Address *
                     </label>
                     <input
@@ -337,13 +337,13 @@ const Index: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="your@email.com"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="phone" className="block text-sm font-medium text-white/90">
                       Phone Number *
                     </label>
                     <input
@@ -353,14 +353,14 @@ const Index: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-300">
+                  <label htmlFor="address" className="block text-sm font-medium text-white/90">
                     Full Address *
                   </label>
                   <textarea
@@ -370,14 +370,14 @@ const Index: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     rows={3}
-                    className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl resize-none"
-                    placeholder="Enter your complete address"
+                    className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl resize-none"
+                    placeholder="Enter your full residential address"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-white/90">
                       Investment Amount *
                     </label>
                     <select
@@ -386,19 +386,19 @@ const Index: React.FC = () => {
                       value={formData.investmentAmount}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                     >
-                      <option value="">Select investment range</option>
-                      <option value="10k-50k">$10,000 - $50,000</option>
-                      <option value="50k-100k">$50,000 - $100,000</option>
-                      <option value="100k-500k">$100,000 - $500,000</option>
-                      <option value="500k-1m">$500,000 - $1,000,000</option>
-                      <option value="1m+">$1,000,000+</option>
+                      <option value="" className="bg-gray-800 text-white">Select investment amount</option>
+                      <option value="50000-100000" className="bg-gray-800 text-white">£50,000 - £100,000</option>
+                      <option value="100000-250000" className="bg-gray-800 text-white">£100,000 - £250,000</option>
+                      <option value="250000-500000" className="bg-gray-800 text-white">£250,000 - £500,000</option>
+                      <option value="500000-1000000" className="bg-gray-800 text-white">£500,000 - £1,000,000</option>
+                      <option value="1000000+" className="bg-gray-800 text-white">£1,000,000+</option>
                     </select>
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="timeframe" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="timeframe" className="block text-sm font-medium text-white/90">
                       Investment Timeframe *
                     </label>
                     <select
@@ -407,26 +407,25 @@ const Index: React.FC = () => {
                       value={formData.timeframe}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-black/50 border border-gray-600 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                     >
-                      <option value="">Select timeframe</option>
-                      <option value="immediate">Immediate (Within 30 days)</option>
-                      <option value="short-term">Short-term (1-3 months)</option>
-                      <option value="medium-term">Medium-term (3-6 months)</option>
-                      <option value="long-term">Long-term (6+ months)</option>
+                      <option value="" className="bg-gray-800 text-white">Select timeframe</option>
+                      <option value="immediate" className="bg-gray-800 text-white">Immediate (Within 30 days)</option>
+                      <option value="short-term" className="bg-gray-800 text-white">Short-term (1-3 months)</option>
+                      <option value="medium-term" className="bg-gray-800 text-white">Medium-term (3-6 months)</option>
+                      <option value="long-term" className="bg-gray-800 text-white">Long-term (6+ months)</option>
                     </select>
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="group relative w-full bg-gradient-to-r from-red-500 to-orange-600 py-5 px-8 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  className="group relative w-full bg-white text-blue-600 py-5 px-8 rounded-xl font-semibold text-lg hover:bg-white/90 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Secure IPO Position Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </form>
             </div>
@@ -492,12 +491,12 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Footer */}
-        <footer className="border-t border-gray-800/50 px-6 py-16 bg-gradient-to-b from-transparent to-black">
+        <footer className="border-t border-white/20 px-6 py-16">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-white">Investment Disclaimer</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   This is not financial advice. All investments carry risk, including potential loss of principal. 
                   Past performance does not guarantee future results.
                 </p>
@@ -505,7 +504,7 @@ const Index: React.FC = () => {
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-white">Regulatory Information</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   This offering is subject to regulatory approval and market conditions. 
                   Available only to qualified investors in eligible jurisdictions.
                 </p>
@@ -513,15 +512,15 @@ const Index: React.FC = () => {
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-white">Data Protection</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   Your data is processed in accordance with GDPR regulations and our privacy policy. 
                   Consent to contact regarding investment opportunities.
                 </p>
               </div>
             </div>
             
-            <div className="text-center pt-8 border-t border-gray-800/50">
-              <p className="text-gray-500 text-sm">
+            <div className="text-center pt-8 border-t border-white/20">
+              <p className="text-white/60 text-sm">
                 © 2024 Revolut Investment Opportunity Portal. For qualified investors only.
               </p>
             </div>
