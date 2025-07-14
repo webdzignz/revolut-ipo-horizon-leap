@@ -127,20 +127,20 @@ const Index: React.FC = () => {
             <div className="space-y-8 z-10">
               <h1 className="text-7xl md:text-8xl font-bold leading-tight">
                 <span className="text-white">
-                  CHANGE THE WAY YOU
+                  REVOLUT LOOKS TO RAISE AT
                 </span>
                 <br />
                 <span className="text-white">
-                  MONEY
+                  $65 BILLION VALUATION
                 </span>
               </h1>
               
-              <p className="text-xl text-white/80 leading-relaxed max-w-lg">
-                Home or away, local or global — move freely between countries and currencies. Sign up for free, in a tap.
+              <p className="text-xl text-white/90 leading-relaxed max-w-lg">
+                Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
               </p>
               
-              <button className="bg-black text-white px-10 py-5 rounded-full font-medium text-lg hover:bg-black/80 transition-colors">
-                Download the app
+              <button className="bg-white text-background px-10 py-5 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
+                Register Interest
               </button>
             </div>
 
