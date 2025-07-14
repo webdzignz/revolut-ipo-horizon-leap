@@ -131,10 +131,10 @@ const Index: React.FC = () => {
 
         {/* Hero Section */}
         <section className="px-6 relative min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0 items-center h-full">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
             {/* Left Content */}
             <div className="space-y-8 z-10">
-              <h1 className="text-7xl md:text-8xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 <span className="text-white">
                   REVOLUT LOOKS TO RAISE AT
                 </span>
@@ -144,18 +144,18 @@ const Index: React.FC = () => {
                 </span>
               </h1>
               
-              <p className="text-xl text-white/90 leading-relaxed max-w-lg">
+              <p className="text-lg text-white/90 leading-relaxed max-w-lg">
                 Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
               </p>
               
-              <button className="bg-white text-background px-10 py-5 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
+              <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
                 Register Interest
               </button>
             </div>
 
-            {/* Right Content - Large Woman Image */}
-            <div className="relative h-screen flex items-end justify-end -mr-6">
-              <div className="relative w-full max-w-2xl h-full">
+            {/* Right Content - Woman Image */}
+            <div className="relative h-[600px] flex items-end justify-end">
+              <div className="relative w-full max-w-lg h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
@@ -163,16 +163,16 @@ const Index: React.FC = () => {
                 />
                 
                 {/* Floating Phone UI Elements */}
-                <div className="absolute top-1/3 right-20 bg-white/95 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20">
+                <div className="absolute top-1/4 right-16 bg-white/95 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20">
                   <div className="text-sm text-gray-600 mb-2">Personal</div>
-                  <div className="text-4xl font-bold text-black">£6,012</div>
+                  <div className="text-3xl font-bold text-black">£6,012</div>
                 </div>
                 
-                <div className="absolute top-2/3 left-16 bg-white/95 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-2xl border border-white/20">
+                <div className="absolute top-2/3 left-8 bg-white/95 backdrop-blur-xl rounded-2xl px-6 py-4 shadow-2xl border border-white/20">
                   <div className="text-sm text-gray-600">Accounts</div>
                 </div>
                 
-                <div className="absolute bottom-1/3 right-8 bg-white rounded-3xl p-6 shadow-2xl min-w-[280px]">
+                <div className="absolute bottom-1/4 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[260px]">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-sm font-bold">£</span>
