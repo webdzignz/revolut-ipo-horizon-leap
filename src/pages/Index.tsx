@@ -87,12 +87,21 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
-      {/* Animated Background */}
+      {/* Animated Background with Clouds */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[var(--gradient-revolut)]"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-conic from-transparent via-white/5 to-transparent rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
+        
+        {/* Cloud Elements */}
+        <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
+        <div className="absolute top-32 right-32 w-48 h-24 bg-white/30 rounded-full blur-lg animate-float delay-1000 opacity-80"></div>
+        <div className="absolute top-24 left-1/2 w-72 h-36 bg-white/35 rounded-full blur-xl animate-float delay-500 opacity-60"></div>
+        <div className="absolute top-64 left-10 w-56 h-28 bg-white/25 rounded-full blur-lg animate-float delay-2000 opacity-70"></div>
+        <div className="absolute top-80 right-20 w-80 h-40 bg-white/40 rounded-full blur-xl animate-float delay-1500 opacity-50"></div>
+        <div className="absolute top-40 right-1/3 w-60 h-30 bg-white/30 rounded-full blur-lg animate-float delay-3000 opacity-65"></div>
+        <div className="absolute top-96 left-1/3 w-68 h-34 bg-white/35 rounded-full blur-xl animate-float delay-2500 opacity-55"></div>
+        
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
       </div>
 
       <div className="relative z-10">
