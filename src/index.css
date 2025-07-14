@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 100% 65%;
+    --background: 207 65% 58%;
     --foreground: 0 0% 100%;
 
-    --card: 210 100% 60%;
+    --card: 207 65% 53%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 210 100% 60%;
+    --popover: 207 65% 53%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 210 100% 65%;
+    --primary-foreground: 207 65% 58%;
 
-    --secondary: 210 100% 55%;
+    --secondary: 207 65% 48%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 100% 55%;
-    --muted-foreground: 210 20% 80%;
+    --muted: 207 65% 48%;
+    --muted-foreground: 207 20% 80%;
 
-    --accent: 210 100% 55%;
+    --accent: 207 65% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 50% 75%;
-    --input: 210 100% 55%;
+    --border: 207 50% 70%;
+    --input: 207 65% 48%;
     --ring: 0 0% 100%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 210 100% 60%;
+    --sidebar-background: 207 65% 53%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 210 100% 65%;
-    --sidebar-accent: 210 100% 55%;
+    --sidebar-primary-foreground: 207 65% 58%;
+    --sidebar-accent: 207 65% 48%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 210 50% 75%;
+    --sidebar-border: 207 50% 70%;
     --sidebar-ring: 0 0% 100%;
 
-    /* Darker blue sky gradient */
-    --gradient-sky: linear-gradient(135deg, hsl(210, 100%, 65%), hsl(210, 100%, 75%));
-    --gradient-sky-light: linear-gradient(135deg, hsl(210, 100%, 70%), hsl(210, 100%, 80%));
+    /* Custom blue gradient using #4f9bda */
+    --gradient-sky: linear-gradient(135deg, hsl(207, 65%, 58%), hsl(207, 65%, 65%));
+    --gradient-sky-light: linear-gradient(135deg, hsl(207, 65%, 63%), hsl(207, 65%, 70%));
   }
 
   .dark {
