@@ -204,7 +204,7 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-2xl mx-auto w-1/2">
+          <div className="max-w-2xl ml-0 w-1/2">
 
             {showSuccess && (
               <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
