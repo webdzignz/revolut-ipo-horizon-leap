@@ -94,8 +94,8 @@ const Index: React.FC = () => {
             <div className="relative flex items-center justify-center lg:pl-8">
               <div className="w-full max-w-sm lg:max-w-xl">
                 <img 
-                  src="/lovable-uploads/4e4a5147-fd89-4a1a-a7a6-a76799179213.png" 
-                  alt="The Salary Wants Out of Old Banks - Revolut" 
+                  src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
+                  alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
                   className="w-full h-96 object-contain"
                 />
               </div>
