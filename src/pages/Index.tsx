@@ -67,7 +67,7 @@ const Index: React.FC = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
-                  INVEST IN TOMORROW, TODAY — REVOLUT'S IPO IS COMING
+                  REVOLUT IPO IS COMING, INVEST IN TOMORROW TODAY
                 </h1>
                 
                 <div className="text-xl text-black font-medium">
@@ -95,11 +95,11 @@ const Index: React.FC = () => {
                 />
                 
                 {/* Text Overlay */}
-                <div className="absolute top-8 left-6 right-6 text-white">
-                  <h3 className="text-xl font-bold mb-3 leading-tight">
+                <div className="absolute top-8 left-6 right-6 text-white z-10">
+                  <h3 className="text-xl font-bold mb-3 leading-tight drop-shadow-lg">
                     Revolut IPO: The Most Anticipated Fintech Public Launch of the Decade
                   </h3>
-                  <p className="text-sm leading-relaxed opacity-90">
+                  <p className="text-sm leading-relaxed opacity-90 drop-shadow-md">
                     45 Million Users. $45 Billion Valuation. A Global Opportunity You Don't Want to Miss.
                   </p>
                 </div>
