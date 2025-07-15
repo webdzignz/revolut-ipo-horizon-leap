@@ -385,6 +385,104 @@ const Index: React.FC = () => {
         </div>
       </section>
 
+      {/* IPO Highlights Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              IPO Highlight Information
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Everything you need to know about Revolut's upcoming public offering
+            </p>
+          </div>
+
+          {/* Step 1 */}
+          <div className="mb-20">
+            <div className="bg-green-50 rounded-3xl p-8 md:p-12">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
+                    Step 1
+                  </div>
+                  <h3 className="text-3xl font-bold text-black mb-4">Expected Timeline</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Revolut is targeting a 2025 IPO launch with preparation already underway. 
+                    The company has secured necessary banking licenses and achieved profitability, 
+                    positioning itself for a successful public debut.
+                  </p>
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">📅</div>
+                      <div className="text-2xl font-bold text-black">2025</div>
+                      <div className="text-gray-600">IPO Launch</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="mb-20">
+            <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
+              <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div className="flex-1">
+                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
+                    Step 2
+                  </div>
+                  <h3 className="text-3xl font-bold text-black mb-4">Valuation & Growth</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Currently valued at $45 billion with 45+ million users across 38 countries. 
+                    Revenue grew to $2.2B in 2023 with $545M pre-tax profit, demonstrating 
+                    strong financial performance and global expansion.
+                  </p>
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">📈</div>
+                      <div className="text-2xl font-bold text-black">$45B</div>
+                      <div className="text-gray-600">Valuation</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="mb-20">
+            <div className="bg-purple-50 rounded-3xl p-8 md:p-12">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
+                    Step 3
+                  </div>
+                  <h3 className="text-3xl font-bold text-black mb-4">Investment Opportunity</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    With backing from Tiger Global, Coatue, and D1 Capital, Revolut offers 
+                    exposure to the rapidly growing fintech sector. Multiple revenue streams 
+                    and global expansion plans make it an attractive investment opportunity.
+                  </p>
+                </div>
+                <div className="flex-1 flex justify-center">
+                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">💼</div>
+                      <div className="text-2xl font-bold text-black">Invest</div>
+                      <div className="text-gray-600">Opportunity</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
