@@ -176,7 +176,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Features Grid */}
-        <section className="px-6 py-20 bg-white mt-20">
+        <section className="px-6 py-20 bg-white mt-16">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
               <span className="text-black">
@@ -232,9 +232,9 @@ const Index: React.FC = () => {
               {milestones.map((milestone, index) => (
                 <div key={index} className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                    <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
-                      <div className="text-2xl font-bold text-blue-400 mb-2">{milestone.year}</div>
-                      <div className="text-lg font-semibold mb-2">{milestone.event}</div>
+                    <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-6">
+                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
+                      <div className="text-lg font-semibold text-gray-800 mb-2">{milestone.event}</div>
                       <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                         {milestone.value}
                       </div>
