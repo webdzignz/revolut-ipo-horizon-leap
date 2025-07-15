@@ -386,12 +386,12 @@ const Index: React.FC = () => {
             {/* Right side - Information */}
             <div className="w-full space-y-12">
               <div>
-                <h3 className="text-4xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
+                <h3 className="text-2xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
                 
                 <div className="space-y-8">
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 1: Submit Your Details</h4>
-                    <ul className="space-y-2 text-gray-700">
+                    <h4 className="text-lg font-bold text-black mb-4">Step 1: Submit Your Details</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
                       <li>• Fill in the form on this page.</li>
                       <li>• Make sure all your information is correct.</li>
                       <li>• If you have an alternative phone number or email, include it in the Notes section.</li>
@@ -400,8 +400,8 @@ const Index: React.FC = () => {
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
-                    <ul className="space-y-2 text-gray-700">
+                    <h4 className="text-lg font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
                       <li>• Once we receive your details, we'll review your profile.</li>
                       <li>• A regulated and recognised distributor of the Revolut IPO will be assigned to contact you.</li>
                       <li>• If you have a preferred time for calls, mention it in the Notes section.</li>
@@ -409,8 +409,8 @@ const Index: React.FC = () => {
                   </div>
 
                   <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
-                    <ul className="space-y-2 text-gray-700">
+                    <h4 className="text-lg font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
                       <li>• You'll receive a call within 48 hours from a licensed broker.</li>
                       <li>• They'll explain the IPO in detail.</li>
                       <li>• They'll also ask questions to understand your investor profile.</li>
