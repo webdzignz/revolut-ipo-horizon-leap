@@ -246,17 +246,21 @@ const Index: React.FC = () => {
                         className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
                       >
                         <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                        <div className="relative z-10">
-                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <Icon className="w-6 h-6 text-black" />
+                        <div className="relative z-10 flex flex-col justify-between h-full">
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                              <Icon className="w-5 h-5 text-black" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h3 className="text-base font-bold mb-1 text-black group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                                {feature.title}
+                              </h3>
+                              <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                                {feature.description}
+                              </p>
+                            </div>
                           </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
-                            {feature.title}
-                          </h3>
-                          <p className="text-gray-600 mb-3 text-sm group-hover:text-gray-700 transition-colors duration-300">
-                            {feature.description}
-                          </p>
-                          <div className="text-xl font-bold text-black">
+                          <div className="text-lg font-bold text-black mt-2">
                             {feature.metric}
                           </div>
                         </div>
