@@ -243,20 +243,20 @@ const Index: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                        className="group relative p-6 bg-sky-50 border border-sky-200 rounded-2xl hover:border-sky-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <Icon className="w-6 h-6 text-blue-600" />
+                          <div className="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <Icon className="w-6 h-6 text-sky-600" />
                           </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-300">
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-sky-600 transition-colors duration-300">
                             {feature.title}
                           </h3>
                           <p className="text-gray-600 mb-3 text-sm group-hover:text-gray-700 transition-colors duration-300">
                             {feature.description}
                           </p>
-                          <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                          <div className="text-xl font-bold text-sky-600">
                             {feature.metric}
                           </div>
                         </div>
