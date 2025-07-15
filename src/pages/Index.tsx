@@ -459,57 +459,45 @@ const Index: React.FC = () => {
         </section>
 
         {/* Terms and Conditions Section */}
-        <section className="px-6 py-12 bg-black/20 border-t border-gray-800/30">
+        <section className="px-6 py-8 bg-black/20 border-t border-gray-800/30">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Terms and Conditions / Disclaimer</h2>
-              <div className="text-xs text-gray-400 leading-relaxed space-y-4">
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6">
+              <h2 className="text-xl font-bold text-white mb-4">Terms and Conditions / Disclaimer</h2>
+              <div className="text-xs text-gray-400 leading-tight space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">IMPORTANT INVESTMENT DISCLAIMER</h3>
-                  <p><strong>THIS IS NOT AN OFFER TO SELL OR A SOLICITATION OF AN OFFER TO BUY SECURITIES.</strong> This website and its contents are for informational purposes only and do not constitute an offer to sell or a solicitation of an offer to buy any securities. No securities are being offered or sold through this website.</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">INVESTMENT DISCLAIMER</h3>
+                  <p className="text-xs">NOT AN OFFER TO SELL. For informational purposes only. All investments involve risk and may result in loss.</p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Investment Risk Warning</h3>
-                  <p><strong>ALL INVESTMENTS INVOLVE RISK AND MAY RESULT IN LOSS.</strong> Past performance is not indicative of future results. The value of investments can go down as well as up. You may not get back the amount you originally invested. Investment in pre-IPO companies carries additional risks including illiquidity and potential total loss.</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Financial Advice</h3>
+                  <p className="text-xs">Information provided does not constitute financial advice. Consult a qualified advisor before investing.</p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">No Financial Advice</h3>
-                  <p>The information provided on this website does not constitute financial, investment, tax, or legal advice. We strongly recommend that you consult with a qualified financial advisor before making any investment decisions, seek independent professional advice tailored to your specific circumstances, conduct your own due diligence before investing, and only invest amounts you can afford to lose.</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Affiliation</h3>
+                  <p className="text-xs">Not affiliated with Revolut Ltd. Independent third-party platform collecting investment interest.</p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">No Affiliation</h3>
-                  <p>This website is not affiliated with, endorsed by, or sponsored by Revolut Ltd. or any of its subsidiaries. We are an independent third-party platform collecting expressions of interest for potential investment opportunities.</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Eligibility & Data</h3>
+                  <p className="text-xs">Must be 18+, qualified investor. We collect data for investment opportunities and compliance.</p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Terms and Conditions</h3>
-                  <p><strong>Eligibility:</strong> You must be at least 18 years of age, legally competent to enter into contracts, not restricted from investing under applicable laws, and a qualified investor in your jurisdiction (where applicable).</p>
-                  <p className="mt-2"><strong>Data Collection:</strong> We collect personal information (name, email, phone, address), investment preferences, and website usage data. We use this information to contact you regarding investment opportunities, verify eligibility, comply with legal requirements, and improve our services. We implement appropriate security measures and will not sell your information without consent.</p>
-                  <p className="mt-2"><strong>Registration Process:</strong> Information submitted is an expression of interest only. No binding commitment is created. We may contact you to discuss opportunities. You may withdraw your interest at any time.</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Limitation of Liability</h3>
+                  <p className="text-xs">TO THE FULLEST EXTENT PERMITTED: We exclude all warranties and limit our liability.</p>
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Limitation of Liability</h3>
-                  <p>TO THE FULLEST EXTENT PERMITTED BY LAW: We exclude all warranties, express or implied. We are not liable for any direct, indirect, incidental, or consequential damages. Our total liability shall not exceed the amount you paid to use this website (if any).</p>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Compliance & Cookies</h3>
+                  <p className="text-xs">Complies with securities laws. Uses essential, analytics, and marketing cookies. You control settings.</p>
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Regulatory Compliance</h3>
-                  <p>This website complies with applicable securities laws. We maintain appropriate AML procedures and may conduct KYC checks as required. This website may not be available in all jurisdictions. It is your responsibility to ensure compliance with local laws and regulations.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Cookie Policy</h3>
-                  <p>We use essential cookies for website functionality, analytics cookies to understand usage, and marketing cookies for advertising (with your consent). You can control cookies through your browser settings.</p>
-                </div>
-
-                <div className="border-t border-gray-700/50 pt-4 mt-6">
-                  <p className="text-center"><strong>By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and Disclaimer.</strong></p>
-                  <p className="text-center mt-2"><strong>Last Updated:</strong> July 15, 2025</p>
+                <div className="col-span-1 md:col-span-2 border-t border-gray-700/50 pt-3 mt-3 text-center">
+                  <p className="text-xs"><strong>By using this website, you agree to these Terms and Conditions.</strong></p>
+                  <p className="text-xs mt-1"><strong>Last Updated:</strong> July 15, 2025</p>
                 </div>
               </div>
             </div>
