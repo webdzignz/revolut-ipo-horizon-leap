@@ -87,12 +87,22 @@ const Index: React.FC = () => {
 
             {/* Right Content - Hero Image */}
             <div className="relative flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-sm -mt-24">
+              <div className="relative w-full max-w-sm -mt-24">
                 <img 
                   src="/lovable-uploads/8c8582dd-5800-41e6-92e5-bf016af7186e.png" 
                   alt="Revolut Technology Stack" 
                   className="w-full h-auto object-contain"
                 />
+                
+                {/* Text Overlay */}
+                <div className="absolute top-8 left-6 right-6 text-white">
+                  <h3 className="text-xl font-bold mb-3 leading-tight">
+                    Revolut IPO: The Most Anticipated Fintech Public Launch of the Decade
+                  </h3>
+                  <p className="text-sm leading-relaxed opacity-90">
+                    45 Million Users. $45 Billion Valuation. A Global Opportunity You Don't Want to Miss.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
