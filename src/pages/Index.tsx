@@ -59,15 +59,15 @@ const Index: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-20 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center min-h-[600px]">
-            {/* Left Content */}
-            <div className="space-y-8 lg:pr-8">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Main Content */}
+            <div className="space-y-8">
               <div className="space-y-6">
                 <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center justify-center gap-4">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
@@ -93,23 +93,23 @@ const Index: React.FC = () => {
                 </div>
               </div>
               
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
                 Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
               </p>
 
               <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
                 Join now
               </button>
-            </div>
 
-            {/* Right Content - Hero Image */}
-            <div className="relative flex items-start justify-center lg:pl-8 -mt-20">
-              <div className="w-full max-w-2xl lg:max-w-3xl">
-                <img 
-                  src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
-                  alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
-                  className="w-full h-[600px] object-contain"
-                />
+              {/* Hero Image moved below Join now button */}
+              <div className="relative flex justify-center mt-12">
+                <div className="w-full max-w-2xl lg:max-w-3xl">
+                  <img 
+                    src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
+                    alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
+                    className="w-full h-[600px] object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
