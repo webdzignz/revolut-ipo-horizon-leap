@@ -177,7 +177,7 @@ const Index: React.FC = () => {
 
         {/* Enhanced Investment Form */}
         <section className="px-6 py-20 bg-white">
-          <div className="max-w-2xl mx-auto w-1/2">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="text-black">
@@ -203,6 +203,9 @@ const Index: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+          
+          <div className="max-w-2xl mx-auto w-1/2">
 
             {showSuccess && (
               <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
