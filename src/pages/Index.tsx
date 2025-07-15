@@ -1,613 +1,174 @@
-import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, Shield, ArrowRight, Star, CheckCircle, Building2, CreditCard, BarChart3, Wallet } from 'lucide-react';
+import React from 'react';
 
 const Index: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    address: '',
-    investmentAmount: '',
-    timeframe: '',
-    notes: ''
-  });
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
-
-  const stats = [
-    { value: '£1.1B', label: 'Pre-tax Profit', icon: TrendingUp, color: 'from-green-400 to-emerald-600' },
-    { value: '149%', label: 'Profit Growth', icon: BarChart3, color: 'from-blue-400 to-cyan-600' },
-    { value: '26%', label: 'Net Margin', icon: Wallet, color: 'from-purple-400 to-violet-600' },
-    { value: '50M+', label: 'Customers', icon: Users, color: 'from-orange-400 to-red-500' },
-  ];
-
-  const features = [
-    {
-      icon: Globe,
-      title: 'Global Expansion',
-      description: 'Operating across 38+ countries with rapid international growth',
-      metric: '38+ Countries'
-    },
-    {
-      icon: CreditCard,
-      title: 'Digital Banking',
-      description: 'Leading neobank with comprehensive financial services ecosystem',
-      metric: '£500B+ Processed'
-    },
-    {
-      icon: Building2,
-      title: 'Business Growth',
-      description: 'Serving millions of business customers with innovative solutions',
-      metric: '500K+ Businesses'
-    },
-    {
-      icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Fully licensed and regulated across all operating jurisdictions',
-      metric: '100% Compliant'
-    }
-  ];
-
-  const milestones = [
-            { year: '2015', event: 'Founded in London', value: 'Startup' },
-            { year: '2021', event: 'Series E Funding', value: '$33B Valuation' },
-            { year: '2024', event: 'Pre-IPO Round', value: '$45B Valuation' },
-            { year: '2024', event: 'IPO Filing', value: '$65B Target' },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Investment Form Submitted:', formData);
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 5000);
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      address: '',
-      investmentAmount: '',
-      timeframe: '',
-      notes: ''
-    });
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
-      {/* Animated Background with Clouds */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
-        
-        {/* Cloud Elements */}
-        <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
-        <div className="absolute top-32 right-32 w-48 h-24 bg-white/30 rounded-full blur-lg animate-float delay-1000 opacity-80"></div>
-        <div className="absolute top-24 left-1/2 w-72 h-36 bg-white/35 rounded-full blur-xl animate-float delay-500 opacity-60"></div>
-        <div className="absolute top-64 left-10 w-56 h-28 bg-white/25 rounded-full blur-lg animate-float delay-2000 opacity-70"></div>
-        <div className="absolute top-80 right-20 w-80 h-40 bg-white/40 rounded-full blur-xl animate-float delay-1500 opacity-50"></div>
-        <div className="absolute top-40 right-1/3 w-60 h-30 bg-white/30 rounded-full blur-lg animate-float delay-3000 opacity-65"></div>
-        <div className="absolute top-96 left-1/3 w-68 h-34 bg-white/35 rounded-full blur-xl animate-float delay-2500 opacity-55"></div>
-        
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <header className="backdrop-blur-xl bg-background/80 px-6 py-4 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-background font-bold text-sm">R</span>
-                </div>
-                <h1 className="text-2xl font-bold text-white">Revolut</h1>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white px-6 py-4 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">R</span>
               </div>
-              <nav className="hidden md:flex items-center gap-8 text-white/80">
-                <span>Personal</span>
-                <span>Business</span>
-                <span>Revolut &lt;18</span>
-                <span>Company</span>
-              </nav>
+              <h1 className="text-2xl font-bold text-black">Revolut</h1>
             </div>
-            <div className="flex items-center gap-4">
-              <button className="text-white/80 hover:text-white transition-colors">Log in</button>
-              <button className="bg-white text-background px-6 py-2 rounded-full font-medium hover:bg-white/90 transition-colors">Sign up</button>
-            </div>
+            <nav className="hidden md:flex items-center gap-8 text-gray-600">
+              <span className="hover:text-black cursor-pointer">Personal</span>
+              <span className="hover:text-black cursor-pointer">Business</span>
+              <span className="hover:text-black cursor-pointer">Revolut &lt;18</span>
+              <span className="hover:text-black cursor-pointer">Company</span>
+            </nav>
           </div>
-        </header>
-
-        {/* Hero Section */}
-        <section className="relative pb-40 pt-12 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-2 gap-16 items-center">
-              {/* Left Content */}
-              <div className="space-y-6 z-10">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                  <div className="text-white">REVOLUT LOOKS</div>
-                  <div className="text-white">TO RAISE AT</div>
-                  <div className="text-white">$65 BILLION</div>
-                  <div className="text-white">VALUATION</div>
-                </h1>
-                
-                <p className="text-lg text-white/90 leading-relaxed max-w-lg">
-                  Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
-                </p>
-                
-                <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
-                  Register Interest
-                </button>
-              </div>
-
-              {/* Right Content - Woman Image */}
-              <div className="relative h-[600px] -mr-6">
-                <div className="absolute inset-0 w-full h-full overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
-                    alt="Woman in beige jacket" 
-                    className="absolute -top-[208px] right-0 h-[1000px] w-auto object-cover object-top"
-                  />
-                  
-                  {/* Floating UI Elements */}
-                  <div className="absolute top-[40%] right-[60%] bg-white rounded-3xl p-6 shadow-2xl">
-                    <div className="text-4xl font-bold text-black">$65 Billion</div>
-                    <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
-                  </div>
-                  
-                  <div className="absolute bottom-[20%] right-[20%] bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
-                    <div className="text-center">
-                      <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
-                      <div className="text-sm text-gray-500">Get exclusive updates</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center gap-4">
+            <button className="text-gray-600 hover:text-black transition-colors">Log in</button>
+            <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">Sign up</button>
           </div>
-        </section>
+        </div>
+      </header>
 
-        {/* Enhanced Investment Form */}
-        <section className="px-6 pt-4 pb-20 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="mb-4">
-                <span className="text-4xl md:text-5xl font-bold text-black">Revolut IPO: </span>
-                <span className="text-2xl md:text-3xl font-semibold text-black">A Landmark Entry into Public Markets</span>
-              </h2>
-              <p className="text-xl text-gray-700 mb-8">
-                Secure your position in the most anticipated fintech IPO of 2024
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-white pt-16 pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <div className="text-sm text-gray-500 uppercase tracking-wide">
+                Deposits
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-black">
+                Secure Your Future,<br />
+                Invest in Tomorrow
+              </h1>
+              
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                Invest in your future with deposits offering competitive rates and flexible 
+                terms for steady growth and peace of mind.
               </p>
               
-              <div className="flex items-center justify-center gap-8 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>Secure & Encrypted</span>
+              <button className="bg-black text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-gray-800 transition-colors">
+                Open Deposits
+              </button>
+            </div>
+
+            {/* Right Content - Decorative Element */}
+            <div className="relative h-[500px] flex items-center justify-center">
+              {/* Main decorative graphic */}
+              <div className="relative w-96 h-96">
+                {/* Central circle with R logo */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center z-10">
+                  <span className="text-2xl font-bold text-gray-600">R</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>GDPR Compliant</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>No Commitment</span>
+                
+                {/* Radiating elements */}
+                <div className="absolute inset-0">
+                  {/* Blue elements */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-32 bg-blue-500 rounded-sm rotate-12 origin-bottom"></div>
+                  <div className="absolute top-8 right-8 w-12 h-24 bg-blue-400 rounded-sm rotate-45 origin-bottom"></div>
+                  <div className="absolute bottom-8 right-4 w-14 h-28 bg-blue-600 rounded-sm -rotate-12 origin-bottom"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-18 h-36 bg-blue-500 rounded-sm -rotate-45 origin-bottom"></div>
+                  <div className="absolute bottom-8 left-4 w-12 h-24 bg-blue-400 rounded-sm rotate-12 origin-bottom"></div>
+                  <div className="absolute top-8 left-8 w-16 h-32 bg-blue-600 rounded-sm -rotate-45 origin-bottom"></div>
+                  
+                  {/* Green elements */}
+                  <div className="absolute top-4 left-1/3 w-10 h-20 bg-green-400 rounded-sm rotate-30 origin-bottom"></div>
+                  <div className="absolute right-4 top-1/3 w-12 h-24 bg-green-500 rounded-sm rotate-60 origin-bottom"></div>
+                  <div className="absolute bottom-4 right-1/3 w-14 h-28 bg-green-400 rounded-sm -rotate-30 origin-bottom"></div>
+                  <div className="absolute left-4 bottom-1/3 w-10 h-20 bg-green-500 rounded-sm -rotate-60 origin-bottom"></div>
+                  
+                  {/* Gray elements */}
+                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-8 h-16 bg-gray-300 rounded-sm rotate-0 origin-bottom"></div>
+                  <div className="absolute right-12 top-1/2 transform -translate-y-1/2 w-10 h-20 bg-gray-400 rounded-sm rotate-90 origin-bottom"></div>
+                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-12 h-24 bg-gray-300 rounded-sm rotate-0 origin-bottom"></div>
+                  <div className="absolute left-12 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-gray-400 rounded-sm -rotate-90 origin-bottom"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Second Section */}
+      <section className="relative overflow-hidden bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Background arrow pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="grid grid-cols-12 gap-4 h-full">
+              {Array.from({ length: 144 }).map((_, i) => (
+                <div key={i} className="flex items-center justify-center">
+                  <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+              ))}
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto grid grid-cols-3 gap-12 items-start">
-            {/* Left side - Form (spans 2 columns) */}
-            <div className="col-span-2 w-full">
-              {showSuccess && (
-                <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
-                  <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
-                  <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
-                  <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
-                </div>
-              )}
-
-              <div className="bg-black border border-gray-600 rounded-xl p-8 md:p-12 shadow-2xl">
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-medium text-white">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-medium text-white">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-white">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-sm font-medium text-white">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="address" className="block text-sm font-medium text-white">
-                      Full Address *
-                    </label>
-                    <textarea
-                      id="address"
-                      name="address"
-                      value={formData.address}
-                      onChange={handleInputChange}
-                      required
-                      rows={3}
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
-                      placeholder="Enter your full residential address"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-white">
-                        Investment Amount *
-                      </label>
-                      <select
-                        id="investmentAmount"
-                        name="investmentAmount"
-                        value={formData.investmentAmount}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      >
-                        <option value="" className="bg-white text-black">Select investment amount</option>
-                        <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
-                        <option value="100000-250000" className="bg-white text-black">£100,000 - £250,000</option>
-                        <option value="250000-500000" className="bg-white text-black">£250,000 - £500,000</option>
-                        <option value="500000-1000000" className="bg-white text-black">£500,000 - £1,000,000</option>
-                        <option value="1000000+" className="bg-white text-black">£1,000,000+</option>
-                      </select>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="timeframe" className="block text-sm font-medium text-white">
-                        Investment Timeframe *
-                      </label>
-                      <select
-                        id="timeframe"
-                        name="timeframe"
-                        value={formData.timeframe}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      >
-                        <option value="" className="bg-white text-black">Select timeframe</option>
-                        <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
-                        <option value="short-term" className="bg-white text-black">Short-term (1-3 months)</option>
-                        <option value="medium-term" className="bg-white text-black">Medium-term (3-6 months)</option>
-                        <option value="long-term" className="bg-white text-black">Long-term (6+ months)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="notes" className="block text-sm font-medium text-white">
-                      Additional Notes
-                    </label>
-                    <textarea
-                      id="notes"
-                      name="notes"
-                      value={formData.notes}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
-                      placeholder="Any additional information, preferred contact times, or special requirements..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="group relative w-full bg-blue-600 text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-blue-700 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
-                  >
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      Secure IPO Position Now
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </span>
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Right side - Information */}
-            <div className="w-full space-y-12">
-              <div>
-                <h3 className="text-2xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
-                
-                <div className="space-y-8">
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 1: Submit Your Details</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Fill in the form completely</li>
-                      <li>• Double-check your information</li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• We review your profile</li>
-                      <li>• Regulated distributor assigned</li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Licensed broker will contact you</li>
-                      <li>• IPO details and investor profile discussion</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Combined Features and Timeline Section */}
-        <section className="px-6 py-20 bg-white">
-          <div className="max-w-7xl mx-auto">
-            {/* Section Title */}
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
-                <span className="text-black">
-                  Why Revolut Leads
-                </span>
+          <div className="relative z-10 grid grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-6xl font-bold leading-tight text-black">
+                Unlock the power of steady<br />
+                growth with our deposits
               </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-12">
-                <span className="text-gray-700">
-                  Growth Journey
-                </span>
-              </h3>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* Growth Journey Timeline - Left Side */}
-              <div>
-                
-                <div className="relative pl-8">
-                  {/* Connecting line */}
-                  <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {milestones.map((milestone, index) => (
-                      <div 
-                        key={index} 
-                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                      >
-                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                        <div className="relative z-10">
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg font-bold text-black">{milestone.year}</span>
-                            </div>
-                            <div className="text-xl font-bold text-black">
-                              {milestone.value}
-                            </div>
-                          </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
-                            {milestone.event}
-                          </h3>
-                          <div className="w-full h-1 bg-black rounded-full"></div>
-                        </div>
-                        
-                        {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
 
-              {/* Features - Right Side */}
-              <div>
-                
-                <div className="relative pr-8">
-                  {/* Connecting line */}
-                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {features.map((feature, index) => {
-                      const Icon = feature.icon;
-                      return (
-                        <div 
-                          key={index} 
-                          className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                        >
-                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                          <div className="relative z-10 flex flex-col justify-between h-full">
-                            <div className="flex items-start gap-3">
-                              <div className="w-10 h-10 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                <Icon className="w-5 h-5 text-black" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h3 className="text-base font-bold mb-1 text-black group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.title}
-                                </h3>
-                                <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.description}
-                                </p>
-                              </div>
+            {/* Right Content - Phone Mockup */}
+            <div className="relative h-[600px] flex items-center justify-center">
+              <div className="relative">
+                {/* Phone Frame */}
+                <div className="w-72 h-[500px] bg-black rounded-[3rem] p-4 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                    {/* Phone Content */}
+                    <div className="p-6 space-y-6">
+                      {/* Header */}
+                      <div className="flex items-center justify-between">
+                        <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+                        <div className="text-sm font-medium">Search</div>
+                        <div className="w-6 h-6"></div>
+                      </div>
+                      
+                      {/* Deposit Info Card */}
+                      <div className="bg-black text-white p-6 rounded-2xl">
+                        <div className="space-y-2">
+                          <div className="text-2xl font-bold">1,000 €</div>
+                          <div className="text-sm opacity-80">Deposit amount</div>
+                        </div>
+                      </div>
+                      
+                      {/* Benefits */}
+                      <div className="space-y-4">
+                        <div className="text-sm font-medium">Your benefits</div>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                              <span className="text-white text-xs">%</span>
                             </div>
-                            <div className="text-lg font-bold text-black mt-2">
-                              {feature.metric}
-                            </div>
+                            <div className="text-sm">according % of interest</div>
                           </div>
                           
-                          {/* Timeline dot */}
-                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-6 h-6 bg-red-500 rounded-full"></div>
+                            <div className="text-sm">To the Standard card</div>
+                          </div>
                         </div>
-                      );
-                    })}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Enhanced Footer */}
-        <footer className="border-t border-gray-300 px-6 py-16 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Revolut IPO</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>IPO Overview</li>
-                  <li>Investment Information</li>
-                  <li>Registration Portal</li>
-                  <li>Investor Relations</li>
-                  <li>Financial Reports</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Contact</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>Investor Support</li>
-                  <li>General Inquiries</li>
-                  <li>Media Relations</li>
-                  <li>Partnership Opportunities</li>
-                  <li>Legal & Compliance</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Fast Links</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>Terms & Conditions</li>
-                  <li>Privacy Policy</li>
-                  <li>Risk Disclosure</li>
-                  <li>Cookie Policy</li>
-                  <li>GDPR Compliance</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="text-center pt-8 border-t border-gray-300">
-              <p className="text-gray-500 text-sm">
-                © 2024 Revolut Investment Opportunity Portal. For qualified investors only.
-              </p>
-            </div>
-          </div>
-        </footer>
-
-        {/* Terms and Conditions Section */}
-        <section className="px-6 py-8 bg-black/20 border-t border-gray-800/30">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6">
-              <h2 className="text-xl font-bold text-white mb-4">Terms and Conditions / Disclaimer</h2>
-              <div className="text-xs text-gray-400 leading-tight space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
                 
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">INVESTMENT DISCLAIMER</h3>
-                  <p className="text-xs">NOT AN OFFER TO SELL. For informational purposes only. All investments involve risk and may result in loss.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Financial Advice</h3>
-                  <p className="text-xs">Information provided does not constitute financial advice. Consult a qualified advisor before investing.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Affiliation</h3>
-                  <p className="text-xs">Not affiliated with Revolut Ltd. Independent third-party platform collecting investment interest.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Eligibility & Data</h3>
-                  <p className="text-xs">Must be 18+, qualified investor. We collect data for investment opportunities and compliance.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Limitation of Liability</h3>
-                  <p className="text-xs">TO THE FULLEST EXTENT PERMITTED: We exclude all warranties and limit our liability.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Compliance & Cookies</h3>
-                  <p className="text-xs">Complies with securities laws. Uses essential, analytics, and marketing cookies. You control settings.</p>
-                </div>
-
-                <div className="col-span-1 md:col-span-2 border-t border-gray-700/50 pt-3 mt-3 text-center">
-                  <p className="text-xs"><strong>By using this website, you agree to these Terms and Conditions.</strong></p>
-                  <p className="text-xs mt-1"><strong>Last Updated:</strong> July 15, 2025</p>
+                {/* Floating Info Boxes */}
+                <div className="absolute -left-20 top-1/3 bg-white rounded-xl p-4 shadow-lg border">
+                  <div className="text-xs text-gray-500 mb-1">Term</div>
+                  <div className="font-bold">3 months at 5% per annum</div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-
+        </div>
+      </section>
     </div>
   );
 };
