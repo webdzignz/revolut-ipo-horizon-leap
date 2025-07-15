@@ -73,8 +73,20 @@ const Index: React.FC = () => {
                     alt="Revolut" 
                     className="h-12 md:h-16 lg:h-20 w-auto"
                   />
-                  IPO IS COMING, INVEST IN TOMORROW TODAY
+                  <span>IPO</span>
                 </h1>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Is Coming
+                </h2>
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Invest In
+                </h3>
+                <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Tomorrow
+                </h4>
+                <h5 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Today
+                </h5>
                 
                 <div className="text-xl text-black font-medium">
                   Expected 2025
@@ -91,7 +103,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="relative flex items-start justify-center lg:pl-8 -mt-8">
+            <div className="relative flex items-start justify-center lg:pl-8 -mt-20">
               <div className="w-full max-w-2xl lg:max-w-3xl">
                 <img 
                   src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
