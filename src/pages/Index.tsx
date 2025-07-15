@@ -208,26 +208,26 @@ const Index: React.FC = () => {
                     {milestones.map((milestone, index) => (
                       <div 
                         key={index} 
-                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl min-h-[140px]"
+                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
                           <div className="flex items-center justify-between mb-4">
-                            <div className="w-12 h-12 bg-primary-foreground/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg font-bold text-primary-foreground">{milestone.year}</span>
+                            <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-lg font-bold text-black">{milestone.year}</span>
                             </div>
-                            <div className="text-xl font-bold text-primary-foreground">
+                            <div className="text-xl font-bold text-black">
                               {milestone.value}
                             </div>
                           </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-primary-foreground transition-colors duration-300">
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
                             {milestone.event}
                           </h3>
-                          <div className="w-full h-1 bg-primary-foreground rounded-full"></div>
+                          <div className="w-full h-1 bg-black rounded-full"></div>
                         </div>
                         
                         {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
+                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg"></div>
                       </div>
                     ))}
                   </div>
@@ -243,20 +243,20 @@ const Index: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className="group relative p-6 bg-blue-50 border border-blue-200 rounded-2xl hover:border-blue-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl min-h-[140px]"
+                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
-                          <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                            <Icon className="w-6 h-6 text-blue-600" />
+                          <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <Icon className="w-6 h-6 text-black" />
                           </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-300">
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
                             {feature.title}
                           </h3>
                           <p className="text-gray-600 mb-3 text-sm group-hover:text-gray-700 transition-colors duration-300">
                             {feature.description}
                           </p>
-                          <div className="text-xl font-bold text-blue-600">
+                          <div className="text-xl font-bold text-black">
                             {feature.metric}
                           </div>
                         </div>
