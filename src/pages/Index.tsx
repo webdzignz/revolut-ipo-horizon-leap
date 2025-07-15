@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Index: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    numbers: '',
+    investmentAmount: '',
+    timeframe: '',
+    notes: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Investment Form Submitted:', formData);
+    // Reset form after submission
+    setFormData({
+      name: '',
+      numbers: '',
+      investmentAmount: '',
+      timeframe: '',
+      notes: ''
+    });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -52,38 +80,116 @@ const Index: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Content - Decorative Element */}
-            <div className="relative h-[500px] flex items-center justify-center">
-              {/* Main decorative graphic */}
-              <div className="relative w-96 h-96">
-                {/* Central circle with R logo */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center z-10">
-                  <span className="text-2xl font-bold text-gray-600">R</span>
+            {/* Right Content - Investment Form */}
+            <div className="relative">
+              <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200 space-y-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-black mb-2">Investment Interest</h3>
+                  <p className="text-gray-600">Tell us about your investment goals</p>
                 </div>
                 
-                {/* Radiating elements */}
-                <div className="absolute inset-0">
-                  {/* Blue elements */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-32 bg-blue-500 rounded-sm rotate-12 origin-bottom"></div>
-                  <div className="absolute top-8 right-8 w-12 h-24 bg-blue-400 rounded-sm rotate-45 origin-bottom"></div>
-                  <div className="absolute bottom-8 right-4 w-14 h-28 bg-blue-600 rounded-sm -rotate-12 origin-bottom"></div>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-18 h-36 bg-blue-500 rounded-sm -rotate-45 origin-bottom"></div>
-                  <div className="absolute bottom-8 left-4 w-12 h-24 bg-blue-400 rounded-sm rotate-12 origin-bottom"></div>
-                  <div className="absolute top-8 left-8 w-16 h-32 bg-blue-600 rounded-sm -rotate-45 origin-bottom"></div>
-                  
-                  {/* Green elements */}
-                  <div className="absolute top-4 left-1/3 w-10 h-20 bg-green-400 rounded-sm rotate-30 origin-bottom"></div>
-                  <div className="absolute right-4 top-1/3 w-12 h-24 bg-green-500 rounded-sm rotate-60 origin-bottom"></div>
-                  <div className="absolute bottom-4 right-1/3 w-14 h-28 bg-green-400 rounded-sm -rotate-30 origin-bottom"></div>
-                  <div className="absolute left-4 bottom-1/3 w-10 h-20 bg-green-500 rounded-sm -rotate-60 origin-bottom"></div>
-                  
-                  {/* Gray elements */}
-                  <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-8 h-16 bg-gray-300 rounded-sm rotate-0 origin-bottom"></div>
-                  <div className="absolute right-12 top-1/2 transform -translate-y-1/2 w-10 h-20 bg-gray-400 rounded-sm rotate-90 origin-bottom"></div>
-                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-12 h-24 bg-gray-300 rounded-sm rotate-0 origin-bottom"></div>
-                  <div className="absolute left-12 top-1/2 transform -translate-y-1/2 w-8 h-16 bg-gray-400 rounded-sm -rotate-90 origin-bottom"></div>
+                {/* Name Field */}
+                <div className="space-y-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
+                    placeholder="Enter your full name"
+                  />
                 </div>
-              </div>
+
+                {/* Numbers Field */}
+                <div className="space-y-2">
+                  <label htmlFor="numbers" className="block text-sm font-medium text-gray-700">
+                    Contact Number/s
+                  </label>
+                  <input
+                    type="text"
+                    id="numbers"
+                    name="numbers"
+                    value={formData.numbers}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none transition-all"
+                    placeholder="Phone number(s)"
+                  />
+                </div>
+
+                {/* Investment Amount Field */}
+                <div className="space-y-2">
+                  <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
+                    Potential Investment Amount
+                  </label>
+                  <select
+                    id="investmentAmount"
+                    name="investmentAmount"
+                    value={formData.investmentAmount}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-blue-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all"
+                  >
+                    <option value="">Select amount range</option>
+                    <option value="10000-50000">€10,000 - €50,000</option>
+                    <option value="50000-100000">€50,000 - €100,000</option>
+                    <option value="100000-250000">€100,000 - €250,000</option>
+                    <option value="250000-500000">€250,000 - €500,000</option>
+                    <option value="500000+">€500,000+</option>
+                  </select>
+                </div>
+
+                {/* Timeframe Field */}
+                <div className="space-y-2">
+                  <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
+                    Investment Timeframe
+                  </label>
+                  <select
+                    id="timeframe"
+                    name="timeframe"
+                    value={formData.timeframe}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none transition-all"
+                  >
+                    <option value="">Select timeframe</option>
+                    <option value="3-months">3 months</option>
+                    <option value="6-months">6 months</option>
+                    <option value="1-year">1 year</option>
+                    <option value="2-years">2 years</option>
+                    <option value="5-years">5+ years</option>
+                  </select>
+                </div>
+
+                {/* Notes Field */}
+                <div className="space-y-2">
+                  <label htmlFor="notes" className="block text-sm font-medium text-gray-700">
+                    Additional Notes
+                  </label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    value={formData.notes}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gray-500 focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all resize-none"
+                    placeholder="Any specific questions or requirements..."
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors"
+                >
+                  Submit Interest
+                </button>
+              </form>
             </div>
           </div>
         </div>
