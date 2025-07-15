@@ -180,7 +180,7 @@ const Index: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">
-                <span className="text-4xl md:text-5xl font-bold text-black">REVOLUT IPO: </span>
+                <span className="text-4xl md:text-5xl font-bold text-black">Revolut IPO: </span>
                 <span className="text-2xl md:text-3xl font-semibold text-black">A Landmark Entry into Public Markets</span>
               </h2>
               <p className="text-xl text-gray-700 mb-8">
