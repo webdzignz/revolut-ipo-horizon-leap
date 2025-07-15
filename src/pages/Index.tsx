@@ -88,102 +88,73 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
-      {/* Animated Background with Clouds */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
-        
-        {/* Cloud Elements */}
-        <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
-        <div className="absolute top-32 right-32 w-48 h-24 bg-white/30 rounded-full blur-lg animate-float delay-1000 opacity-80"></div>
-        <div className="absolute top-24 left-1/2 w-72 h-36 bg-white/35 rounded-full blur-xl animate-float delay-500 opacity-60"></div>
-        <div className="absolute top-64 left-10 w-56 h-28 bg-white/25 rounded-full blur-lg animate-float delay-2000 opacity-70"></div>
-        <div className="absolute top-80 right-20 w-80 h-40 bg-white/40 rounded-full blur-xl animate-float delay-1500 opacity-50"></div>
-        <div className="absolute top-40 right-1/3 w-60 h-30 bg-white/30 rounded-full blur-lg animate-float delay-3000 opacity-65"></div>
-        <div className="absolute top-96 left-1/3 w-68 h-34 bg-white/35 rounded-full blur-xl animate-float delay-2500 opacity-55"></div>
-        
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
-      </div>
-
+    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-blue-600 text-foreground font-inter overflow-hidden">
       <div className="relative z-10">
         {/* Header */}
-        <header className="backdrop-blur-xl bg-background/80 px-6 py-4 sticky top-0 z-50">
+        <header className="px-6 py-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
+            <div className="flex items-center gap-8">
+              <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-background font-bold text-sm">R</span>
+                  <span className="text-blue-600 font-bold text-sm">R</span>
                 </div>
-                <h1 className="text-2xl font-bold text-white">Revolut</h1>
+                <h1 className="text-xl font-medium text-white">Revolut</h1>
               </div>
-              <nav className="hidden md:flex items-center gap-8 text-white/80">
-                <span>Personal</span>
-                <span>Business</span>
-                <span>Revolut &lt;18</span>
-                <span>Company</span>
+              <nav className="hidden md:flex items-center gap-8 text-white text-sm">
+                <span className="hover:text-white/80 cursor-pointer">Personal</span>
+                <span className="hover:text-white/80 cursor-pointer">Business</span>
+                <span className="hover:text-white/80 cursor-pointer">Revolut &lt;18</span>
+                <span className="hover:text-white/80 cursor-pointer">Company</span>
               </nav>
             </div>
             <div className="flex items-center gap-4">
-              <button className="text-white/80 hover:text-white transition-colors">Log in</button>
-              <button className="bg-white text-background px-6 py-2 rounded-full font-medium hover:bg-white/90 transition-colors">Sign up</button>
+              <button className="text-white text-sm hover:text-white/80 transition-colors">Log in</button>
+              <button className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-colors">Sign up</button>
             </div>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="relative pb-40 pt-12 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-2 gap-16 items-center">
-              {/* Left Content */}
-              <div className="space-y-6 z-10">
-                <h1 className="font-bold leading-tight">
-                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
-                    REVOLUT
-                  </div>
-                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
-                    LOOKS TO
-                  </div>
-                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
-                    RAISE AT
-                  </div>
-                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
-                    65 BILLION
-                  </div>
-                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
-                    VALUATION
-                  </div>
-                </h1>
-                
-                <p className="text-lg text-white/90 leading-relaxed max-w-lg">
-                  Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
-                </p>
-                
-                <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
-                  Register Interest
-                </button>
-              </div>
+        <section className="relative min-h-screen flex items-center">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h1 className="text-white font-light leading-none">
+                <div className="text-7xl mb-2">REVOLUT LOOKS</div>
+                <div className="text-7xl mb-2">TO</div>
+                <div className="text-7xl mb-2">RAISE AT $65</div>
+                <div className="text-7xl mb-2">BILLION</div>
+                <div className="text-7xl">VALUATION</div>
+              </h1>
+              
+              <p className="text-white text-lg leading-relaxed max-w-md mt-8">
+                Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
+              </p>
+              
+              <button className="bg-white/20 text-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white/30 transition-colors mt-8">
+                Register Interest
+              </button>
+            </div>
 
-              {/* Right Content - Woman Image */}
-              <div className="relative h-[600px] -mr-6">
-                <div className="absolute inset-0 w-full h-full overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
-                    alt="Woman in beige jacket" 
-                    className="absolute -top-[208px] right-0 h-[1000px] w-auto object-cover object-top"
-                  />
-                  
-                  {/* Floating UI Elements */}
-                  <div className="absolute top-[40%] right-[60%] bg-white rounded-3xl p-6 shadow-2xl">
-                    <div className="text-4xl font-bold text-black">$65 Billion</div>
-                    <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
-                  </div>
-                  
-                  <div className="absolute bottom-[20%] right-[20%] bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
-                    <div className="text-center">
-                      <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
-                      <div className="text-sm text-gray-500">Get exclusive updates</div>
-                    </div>
+            {/* Right Content - Woman Image */}
+            <div className="relative h-[700px] flex justify-end">
+              <div className="relative w-full h-full">
+                <img 
+                  src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
+                  alt="Woman in beige jacket" 
+                  className="absolute right-0 top-0 h-full w-auto object-cover"
+                />
+                
+                {/* Floating UI Elements */}
+                <div className="absolute top-[30%] left-[10%] bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="text-3xl font-bold text-black">$65 Billion</div>
+                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
+                </div>
+                
+                <div className="absolute bottom-[25%] right-[15%] bg-white rounded-2xl p-6 shadow-lg min-w-[180px]">
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-black mb-1">Sign Up for Info</div>
+                    <div className="text-sm text-gray-500">Get exclusive updates</div>
                   </div>
                 </div>
               </div>
