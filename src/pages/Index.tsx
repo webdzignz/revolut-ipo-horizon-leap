@@ -133,9 +133,9 @@ const Index: React.FC = () => {
 
         {/* Hero Section */}
         <section className="px-6 relative pb-24">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className="space-y-8 z-10">
+            <div className="col-span-5 space-y-8 z-10">
               <h1 className="text-6xl md:text-7xl font-bold leading-tight">
                 <div className="text-white">REVOLUT LOOKS TO</div>
                 <div className="text-white">RAISE AT $65 BILLION</div>
@@ -152,21 +152,21 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[600px] flex items-center justify-center">
-              <div className="relative w-full max-w-2xl h-full">
+            <div className="col-span-7 relative h-[700px] flex items-center justify-end">
+              <div className="relative w-full h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-125"
+                  className="absolute top-0 right-0 h-full w-auto object-cover object-top"
                 />
                 
                 {/* Floating UI Elements */}
-                <div className="absolute top-1/4 right-16 bg-white rounded-3xl p-6 shadow-2xl">
-                  <div className="text-4xl font-bold text-black">$65 Billion</div>
+                <div className="absolute top-16 right-20 bg-white rounded-2xl p-6 shadow-2xl">
+                  <div className="text-3xl font-bold text-black">$65 Billion</div>
                   <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
                 </div>
                 
-                <div className="absolute bottom-1/3 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                <div className="absolute bottom-24 right-8 bg-white rounded-2xl p-6 shadow-2xl min-w-[180px]">
                   <div className="text-center">
                     <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
                     <div className="text-sm text-gray-500">Get exclusive updates</div>
