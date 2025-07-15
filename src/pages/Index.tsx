@@ -84,27 +84,14 @@ const Index: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Content - 3D Visual */}
+            {/* Right Content - Hero Image */}
             <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                {/* 3D Card Stack Effect */}
-                <div className="absolute top-0 right-0 w-32 h-48 bg-blue-500 rounded-2xl transform rotate-12 shadow-xl"></div>
-                <div className="absolute top-8 right-8 w-32 h-48 bg-black rounded-2xl transform rotate-6 shadow-xl"></div>
-                <div className="relative w-32 h-48 bg-gray-800 rounded-2xl shadow-2xl mx-auto">
-                  <div className="absolute inset-4 flex items-center justify-center">
-                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                      <span className="text-black font-bold text-sm">R</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute -top-4 left-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">💳</span>
-                </div>
-                <div className="absolute bottom-4 -left-8 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">📈</span>
-                </div>
+              <div className="w-full max-w-md">
+                <img 
+                  src="/lovable-uploads/25b5cda2-5546-448c-bd17-93266c2d4853.png" 
+                  alt="Revolut 3D Card Design" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           </div>
