@@ -68,8 +68,8 @@ const Index: React.FC = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl font-bold leading-tight text-black">
-                  Revolut IPO, What You<br />
-                  Need to Know and Why
+                  Invest in Tomorrow, Today —<br />
+                  Revolut's IPO Is Coming
                 </h1>
                 
                 <div className="flex items-center gap-2 text-2xl font-bold text-green-600">
@@ -79,7 +79,7 @@ const Index: React.FC = () => {
               </div>
               
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                Revolut — one of the world&apos;s fastest-growing digital banks — is preparing for a much-anticipated Initial Public Offering (IPO) expected in 2025. With over 45 million users and a sharp growth trajectory, Revolut is positioning itself to become a global fintech leader.
+                Get early access insights into one of the world's fastest-growing digital banks.
               </p>
             </div>
 
