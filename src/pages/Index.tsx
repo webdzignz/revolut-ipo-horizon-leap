@@ -157,16 +157,16 @@ const Index: React.FC = () => {
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute -top-[204px] right-0 h-[900px] w-auto object-cover object-top"
+                  className="absolute -top-[304px] right-0 h-[1000px] w-auto object-cover object-top"
                 />
                 
                 {/* Floating UI Elements */}
-                <div className="absolute top-1/4 right-16 bg-white rounded-3xl p-6 shadow-2xl">
+                <div className="absolute top-1/4 left-8 bg-white rounded-3xl p-6 shadow-2xl">
                   <div className="text-4xl font-bold text-black">$65 Billion</div>
                   <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
                 </div>
                 
-                <div className="absolute bottom-1/3 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                <div className="absolute bottom-1/4 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
                   <div className="text-center">
                     <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
                     <div className="text-sm text-gray-500">Get exclusive updates</div>
