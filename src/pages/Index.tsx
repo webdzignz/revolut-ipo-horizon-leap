@@ -92,11 +92,11 @@ const Index: React.FC = () => {
 
             {/* Right Content - Hero Image */}
             <div className="relative flex items-center justify-center lg:pl-8">
-              <div className="w-full max-w-sm lg:max-w-xl">
+              <div className="w-full max-w-lg lg:max-w-2xl">
                 <img 
                   src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
                   alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
-                  className="w-full h-96 object-contain"
+                  className="w-full h-[500px] object-contain"
                 />
               </div>
             </div>
