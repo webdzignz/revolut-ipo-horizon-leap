@@ -84,7 +84,7 @@ const Index: React.FC = () => {
               </button>
               
               {/* Stats Image */}
-              <div className="mt-8 -mx-6 lg:-mx-24 xl:-mx-48">
+              <div className="mt-8 -mx-6 sm:-mx-12 md:-mx-24 lg:-mx-32 xl:-mx-64 2xl:-mx-96">
                 <img 
                   src="/lovable-uploads/c8d2f23f-9763-450f-879b-d04268f00419.png" 
                   alt="Revolut Stats - 52.5M customers, #1 finance app, $38B balances, $4B revenue" 
