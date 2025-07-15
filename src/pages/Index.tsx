@@ -200,11 +200,11 @@ const Index: React.FC = () => {
                   </span>
                 </h2>
                 
-                <div className="relative">
+                <div className="relative pl-8">
                   {/* Connecting line */}
-                  <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                  <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
                   
-                  <div className="grid grid-cols-1 gap-8">
+                  <div className="space-y-8">
                     {milestones.map((milestone, index) => (
                       <div 
                         key={index} 
@@ -227,7 +227,7 @@ const Index: React.FC = () => {
                         </div>
                         
                         {/* Timeline dot */}
-                        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full border-2 border-white shadow-lg"></div>
+                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full border-2 border-white shadow-lg"></div>
                       </div>
                     ))}
                   </div>
