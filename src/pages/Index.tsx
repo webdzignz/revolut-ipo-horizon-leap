@@ -459,12 +459,12 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Footer */}
-        <footer className="border-t border-white/20 px-6 py-16">
+        <footer className="border-t border-gray-300 px-6 py-16 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Revolut IPO</h3>
-                <ul className="space-y-2 text-white/70 text-sm">
+                <h3 className="text-lg font-semibold mb-4 text-black">Revolut IPO</h3>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li>IPO Overview</li>
                   <li>Investment Information</li>
                   <li>Registration Portal</li>
@@ -474,8 +474,8 @@ const Index: React.FC = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
-                <ul className="space-y-2 text-white/70 text-sm">
+                <h3 className="text-lg font-semibold mb-4 text-black">Contact</h3>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li>Investor Support</li>
                   <li>General Inquiries</li>
                   <li>Media Relations</li>
@@ -485,8 +485,8 @@ const Index: React.FC = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Fast Links</h3>
-                <ul className="space-y-2 text-white/70 text-sm">
+                <h3 className="text-lg font-semibold mb-4 text-black">Fast Links</h3>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li>Terms & Conditions</li>
                   <li>Privacy Policy</li>
                   <li>Risk Disclosure</li>
@@ -496,8 +496,8 @@ const Index: React.FC = () => {
               </div>
             </div>
             
-            <div className="text-center pt-8 border-t border-white/20">
-              <p className="text-white/60 text-sm">
+            <div className="text-center pt-8 border-t border-gray-300">
+              <p className="text-gray-500 text-sm">
                 © 2024 Revolut Investment Opportunity Portal. For qualified investors only.
               </p>
             </div>
