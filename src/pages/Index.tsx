@@ -59,15 +59,15 @@ const Index: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-20 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            {/* Main Content */}
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start min-h-[600px]">
+            {/* Left Content */}
+            <div className="space-y-8 lg:pr-8">
               <div className="space-y-6">
                 <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center justify-center gap-4">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
@@ -93,7 +93,7 @@ const Index: React.FC = () => {
                 </div>
               </div>
               
-              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                 Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
               </p>
 
@@ -102,7 +102,7 @@ const Index: React.FC = () => {
               </button>
 
               {/* Hero Image moved below Join now button */}
-              <div className="relative flex justify-center mt-12">
+              <div className="relative flex justify-start mt-12">
                 <div className="w-full max-w-2xl lg:max-w-3xl">
                   <img 
                     src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
@@ -110,6 +110,123 @@ const Index: React.FC = () => {
                     className="w-full h-[600px] object-contain"
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* Right Content - Investment Form */}
+            <div className="lg:pl-8">
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200">
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-black uppercase tracking-tight mb-2">
+                    REGISTER YOUR INVESTMENT INTEREST
+                  </h2>
+                  <p className="text-gray-600">
+                    Get priority access to IPO updates and investment opportunities
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name Field */}
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+
+                  {/* Numbers Field */}
+                  <div className="space-y-2">
+                    <label htmlFor="numbers" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                      Contact Number/s
+                    </label>
+                    <input
+                      type="text"
+                      id="numbers"
+                      name="numbers"
+                      value={formData.numbers}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      placeholder="Phone number(s)"
+                    />
+                  </div>
+
+                  {/* Investment Amount Field */}
+                  <div className="space-y-2">
+                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                      Potential Investment Amount
+                    </label>
+                    <select
+                      id="investmentAmount"
+                      name="investmentAmount"
+                      value={formData.investmentAmount}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                    >
+                      <option value="">Select amount range</option>
+                      <option value="10000-50000">£10,000 - £50,000</option>
+                      <option value="50000-100000">£50,000 - £100,000</option>
+                      <option value="100000-250000">£100,000 - £250,000</option>
+                      <option value="250000-500000">£250,000 - £500,000</option>
+                      <option value="500000+">£500,000+</option>
+                    </select>
+                  </div>
+
+                  {/* Timeframe Field */}
+                  <div className="space-y-2">
+                    <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                      Investment Timeframe
+                    </label>
+                    <select
+                      id="timeframe"
+                      name="timeframe"
+                      value={formData.timeframe}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                    >
+                      <option value="">Select timeframe</option>
+                      <option value="immediate">Immediate (IPO launch)</option>
+                      <option value="3-months">Within 3 months</option>
+                      <option value="6-months">Within 6 months</option>
+                      <option value="1-year">Long-term (1+ years)</option>
+                    </select>
+                  </div>
+
+                  {/* Notes Field */}
+                  <div className="space-y-2">
+                    <label htmlFor="notes" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all resize-none text-lg"
+                      placeholder="Any specific questions or requirements..."
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors uppercase tracking-wide"
+                  >
+                    Register Interest
+                  </button>
+                </form>
               </div>
             </div>
           </div>
@@ -140,122 +257,6 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* Investment Form Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-black uppercase tracking-tight mb-4">
-              REGISTER YOUR INVESTMENT INTEREST
-            </h2>
-            <p className="text-lg text-gray-600">
-              Get priority access to IPO updates and investment opportunities
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="bg-gray-50 p-8 md:p-12 rounded-2xl shadow-lg border border-gray-200 space-y-6">
-            {/* Name Field */}
-            <div className="space-y-2">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
-                placeholder="Enter your full name"
-              />
-            </div>
-
-            {/* Numbers Field */}
-            <div className="space-y-2">
-              <label htmlFor="numbers" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
-                Contact Number/s
-              </label>
-              <input
-                type="text"
-                id="numbers"
-                name="numbers"
-                value={formData.numbers}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
-                placeholder="Phone number(s)"
-              />
-            </div>
-
-            {/* Investment Amount Field */}
-            <div className="space-y-2">
-              <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
-                Potential Investment Amount
-              </label>
-              <select
-                id="investmentAmount"
-                name="investmentAmount"
-                value={formData.investmentAmount}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
-              >
-                <option value="">Select amount range</option>
-                <option value="10000-50000">£10,000 - £50,000</option>
-                <option value="50000-100000">£50,000 - £100,000</option>
-                <option value="100000-250000">£100,000 - £250,000</option>
-                <option value="250000-500000">£250,000 - £500,000</option>
-                <option value="500000+">£500,000+</option>
-              </select>
-            </div>
-
-            {/* Timeframe Field */}
-            <div className="space-y-2">
-              <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
-                Investment Timeframe
-              </label>
-              <select
-                id="timeframe"
-                name="timeframe"
-                value={formData.timeframe}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
-              >
-                <option value="">Select timeframe</option>
-                <option value="immediate">Immediate (IPO launch)</option>
-                <option value="3-months">Within 3 months</option>
-                <option value="6-months">Within 6 months</option>
-                <option value="1-year">Long-term (1+ years)</option>
-              </select>
-            </div>
-
-            {/* Notes Field */}
-            <div className="space-y-2">
-              <label htmlFor="notes" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
-                Additional Notes
-              </label>
-              <textarea
-                id="notes"
-                name="notes"
-                value={formData.notes}
-                onChange={handleInputChange}
-                rows={4}
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all resize-none text-lg"
-                placeholder="Any specific questions or requirements..."
-              />
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors uppercase tracking-wide"
-            >
-              Register Interest
-            </button>
-          </form>
-        </div>
-      </section>
 
       {/* IPO Highlights Section */}
       <section className="py-20">
