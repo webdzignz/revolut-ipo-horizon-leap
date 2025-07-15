@@ -86,7 +86,7 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter">
       {/* Animated Background with Clouds */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
