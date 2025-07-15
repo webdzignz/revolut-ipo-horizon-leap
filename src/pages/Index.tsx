@@ -458,52 +458,6 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        {/* Terms and Conditions Section */}
-        <section className="px-6 py-8 bg-black/20 border-t border-gray-800/30">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6">
-              <h2 className="text-xl font-bold text-white mb-4">Terms and Conditions / Disclaimer</h2>
-              <div className="text-xs text-gray-400 leading-tight space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">INVESTMENT DISCLAIMER</h3>
-                  <p className="text-xs">NOT AN OFFER TO SELL. For informational purposes only. All investments involve risk and may result in loss.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Financial Advice</h3>
-                  <p className="text-xs">Information provided does not constitute financial advice. Consult a qualified advisor before investing.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Affiliation</h3>
-                  <p className="text-xs">Not affiliated with Revolut Ltd. Independent third-party platform collecting investment interest.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Eligibility & Data</h3>
-                  <p className="text-xs">Must be 18+, qualified investor. We collect data for investment opportunities and compliance.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Limitation of Liability</h3>
-                  <p className="text-xs">TO THE FULLEST EXTENT PERMITTED: We exclude all warranties and limit our liability.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Compliance & Cookies</h3>
-                  <p className="text-xs">Complies with securities laws. Uses essential, analytics, and marketing cookies. You control settings.</p>
-                </div>
-
-                <div className="col-span-1 md:col-span-2 border-t border-gray-700/50 pt-3 mt-3 text-center">
-                  <p className="text-xs"><strong>By using this website, you agree to these Terms and Conditions.</strong></p>
-                  <p className="text-xs mt-1"><strong>Last Updated:</strong> July 15, 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Enhanced Footer */}
         <footer className="border-t border-white/20 px-6 py-16">
           <div className="max-w-7xl mx-auto">
@@ -549,6 +503,52 @@ const Index: React.FC = () => {
             </div>
           </div>
         </footer>
+
+        {/* Terms and Conditions Section */}
+        <section className="px-6 py-8 bg-black/20 border-t border-gray-800/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6">
+              <h2 className="text-xl font-bold text-white mb-4">Terms and Conditions / Disclaimer</h2>
+              <div className="text-xs text-gray-400 leading-tight space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">INVESTMENT DISCLAIMER</h3>
+                  <p className="text-xs">NOT AN OFFER TO SELL. For informational purposes only. All investments involve risk and may result in loss.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Financial Advice</h3>
+                  <p className="text-xs">Information provided does not constitute financial advice. Consult a qualified advisor before investing.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Affiliation</h3>
+                  <p className="text-xs">Not affiliated with Revolut Ltd. Independent third-party platform collecting investment interest.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Eligibility & Data</h3>
+                  <p className="text-xs">Must be 18+, qualified investor. We collect data for investment opportunities and compliance.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Limitation of Liability</h3>
+                  <p className="text-xs">TO THE FULLEST EXTENT PERMITTED: We exclude all warranties and limit our liability.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Compliance & Cookies</h3>
+                  <p className="text-xs">Complies with securities laws. Uses essential, analytics, and marketing cookies. You control settings.</p>
+                </div>
+
+                <div className="col-span-1 md:col-span-2 border-t border-gray-700/50 pt-3 mt-3 text-center">
+                  <p className="text-xs"><strong>By using this website, you agree to these Terms and Conditions.</strong></p>
+                  <p className="text-xs mt-1"><strong>Last Updated:</strong> July 15, 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
     </div>
