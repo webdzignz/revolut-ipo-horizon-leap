@@ -132,7 +132,7 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative pb-24">
+        <section className="px-6 relative pb-24 pt-24">
           <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8 z-10">
@@ -152,12 +152,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[600px] flex items-center justify-center">
-              <div className="relative w-full max-w-2xl h-full">
+            <div className="relative h-[800px] flex items-center justify-center">
+              <div className="relative w-full max-w-3xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-125"
+                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-150"
                 />
                 
                 {/* Floating UI Elements */}
