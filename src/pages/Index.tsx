@@ -215,16 +215,11 @@ const Index: React.FC = () => {
                 </div>
               )}
 
-              <div className="bg-black border-2 border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-                {/* Premium gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 pointer-events-none"></div>
-                
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 blur-xl opacity-50 pointer-events-none"></div>
+              <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-medium text-white">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                         First Name *
                       </label>
                       <input
@@ -234,13 +229,13 @@ const Index: React.FC = () => {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black placeholder-gray-500 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                         placeholder="Enter your first name"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-medium text-white">
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
                         Last Name *
                       </label>
                       <input
@@ -250,7 +245,7 @@ const Index: React.FC = () => {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black placeholder-gray-500 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                         placeholder="Enter your last name"
                       />
                     </div>
@@ -258,7 +253,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-white">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                         Email Address *
                       </label>
                       <input
@@ -268,13 +263,13 @@ const Index: React.FC = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black placeholder-gray-500 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                         placeholder="your@email.com"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-sm font-medium text-white">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                         Phone Number *
                       </label>
                       <input
@@ -284,14 +279,14 @@ const Index: React.FC = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black placeholder-gray-500 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="address" className="block text-sm font-medium text-white">
+                    <label htmlFor="address" className="block text-sm font-medium text-gray-700">
                       Full Address *
                     </label>
                     <textarea
@@ -301,14 +296,14 @@ const Index: React.FC = () => {
                       onChange={handleInputChange}
                       required
                       rows={3}
-                      className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black placeholder-gray-500 rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 resize-none shadow-lg backdrop-blur-sm"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
                       placeholder="Enter your full residential address"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-white">
+                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
                         Investment Amount *
                       </label>
                       <select
@@ -317,7 +312,7 @@ const Index: React.FC = () => {
                         value={formData.investmentAmount}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       >
                         <option value="" className="bg-white text-black">Select investment amount</option>
                         <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
@@ -329,7 +324,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="timeframe" className="block text-sm font-medium text-white">
+                      <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
                         Investment Timeframe *
                       </label>
                       <select
@@ -338,7 +333,7 @@ const Index: React.FC = () => {
                         value={formData.timeframe}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-4 bg-white border-2 border-white/20 text-black rounded-xl focus:border-blue-400 focus:ring-2 focus:ring-blue-200/50 focus:outline-none transition-all duration-300 shadow-lg backdrop-blur-sm"
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       >
                         <option value="" className="bg-white text-black">Select timeframe</option>
                         <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
@@ -351,9 +346,8 @@ const Index: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="group relative w-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white py-5 px-8 rounded-xl font-semibold text-lg hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden border-2 border-white/20"
+                    className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Secure IPO Position Now
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
