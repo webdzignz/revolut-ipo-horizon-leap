@@ -392,29 +392,24 @@ const Index: React.FC = () => {
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
                     <h4 className="text-lg font-bold text-black mb-4">Step 1: Submit Your Details</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Fill in the form on this page.</li>
-                      <li>• Make sure all your information is correct.</li>
-                      <li>• If you have an alternative phone number or email, include it in the Notes section.</li>
-                      <li>• Double-check everything before submitting.</li>
+                      <li>• Fill in the form completely</li>
+                      <li>• Double-check your information</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
                     <h4 className="text-lg font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Once we receive your details, we'll review your profile.</li>
-                      <li>• A regulated and recognised distributor of the Revolut IPO will be assigned to contact you.</li>
-                      <li>• If you have a preferred time for calls, mention it in the Notes section.</li>
+                      <li>• We review your profile</li>
+                      <li>• Regulated distributor assigned</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
                     <h4 className="text-lg font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• You'll receive a call within 48 hours from a licensed broker.</li>
-                      <li>• They'll explain the IPO in detail.</li>
-                      <li>• They'll also ask questions to understand your investor profile.</li>
-                      <li>• Be honest — this helps them build a tailored portfolio based on your goals and preferences.</li>
+                      <li>• Licensed broker will contact you</li>
+                      <li>• IPO details and investor profile discussion</li>
                     </ul>
                   </div>
                 </div>
