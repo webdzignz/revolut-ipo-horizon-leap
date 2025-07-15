@@ -137,11 +137,11 @@ const Index: React.FC = () => {
             <div className="grid grid-cols-2 gap-16 items-center">
               {/* Left Content */}
               <div className="space-y-6 z-10">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                  <div className="text-white">REVOLUT LOOKS</div>
-                  <div className="text-white">TO RAISE AT</div>
-                  <div className="text-white">$65 BILLION</div>
-                  <div className="text-white">VALUATION</div>
+                <h1 className="font-bold leading-tight">
+                  <div className="text-white text-4xl md:text-5xl">REVOLUT LOOKS</div>
+                  <div className="text-white text-5xl md:text-6xl">TO RAISE AT</div>
+                  <div className="text-white text-4xl md:text-5xl">$65 BILLION</div>
+                  <div className="text-white text-5xl md:text-6xl">VALUATION</div>
                 </h1>
                 
                 <p className="text-lg text-white/90 leading-relaxed max-w-lg">
