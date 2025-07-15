@@ -179,6 +179,9 @@ const Index: React.FC = () => {
             </div>
           </div>
           
+          {/* White Overlay to Cover Blue Separator */}
+          <div className="absolute bottom-0 left-0 w-full h-16 bg-white"></div>
+          
           {/* White Separator */}
           <div className="w-full h-8 bg-white"></div>
         </section>
