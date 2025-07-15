@@ -114,98 +114,100 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Investment Form */}
-            <div className="lg:pl-8">
-              <div className="bg-black p-8 rounded-2xl shadow-lg border border-gray-800">
-                <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-white uppercase tracking-tight mb-2">
+            <div className="lg:pl-8 w-full">
+              <div className="bg-black p-6 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
+                <div className="mb-6">
+                  <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
                     REGISTER YOUR INVESTMENT INTEREST
                   </h2>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 text-sm">
                     Get priority access to IPO updates and investment opportunities
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name Field */}
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-white uppercase tracking-wide">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
-                      placeholder="Enter your full name"
-                    />
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Name and Numbers on same row */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Contact Number/s
+                      </label>
+                      <input
+                        type="text"
+                        id="numbers"
+                        name="numbers"
+                        value={formData.numbers}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                        placeholder="Phone number(s)"
+                      />
+                    </div>
                   </div>
 
-                  {/* Numbers Field */}
-                  <div className="space-y-2">
-                    <label htmlFor="numbers" className="block text-sm font-medium text-white uppercase tracking-wide">
-                      Contact Number/s
-                    </label>
-                    <input
-                      type="text"
-                      id="numbers"
-                      name="numbers"
-                      value={formData.numbers}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
-                      placeholder="Phone number(s)"
-                    />
-                  </div>
+                  {/* Investment Amount and Timeframe on same row */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Investment Amount
+                      </label>
+                      <select
+                        id="investmentAmount"
+                        name="investmentAmount"
+                        value={formData.investmentAmount}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      >
+                        <option value="">Select amount</option>
+                        <option value="10000-50000">£10K - £50K</option>
+                        <option value="50000-100000">£50K - £100K</option>
+                        <option value="100000-250000">£100K - £250K</option>
+                        <option value="250000-500000">£250K - £500K</option>
+                        <option value="500000+">£500K+</option>
+                      </select>
+                    </div>
 
-                  {/* Investment Amount Field */}
-                  <div className="space-y-2">
-                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-white uppercase tracking-wide">
-                      Potential Investment Amount
-                    </label>
-                    <select
-                      id="investmentAmount"
-                      name="investmentAmount"
-                      value={formData.investmentAmount}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
-                    >
-                      <option value="">Select amount range</option>
-                      <option value="10000-50000">£10,000 - £50,000</option>
-                      <option value="50000-100000">£50,000 - £100,000</option>
-                      <option value="100000-250000">£100,000 - £250,000</option>
-                      <option value="250000-500000">£250,000 - £500,000</option>
-                      <option value="500000+">£500,000+</option>
-                    </select>
-                  </div>
-
-                  {/* Timeframe Field */}
-                  <div className="space-y-2">
-                    <label htmlFor="timeframe" className="block text-sm font-medium text-white uppercase tracking-wide">
-                      Investment Timeframe
-                    </label>
-                    <select
-                      id="timeframe"
-                      name="timeframe"
-                      value={formData.timeframe}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
-                    >
-                      <option value="">Select timeframe</option>
-                      <option value="immediate">Immediate (IPO launch)</option>
-                      <option value="3-months">Within 3 months</option>
-                      <option value="6-months">Within 6 months</option>
-                      <option value="1-year">Long-term (1+ years)</option>
-                    </select>
+                    <div className="space-y-1">
+                      <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Timeframe
+                      </label>
+                      <select
+                        id="timeframe"
+                        name="timeframe"
+                        value={formData.timeframe}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      >
+                        <option value="">Select timeframe</option>
+                        <option value="immediate">Immediate</option>
+                        <option value="3-months">3 months</option>
+                        <option value="6-months">6 months</option>
+                        <option value="1-year">1+ years</option>
+                      </select>
+                    </div>
                   </div>
 
                   {/* Notes Field */}
-                  <div className="space-y-2">
-                    <label htmlFor="notes" className="block text-sm font-medium text-white uppercase tracking-wide">
+                  <div className="space-y-1">
+                    <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
                       Additional Notes
                     </label>
                     <textarea
@@ -213,8 +215,8 @@ const Index: React.FC = () => {
                       name="notes"
                       value={formData.notes}
                       onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all resize-none text-lg"
+                      rows={3}
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
                       placeholder="Any specific questions or requirements..."
                     />
                   </div>
@@ -222,7 +224,7 @@ const Index: React.FC = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-white text-black py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-200 transition-colors uppercase tracking-wide"
+                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-6"
                   >
                     Register Interest
                   </button>
