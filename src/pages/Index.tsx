@@ -59,62 +59,63 @@ const Index: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-20 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start min-h-[600px]">
-            {/* Left Content */}
-            <div className="space-y-8 lg:pr-8">
-              <div className="space-y-6">
-                <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
-                  IPO ANNOUNCEMENT
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
-                  <img 
-                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                    alt="Revolut" 
-                    className="h-12 md:h-16 lg:h-20 w-auto"
-                  />
-                  <span>IPO</span>
-                </h1>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Is Coming
-                </h2>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Invest In
-                </h3>
-                <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Tomorrow
-                </h4>
-                <h5 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Today
-                </h5>
-                
-                <div className="text-xl text-black font-medium">
-                  Expected 2025
-                </div>
+          {/* Top Content */}
+          <div className="space-y-8 lg:pr-8 mb-12">
+            <div className="space-y-6">
+              <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
+                IPO ANNOUNCEMENT
               </div>
               
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
-              </p>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
+                <img 
+                  src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                  alt="Revolut" 
+                  className="h-12 md:h-16 lg:h-20 w-auto"
+                />
+                <span>IPO</span>
+              </h1>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                Is Coming
+              </h2>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                Invest In
+              </h3>
+              <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                Tomorrow
+              </h4>
+              <h5 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                Today
+              </h5>
+              
+              <div className="text-xl text-black font-medium">
+                Expected 2025
+              </div>
+            </div>
+            
+            <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+              Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
+            </p>
 
-              <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
-                Join now
-              </button>
+            <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
+              Join now
+            </button>
+          </div>
 
-              {/* Hero Image moved below Join now button */}
-              <div className="relative flex justify-start mt-12">
-                <div className="w-full max-w-2xl lg:max-w-3xl">
-                  <img 
-                    src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
-                    alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
-                    className="w-full h-[600px] object-contain"
-                  />
-                </div>
+          {/* Bottom Content - Image and Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Content - Hero Image */}
+            <div className="relative flex justify-start">
+              <div className="w-full max-w-2xl">
+                <img 
+                  src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
+                  alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
+                  className="w-full h-[500px] object-contain"
+                />
               </div>
             </div>
 
             {/* Right Content - Investment Form */}
-            <div className="lg:pl-8 w-full">
+            <div className="w-full">
               <div className="bg-black p-6 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
                 <div className="mb-6">
                   <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
