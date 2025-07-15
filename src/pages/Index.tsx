@@ -224,7 +224,7 @@ const Index: React.FC = () => {
                         </div>
                         
                         {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg"></div>
+                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
                       </div>
                     ))}
                   </div>
@@ -236,7 +236,7 @@ const Index: React.FC = () => {
                 
                 <div className="relative pr-8">
                   {/* Connecting line */}
-                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-black to-gray-600 rounded-full"></div>
+                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
                   
                   <div className="space-y-8">
                     {features.map((feature, index) => {
@@ -267,7 +267,7 @@ const Index: React.FC = () => {
                           </div>
                           
                           {/* Timeline dot */}
-                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-black rounded-full border-2 border-white shadow-lg"></div>
+                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
                         </div>
                       );
                     })}
