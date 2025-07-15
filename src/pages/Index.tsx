@@ -157,7 +157,7 @@ const Index: React.FC = () => {
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute -top-16 right-0 h-[500px] w-auto object-cover object-top"
+                  className="absolute -top-16 right-0 h-[700px] w-auto object-cover object-top"
                 />
                 
                 {/* Floating UI Elements */}
