@@ -519,21 +519,38 @@ const Index: React.FC = () => {
         {/* Enhanced Footer */}
         <footer className="border-t border-white/20 px-6 py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Regulatory Information</h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  This offering is subject to regulatory approval and market conditions. 
-                  Available only to qualified investors in eligible jurisdictions.
-                </p>
+                <h3 className="text-lg font-semibold mb-4 text-white">Revolut IPO</h3>
+                <ul className="space-y-2 text-white/70 text-sm">
+                  <li>IPO Overview</li>
+                  <li>Investment Information</li>
+                  <li>Registration Portal</li>
+                  <li>Investor Relations</li>
+                  <li>Financial Reports</li>
+                </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Data Protection</h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Your data is processed in accordance with GDPR regulations and our privacy policy. 
-                  Consent to contact regarding investment opportunities.
-                </p>
+                <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
+                <ul className="space-y-2 text-white/70 text-sm">
+                  <li>Investor Support</li>
+                  <li>General Inquiries</li>
+                  <li>Media Relations</li>
+                  <li>Partnership Opportunities</li>
+                  <li>Legal & Compliance</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-white">Fast Links</h3>
+                <ul className="space-y-2 text-white/70 text-sm">
+                  <li>Terms & Conditions</li>
+                  <li>Privacy Policy</li>
+                  <li>Risk Disclosure</li>
+                  <li>Cookie Policy</li>
+                  <li>GDPR Compliance</li>
+                </ul>
               </div>
             </div>
             
