@@ -70,8 +70,7 @@ const Index: React.FC = () => {
               Revolut's IPO Is Coming
             </h1>
             
-            <div className="flex items-center justify-center gap-2 text-2xl font-bold text-green-600 mb-6">
-              <span className="text-4xl">🚀</span>
+            <div className="flex items-center justify-center gap-2 text-2xl font-bold text-black mb-6">
               <span>Expected 2025</span>
             </div>
             
