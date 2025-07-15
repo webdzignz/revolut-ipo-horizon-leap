@@ -86,10 +86,10 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-foreground font-inter">
       {/* Animated Background with Clouds */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400"></div>
         
         {/* Cloud Elements */}
         <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
