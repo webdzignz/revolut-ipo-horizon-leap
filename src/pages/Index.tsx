@@ -85,12 +85,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="relative flex items-center justify-center">
-              <div className="w-full max-w-md">
+            <div className="relative flex items-start justify-center -mt-8">
+              <div className="w-full max-w-lg">
                 <img 
                   src="/lovable-uploads/25b5cda2-5546-448c-bd17-93266c2d4853.png" 
                   alt="Revolut 3D Card Design" 
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain scale-125"
                 />
               </div>
             </div>
