@@ -63,14 +63,6 @@ const Index: React.FC = () => {
             {/* Left Content */}
             <div className="space-y-8 lg:pr-8">
               <div className="space-y-6">
-                <div className="flex items-center justify-center lg:justify-start mb-4">
-                  <img 
-                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                    alt="Revolut Logo" 
-                    className="h-16 w-auto"
-                  />
-                </div>
-                
                 <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
