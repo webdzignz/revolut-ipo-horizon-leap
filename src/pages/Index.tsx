@@ -132,44 +132,48 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative pb-24 pt-16">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <div className="space-y-8 z-10">
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-                <div className="text-white">REVOLUT LOOKS TO</div>
-                <div className="text-white">RAISE AT $65 BILLION</div>
-                <div className="text-white">VALUATION</div>
-              </h1>
-              
-              <p className="text-xl text-white/90 leading-relaxed max-w-lg">
-                Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
-              </p>
-              
-              <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
-                Register Interest
-              </button>
-            </div>
+        <section className="relative pb-24 pt-16 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-2 gap-16 items-center">
+              {/* Left Content */}
+              <div className="space-y-8 z-10">
+                <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+                  <div className="text-white">REVOLUT LOOKS</div>
+                  <div className="text-white">TO</div>
+                  <div className="text-white">RAISE AT $65</div>
+                  <div className="text-white">BILLION</div>
+                  <div className="text-white">VALUATION</div>
+                </h1>
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-lg">
+                  Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
+                </p>
+                
+                <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
+                  Register Interest
+                </button>
+              </div>
 
-            {/* Right Content - Woman Image */}
-            <div className="relative h-[600px] flex items-center justify-center">
-              <div className="relative w-full max-w-2xl h-full">
-                <img 
-                  src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
-                  alt="Woman in beige jacket" 
-                  className="absolute -top-[304px] right-0 h-[1000px] w-auto object-cover object-top"
-                />
-                
-                {/* Floating UI Elements */}
-                <div className="absolute top-1/2 left-4 bg-white rounded-3xl p-6 shadow-2xl">
-                  <div className="text-4xl font-bold text-black">$65 Billion</div>
-                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
-                </div>
-                
-                <div className="absolute bottom-1/4 left-16 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
-                  <div className="text-center">
-                    <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
-                    <div className="text-sm text-gray-500">Get exclusive updates</div>
+              {/* Right Content - Woman Image */}
+              <div className="relative h-[600px] -mr-6">
+                <div className="absolute inset-0 w-full h-full overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
+                    alt="Woman in beige jacket" 
+                    className="absolute -top-[304px] right-0 h-[1000px] w-auto object-cover object-top"
+                  />
+                  
+                  {/* Floating UI Elements */}
+                  <div className="absolute top-[40%] right-[60%] bg-white rounded-3xl p-6 shadow-2xl">
+                    <div className="text-4xl font-bold text-black">$65 Billion</div>
+                    <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
+                  </div>
+                  
+                  <div className="absolute bottom-[20%] right-[20%] bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                    <div className="text-center">
+                      <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
+                      <div className="text-sm text-gray-500">Get exclusive updates</div>
+                    </div>
                   </div>
                 </div>
               </div>
