@@ -204,155 +204,195 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-2xl ml-0 w-1/2">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Left side - Form */}
+            <div className="w-full">
+              {showSuccess && (
+                <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
+                  <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
+                  <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
+                  <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
+                </div>
+              )}
 
-            {showSuccess && (
-              <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
-                <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
-                <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
-                <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
+              <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                      Full Address *
+                    </label>
+                    <textarea
+                      id="address"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      required
+                      rows={3}
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
+                      placeholder="Enter your full residential address"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
+                        Investment Amount *
+                      </label>
+                      <select
+                        id="investmentAmount"
+                        name="investmentAmount"
+                        value={formData.investmentAmount}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      >
+                        <option value="" className="bg-white text-black">Select investment amount</option>
+                        <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
+                        <option value="100000-250000" className="bg-white text-black">£100,000 - £250,000</option>
+                        <option value="250000-500000" className="bg-white text-black">£250,000 - £500,000</option>
+                        <option value="500000-1000000" className="bg-white text-black">£500,000 - £1,000,000</option>
+                        <option value="1000000+" className="bg-white text-black">£1,000,000+</option>
+                      </select>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
+                        Investment Timeframe *
+                      </label>
+                      <select
+                        id="timeframe"
+                        name="timeframe"
+                        value={formData.timeframe}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      >
+                        <option value="" className="bg-white text-black">Select timeframe</option>
+                        <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
+                        <option value="short-term" className="bg-white text-black">Short-term (1-3 months)</option>
+                        <option value="medium-term" className="bg-white text-black">Medium-term (3-6 months)</option>
+                        <option value="long-term" className="bg-white text-black">Long-term (6+ months)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      Secure IPO Position Now
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </button>
+                </form>
               </div>
-            )}
+            </div>
 
-            <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      placeholder="Enter your first name"
-                    />
+            {/* Right side - Information */}
+            <div className="w-full space-y-12">
+              <div>
+                <h3 className="text-4xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
+                
+                <div className="space-y-8">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 1: Submit Your Details</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Fill in the form on this page.</li>
+                      <li>• Make sure all your information is correct.</li>
+                      <li>• If you have an alternative phone number or email, include it in the Notes section.</li>
+                      <li>• Double-check everything before submitting.</li>
+                    </ul>
                   </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      placeholder="Enter your last name"
-                    />
+
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Once we receive your details, we'll review your profile.</li>
+                      <li>• A regulated and recognised distributor of the Revolut IPO will be assigned to contact you.</li>
+                      <li>• If you have a preferred time for calls, mention it in the Notes section.</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• You'll receive a call within 48 hours from a licensed broker.</li>
+                      <li>• They'll explain the IPO in detail.</li>
+                      <li>• They'll also ask questions to understand your investor profile.</li>
+                      <li>• Be honest — this helps them build a tailored portfolio based on your goals and preferences.</li>
+                    </ul>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="address" className="block text-sm font-medium text-gray-700">
-                    Full Address *
-                  </label>
-                  <textarea
-                    id="address"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleInputChange}
-                    required
-                    rows={3}
-                    className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
-                    placeholder="Enter your full residential address"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
-                      Investment Amount *
-                    </label>
-                    <select
-                      id="investmentAmount"
-                      name="investmentAmount"
-                      value={formData.investmentAmount}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                    >
-                      <option value="" className="bg-white text-black">Select investment amount</option>
-                      <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
-                      <option value="100000-250000" className="bg-white text-black">£100,000 - £250,000</option>
-                      <option value="250000-500000" className="bg-white text-black">£250,000 - £500,000</option>
-                      <option value="500000-1000000" className="bg-white text-black">£500,000 - £1,000,000</option>
-                      <option value="1000000+" className="bg-white text-black">£1,000,000+</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
-                      Investment Timeframe *
-                    </label>
-                    <select
-                      id="timeframe"
-                      name="timeframe"
-                      value={formData.timeframe}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
-                    >
-                      <option value="" className="bg-white text-black">Select timeframe</option>
-                      <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
-                      <option value="short-term" className="bg-white text-black">Short-term (1-3 months)</option>
-                      <option value="medium-term" className="bg-white text-black">Medium-term (3-6 months)</option>
-                      <option value="long-term" className="bg-white text-black">Long-term (6+ months)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    Secure IPO Position Now
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </button>
-              </form>
+              </div>
             </div>
           </div>
         </section>
