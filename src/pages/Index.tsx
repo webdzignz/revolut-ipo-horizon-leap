@@ -178,16 +178,10 @@ const Index: React.FC = () => {
               </div>
             </div>
           </div>
-          
-          {/* White Overlay to Cover Blue Separator */}
-          <div className="absolute bottom-0 left-0 w-full h-16 bg-white"></div>
-          
-          {/* White Separator */}
-          <div className="w-full h-8 bg-white"></div>
         </section>
 
         {/* Enhanced Investment Form */}
-        <section className="px-6 py-20 bg-white">
+        <section className="px-6 pt-4 pb-20 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">
