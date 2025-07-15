@@ -58,7 +58,7 @@ const Index: React.FC = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -84,29 +84,6 @@ const Index: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Content - 3D Visual */}
-            <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                {/* 3D Card Stack Effect */}
-                <div className="absolute top-0 right-0 w-32 h-48 bg-blue-500 rounded-2xl transform rotate-12 shadow-xl"></div>
-                <div className="absolute top-8 right-8 w-32 h-48 bg-black rounded-2xl transform rotate-6 shadow-xl"></div>
-                <div className="relative w-32 h-48 bg-gray-800 rounded-2xl shadow-2xl mx-auto">
-                  <div className="absolute inset-4 flex items-center justify-center">
-                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                      <span className="text-black font-bold text-sm">R</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute -top-4 left-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">💳</span>
-                </div>
-                <div className="absolute bottom-4 -left-8 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">📈</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -267,7 +244,7 @@ const Index: React.FC = () => {
           {/* Step 1 */}
           <div className="mb-20">
             <div className="bg-green-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="max-w-2xl">
                 <div className="flex-1">
                   <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
                     Step 1
@@ -279,15 +256,6 @@ const Index: React.FC = () => {
                     positioning itself for a successful public debut.
                   </p>
                 </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📅</div>
-                      <div className="text-2xl font-bold text-black">2025</div>
-                      <div className="text-gray-600">IPO Launch</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -295,7 +263,7 @@ const Index: React.FC = () => {
           {/* Step 2 */}
           <div className="mb-20">
             <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+              <div className="max-w-2xl">
                 <div className="flex-1">
                   <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
                     Step 2
@@ -307,15 +275,6 @@ const Index: React.FC = () => {
                     strong financial performance and global expansion.
                   </p>
                 </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📈</div>
-                      <div className="text-2xl font-bold text-black">$45B</div>
-                      <div className="text-gray-600">Valuation</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -323,7 +282,7 @@ const Index: React.FC = () => {
           {/* Step 3 */}
           <div className="mb-20">
             <div className="bg-purple-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="max-w-2xl">
                 <div className="flex-1">
                   <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
                     Step 3
@@ -334,15 +293,6 @@ const Index: React.FC = () => {
                     exposure to the rapidly growing fintech sector. Multiple revenue streams 
                     and global expansion plans make it an attractive investment opportunity.
                   </p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">💼</div>
-                      <div className="text-2xl font-bold text-black">Invest</div>
-                      <div className="text-gray-600">Opportunity</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
