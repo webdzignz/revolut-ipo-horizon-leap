@@ -132,7 +132,7 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="relative pb-16 pt-12 overflow-hidden">
+        <section className="relative pb-40 pt-36 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 gap-16 items-center">
               {/* Left Content */}
