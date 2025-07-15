@@ -37,10 +37,11 @@ const Index: React.FC = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
-              <h1 className="text-2xl font-bold text-black">Revolut</h1>
+              <img 
+                src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                alt="Revolut Logo" 
+                className="h-8 w-auto"
+              />
             </div>
             <nav className="hidden md:flex items-center gap-8 text-gray-600">
               <span className="hover:text-black cursor-pointer">Introduction</span>
@@ -62,6 +63,14 @@ const Index: React.FC = () => {
             {/* Left Content */}
             <div className="space-y-8 lg:pr-8">
               <div className="space-y-6">
+                <div className="flex items-center justify-center lg:justify-start mb-4">
+                  <img 
+                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                    alt="Revolut Logo" 
+                    className="h-16 w-auto"
+                  />
+                </div>
+                
                 <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
