@@ -115,12 +115,12 @@ const Index: React.FC = () => {
 
             {/* Right Content - Investment Form */}
             <div className="lg:pl-8">
-              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200">
+              <div className="bg-black p-8 rounded-2xl shadow-lg border border-gray-800">
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-black uppercase tracking-tight mb-2">
+                  <h2 className="text-2xl font-bold text-white uppercase tracking-tight mb-2">
                     REGISTER YOUR INVESTMENT INTEREST
                   </h2>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300">
                     Get priority access to IPO updates and investment opportunities
                   </p>
                 </div>
@@ -128,7 +128,7 @@ const Index: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Field */}
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                    <label htmlFor="name" className="block text-sm font-medium text-white uppercase tracking-wide">
                       Full Name
                     </label>
                     <input
@@ -138,14 +138,14 @@ const Index: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
                       placeholder="Enter your full name"
                     />
                   </div>
 
                   {/* Numbers Field */}
                   <div className="space-y-2">
-                    <label htmlFor="numbers" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                    <label htmlFor="numbers" className="block text-sm font-medium text-white uppercase tracking-wide">
                       Contact Number/s
                     </label>
                     <input
@@ -155,14 +155,14 @@ const Index: React.FC = () => {
                       value={formData.numbers}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
                       placeholder="Phone number(s)"
                     />
                   </div>
 
                   {/* Investment Amount Field */}
                   <div className="space-y-2">
-                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-white uppercase tracking-wide">
                       Potential Investment Amount
                     </label>
                     <select
@@ -171,7 +171,7 @@ const Index: React.FC = () => {
                       value={formData.investmentAmount}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
                     >
                       <option value="">Select amount range</option>
                       <option value="10000-50000">£10,000 - £50,000</option>
@@ -184,7 +184,7 @@ const Index: React.FC = () => {
 
                   {/* Timeframe Field */}
                   <div className="space-y-2">
-                    <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                    <label htmlFor="timeframe" className="block text-sm font-medium text-white uppercase tracking-wide">
                       Investment Timeframe
                     </label>
                     <select
@@ -193,7 +193,7 @@ const Index: React.FC = () => {
                       value={formData.timeframe}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all text-lg"
                     >
                       <option value="">Select timeframe</option>
                       <option value="immediate">Immediate (IPO launch)</option>
@@ -205,7 +205,7 @@ const Index: React.FC = () => {
 
                   {/* Notes Field */}
                   <div className="space-y-2">
-                    <label htmlFor="notes" className="block text-sm font-medium text-gray-700 uppercase tracking-wide">
+                    <label htmlFor="notes" className="block text-sm font-medium text-white uppercase tracking-wide">
                       Additional Notes
                     </label>
                     <textarea
@@ -214,7 +214,7 @@ const Index: React.FC = () => {
                       value={formData.notes}
                       onChange={handleInputChange}
                       rows={4}
-                      className="w-full px-4 py-4 border-2 border-gray-200 rounded-lg focus:border-black focus:ring-2 focus:ring-gray-200 focus:outline-none transition-all resize-none text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition-all resize-none text-lg"
                       placeholder="Any specific questions or requirements..."
                     />
                   </div>
@@ -222,7 +222,7 @@ const Index: React.FC = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-black text-white py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors uppercase tracking-wide"
+                    className="w-full bg-white text-black py-4 px-6 rounded-lg font-medium text-lg hover:bg-gray-200 transition-colors uppercase tracking-wide"
                   >
                     Register Interest
                   </button>
