@@ -43,10 +43,9 @@ const Index: React.FC = () => {
               <h1 className="text-2xl font-bold text-black">Revolut</h1>
             </div>
             <nav className="hidden md:flex items-center gap-8 text-gray-600">
-              <span className="hover:text-black cursor-pointer">Personal</span>
-              <span className="hover:text-black cursor-pointer">Business</span>
-              <span className="hover:text-black cursor-pointer">Revolut &lt;18</span>
-              <span className="hover:text-black cursor-pointer">Company</span>
+              <span className="hover:text-black cursor-pointer">Introduction</span>
+              <span className="hover:text-black cursor-pointer">Request Info</span>
+              <span className="hover:text-black cursor-pointer">Contact Us</span>
             </nav>
           </div>
           <div className="flex items-center gap-4">
