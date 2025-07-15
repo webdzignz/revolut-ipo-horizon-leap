@@ -88,72 +88,87 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-400 to-blue-600 text-foreground font-inter overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
+      {/* Animated Background with Clouds */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
+        
+        {/* Cloud Elements */}
+        <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
+        <div className="absolute top-32 right-32 w-48 h-24 bg-white/30 rounded-full blur-lg animate-float delay-1000 opacity-80"></div>
+        <div className="absolute top-24 left-1/2 w-72 h-36 bg-white/35 rounded-full blur-xl animate-float delay-500 opacity-60"></div>
+        <div className="absolute top-64 left-10 w-56 h-28 bg-white/25 rounded-full blur-lg animate-float delay-2000 opacity-70"></div>
+        <div className="absolute top-80 right-20 w-80 h-40 bg-white/40 rounded-full blur-xl animate-float delay-1500 opacity-50"></div>
+        <div className="absolute top-40 right-1/3 w-60 h-30 bg-white/30 rounded-full blur-lg animate-float delay-3000 opacity-65"></div>
+        <div className="absolute top-96 left-1/3 w-68 h-34 bg-white/35 rounded-full blur-xl animate-float delay-2500 opacity-55"></div>
+        
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
+      </div>
+
       <div className="relative z-10">
         {/* Header */}
-        <header className="px-6 py-4">
+        <header className="backdrop-blur-xl bg-background/80 px-6 py-4 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-8">
-              <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-blue-600 font-bold text-sm">R</span>
+                  <span className="text-background font-bold text-sm">R</span>
                 </div>
-                <h1 className="text-xl font-medium text-white">Revolut</h1>
+                <h1 className="text-2xl font-bold text-white">Revolut</h1>
               </div>
-              <nav className="hidden md:flex items-center gap-8 text-white text-sm">
-                <span className="hover:text-white/80 cursor-pointer">Personal</span>
-                <span className="hover:text-white/80 cursor-pointer">Business</span>
-                <span className="hover:text-white/80 cursor-pointer">Revolut &lt;18</span>
-                <span className="hover:text-white/80 cursor-pointer">Company</span>
+              <nav className="hidden md:flex items-center gap-8 text-white/80">
+                <span>Personal</span>
+                <span>Business</span>
+                <span>Revolut &lt;18</span>
+                <span>Company</span>
               </nav>
             </div>
             <div className="flex items-center gap-4">
-              <button className="text-white text-sm hover:text-white/80 transition-colors">Log in</button>
-              <button className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-colors">Sign up</button>
+              <button className="text-white/80 hover:text-white transition-colors">Log in</button>
+              <button className="bg-white text-background px-6 py-2 rounded-full font-medium hover:bg-white/90 transition-colors">Sign up</button>
             </div>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto px-6 flex items-center">
+        <section className="px-6 relative pb-24 pt-16">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="flex-1 space-y-6">
-              <h1 className="text-white font-light leading-[0.9]">
-                <div className="text-8xl">REVOLUT LOOKS</div>
-                <div className="text-8xl">TO</div>
-                <div className="text-8xl">RAISE AT $65</div>
-                <div className="text-8xl">BILLION</div>
-                <div className="text-8xl">VALUATION</div>
+            <div className="space-y-8 z-10">
+              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+                <div className="text-white">REVOLUT LOOKS TO</div>
+                <div className="text-white">RAISE AT $65 BILLION</div>
+                <div className="text-white">VALUATION</div>
               </h1>
               
-              <p className="text-white/90 text-lg leading-relaxed max-w-lg pt-6">
+              <p className="text-xl text-white/90 leading-relaxed max-w-lg">
                 Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
               </p>
               
-              <button className="bg-white/20 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-white/30 transition-colors mt-8 backdrop-blur-sm">
+              <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
                 Register Interest
               </button>
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="flex-1 relative h-[85vh] flex justify-center items-center">
-              <div className="relative w-full h-full max-w-lg">
+            <div className="relative h-[600px] flex items-center justify-center">
+              <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="w-full h-full object-cover object-center"
+                  className="absolute top-0 right-0 h-[900px] w-auto object-cover object-top"
                 />
                 
                 {/* Floating UI Elements */}
-                <div className="absolute top-[15%] -left-[15%] bg-white rounded-xl p-4 shadow-lg">
-                  <div className="text-2xl font-bold text-black">$65 Billion</div>
-                  <div className="text-sm text-gray-600">Valuation Target</div>
+                <div className="absolute top-1/4 right-16 bg-white rounded-3xl p-6 shadow-2xl">
+                  <div className="text-4xl font-bold text-black">$65 Billion</div>
+                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
                 </div>
                 
-                <div className="absolute bottom-[20%] -right-[10%] bg-white rounded-xl p-4 shadow-lg min-w-[160px]">
+                <div className="absolute bottom-1/3 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
                   <div className="text-center">
-                    <div className="text-base font-semibold text-black">Sign Up for Info</div>
+                    <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
                     <div className="text-sm text-gray-500">Get exclusive updates</div>
                   </div>
                 </div>
@@ -163,7 +178,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Investment Form */}
-        <section className="px-6 pt-4 pb-20 bg-white">
+        <section className="px-6 py-20 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">
@@ -191,9 +206,9 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto grid grid-cols-3 gap-12 items-start">
-            {/* Left side - Form (spans 2 columns) */}
-            <div className="col-span-2 w-full">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-start">
+            {/* Left side - Form */}
+            <div className="w-full">
               {showSuccess && (
                 <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
                   <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
@@ -362,30 +377,35 @@ const Index: React.FC = () => {
             {/* Right side - Information */}
             <div className="w-full space-y-12">
               <div>
-                <h3 className="text-2xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
+                <h3 className="text-4xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
                 
                 <div className="space-y-8">
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 1: Submit Your Details</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Fill in the form completely</li>
-                      <li>• Double-check your information</li>
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 1: Submit Your Details</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Fill in the form on this page.</li>
+                      <li>• Make sure all your information is correct.</li>
+                      <li>• If you have an alternative phone number or email, include it in the Notes section.</li>
+                      <li>• Double-check everything before submitting.</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• We review your profile</li>
-                      <li>• Regulated distributor assigned</li>
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Once we receive your details, we'll review your profile.</li>
+                      <li>• A regulated and recognised distributor of the Revolut IPO will be assigned to contact you.</li>
+                      <li>• If you have a preferred time for calls, mention it in the Notes section.</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
-                    <h4 className="text-lg font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• Licensed broker will contact you</li>
-                      <li>• IPO details and investor profile discussion</li>
+                    <h4 className="text-2xl font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• You'll receive a call within 48 hours from a licensed broker.</li>
+                      <li>• They'll explain the IPO in detail.</li>
+                      <li>• They'll also ask questions to understand your investor profile.</li>
+                      <li>• Be honest — this helps them build a tailored portfolio based on your goals and preferences.</li>
                     </ul>
                   </div>
                 </div>
