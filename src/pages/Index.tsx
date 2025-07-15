@@ -208,7 +208,7 @@ const Index: React.FC = () => {
                     {milestones.map((milestone, index) => (
                       <div 
                         key={index} 
-                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl min-h-[140px]"
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
@@ -243,7 +243,7 @@ const Index: React.FC = () => {
                     return (
                       <div 
                         key={index} 
-                        className="group relative p-6 bg-sky-50 border border-sky-200 rounded-2xl hover:border-sky-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                        className="group relative p-6 bg-blue-50 border border-blue-200 rounded-2xl hover:border-blue-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl min-h-[140px]"
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
