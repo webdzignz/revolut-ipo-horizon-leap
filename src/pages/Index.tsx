@@ -75,8 +75,13 @@ const Index: React.FC = () => {
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
-                  REVOLUT IPO IS COMING, INVEST IN TOMORROW TODAY
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
+                  <img 
+                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                    alt="Revolut" 
+                    className="h-12 md:h-16 lg:h-20 w-auto"
+                  />
+                  IPO IS COMING, INVEST IN TOMORROW TODAY
                 </h1>
                 
                 <div className="text-xl text-black font-medium">
