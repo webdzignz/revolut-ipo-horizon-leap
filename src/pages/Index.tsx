@@ -9,7 +9,8 @@ const Index: React.FC = () => {
     phone: '',
     address: '',
     investmentAmount: '',
-    timeframe: ''
+    timeframe: '',
+    notes: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
@@ -81,7 +82,8 @@ const Index: React.FC = () => {
       phone: '',
       address: '',
       investmentAmount: '',
-      timeframe: ''
+      timeframe: '',
+      notes: ''
     });
   };
 
@@ -130,44 +132,48 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative pb-24">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left Content */}
-            <div className="space-y-8 z-10 pt-20">
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-                <div className="text-white">REVOLUT LOOKS TO</div>
-                <div className="text-white">RAISE AT $65 BILLION</div>
-                <div className="text-white">VALUATION</div>
-              </h1>
-              
-              <p className="text-xl text-white/90 leading-relaxed max-w-lg">
-                Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
-              </p>
-              
-              <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
-                Register Interest
-              </button>
-            </div>
+        <section className="relative pb-40 pt-12 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-2 gap-16 items-center">
+              {/* Left Content */}
+              <div className="space-y-6 z-10">
+                <h1 className="font-bold leading-tight">
+                  <div className="text-white text-7xl md:text-8xl">REVOLUT</div>
+                  <div className="text-white text-6xl md:text-7xl">LOOKS TO</div>
+                  <div className="text-white text-6xl md:text-7xl">RAISE AT</div>
+                  <div className="text-white text-5xl md:text-6xl">65 BILLION</div>
+                  <div className="text-white text-5xl md:text-6xl">VALUATION</div>
+                </h1>
+                
+                <p className="text-lg text-white/90 leading-relaxed max-w-lg">
+                  Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
+                </p>
+                
+                <button className="bg-white text-background px-8 py-4 rounded-full font-medium text-lg hover:bg-white/90 transition-colors">
+                  Register Interest
+                </button>
+              </div>
 
-            {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-start justify-end -mt-32">
-              <div className="relative w-full max-w-2xl h-full">
-                <img 
-                  src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
-                  alt="Woman in beige jacket" 
-                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-125"
-                />
-                
-                {/* Floating UI Elements */}
-                <div className="absolute top-1/4 right-16 bg-white rounded-3xl p-6 shadow-2xl">
-                  <div className="text-4xl font-bold text-black">$65 Billion</div>
-                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
-                </div>
-                
-                <div className="absolute bottom-1/3 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
-                  <div className="text-center">
-                    <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
-                    <div className="text-sm text-gray-500">Get exclusive updates</div>
+              {/* Right Content - Woman Image */}
+              <div className="relative h-[600px] -mr-6">
+                <div className="absolute inset-0 w-full h-full overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
+                    alt="Woman in beige jacket" 
+                    className="absolute -top-[208px] right-0 h-[1000px] w-auto object-cover object-top"
+                  />
+                  
+                  {/* Floating UI Elements */}
+                  <div className="absolute top-[40%] right-[60%] bg-white rounded-3xl p-6 shadow-2xl">
+                    <div className="text-4xl font-bold text-black">$65 Billion</div>
+                    <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
+                  </div>
+                  
+                  <div className="absolute bottom-[20%] right-[20%] bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                    <div className="text-center">
+                      <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
+                      <div className="text-sm text-gray-500">Get exclusive updates</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -176,7 +182,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Investment Form */}
-        <section className="px-6 py-20 bg-white">
+        <section className="px-6 pt-4 pb-20 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">
@@ -204,9 +210,9 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left side - Form */}
-            <div className="w-full mt-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-3 gap-12 items-start">
+            {/* Left side - Form (spans 2 columns) */}
+            <div className="col-span-2 w-full">
               {showSuccess && (
                 <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
                   <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
@@ -215,11 +221,11 @@ const Index: React.FC = () => {
                 </div>
               )}
 
-              <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
+              <div className="bg-black border border-gray-600 rounded-xl p-8 md:p-12 shadow-2xl">
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-white">
                         First Name *
                       </label>
                       <input
@@ -235,7 +241,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="lastName" className="block text-sm font-medium text-white">
                         Last Name *
                       </label>
                       <input
@@ -253,7 +259,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="email" className="block text-sm font-medium text-white">
                         Email Address *
                       </label>
                       <input
@@ -269,7 +275,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="phone" className="block text-sm font-medium text-white">
                         Phone Number *
                       </label>
                       <input
@@ -286,7 +292,7 @@ const Index: React.FC = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="address" className="block text-sm font-medium text-white">
                       Full Address *
                     </label>
                     <textarea
@@ -303,7 +309,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-white">
                         Investment Amount *
                       </label>
                       <select
@@ -324,7 +330,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="timeframe" className="block text-sm font-medium text-white">
                         Investment Timeframe *
                       </label>
                       <select
@@ -344,9 +350,24 @@ const Index: React.FC = () => {
                     </div>
                   </div>
 
+                  <div className="space-y-2">
+                    <label htmlFor="notes" className="block text-sm font-medium text-white">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
+                      placeholder="Any additional information, preferred contact times, or special requirements..."
+                    />
+                  </div>
+
                   <button
                     type="submit"
-                    className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                    className="group relative w-full bg-blue-600 text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-blue-700 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Secure IPO Position Now
@@ -360,35 +381,30 @@ const Index: React.FC = () => {
             {/* Right side - Information */}
             <div className="w-full space-y-12">
               <div>
-                <h3 className="text-4xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
+                <h3 className="text-2xl font-bold text-black mb-8">How to Secure Your Allocation in the Revolut IPO – 3 Simple Steps</h3>
                 
                 <div className="space-y-8">
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 1: Submit Your Details</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Fill in the form on this page.</li>
-                      <li>• Make sure all your information is correct.</li>
-                      <li>• If you have an alternative phone number or email, include it in the Notes section.</li>
-                      <li>• Double-check everything before submitting.</li>
+                    <h4 className="text-lg font-bold text-black mb-4">Step 1: Submit Your Details</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li>• Fill in the form completely</li>
+                      <li>• Double-check your information</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• Once we receive your details, we'll review your profile.</li>
-                      <li>• A regulated and recognised distributor of the Revolut IPO will be assigned to contact you.</li>
-                      <li>• If you have a preferred time for calls, mention it in the Notes section.</li>
+                    <h4 className="text-lg font-bold text-black mb-4">Step 2: We Match You With a Regulated Distributor</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li>• We review your profile</li>
+                      <li>• Regulated distributor assigned</li>
                     </ul>
                   </div>
 
                   <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-8 rounded-3xl">
-                    <h4 className="text-2xl font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
-                    <ul className="space-y-2 text-gray-700">
-                      <li>• You'll receive a call within 48 hours from a licensed broker.</li>
-                      <li>• They'll explain the IPO in detail.</li>
-                      <li>• They'll also ask questions to understand your investor profile.</li>
-                      <li>• Be honest — this helps them build a tailored portfolio based on your goals and preferences.</li>
+                    <h4 className="text-lg font-bold text-black mb-4">Step 3: Expect a Call Within 48 Hours</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li>• Licensed broker will contact you</li>
+                      <li>• IPO details and investor profile discussion</li>
                     </ul>
                   </div>
                 </div>
