@@ -180,7 +180,7 @@ const Index: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             {/* Section Title */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-6xl md:text-7xl font-bold mb-4">
                 <span className="text-black">
                   Why Revolut Leads
                 </span>
