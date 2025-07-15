@@ -56,17 +56,17 @@ const Index: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-16 pb-20">
+      <section className="relative overflow-hidden bg-white pt-20 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center min-h-[600px]">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 lg:pr-8">
               <div className="space-y-6">
-                <div className="text-sm text-gray-500 uppercase tracking-wide">
+                <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
                   REVOLUT IPO IS COMING, INVEST IN TOMORROW TODAY
                 </h1>
                 
@@ -82,12 +82,11 @@ const Index: React.FC = () => {
               <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
                 Join now
               </button>
-              
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="relative flex items-center justify-center overflow-hidden">
-              <div className="w-full max-w-sm -mt-24">
+            <div className="relative flex items-center justify-center lg:pl-8">
+              <div className="w-full max-w-md lg:max-w-lg">
                 <img 
                   src="/lovable-uploads/8c8582dd-5800-41e6-92e5-bf016af7186e.png" 
                   alt="Revolut Technology Stack" 
