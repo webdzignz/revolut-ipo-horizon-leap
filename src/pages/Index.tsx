@@ -213,21 +213,21 @@ const Index: React.FC = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         <div className="relative z-10">
                           <div className="flex items-center justify-between mb-4">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg font-bold text-primary">{milestone.year}</span>
+                            <div className="w-12 h-12 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-lg font-bold text-blue-600">{milestone.year}</span>
                             </div>
-                            <div className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                               {milestone.value}
                             </div>
                           </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-primary transition-colors duration-300">
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-300">
                             {milestone.event}
                           </h3>
-                          <div className="w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                          <div className="w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"></div>
                         </div>
                         
                         {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full border-2 border-white shadow-lg"></div>
+                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
                       </div>
                     ))}
                   </div>
