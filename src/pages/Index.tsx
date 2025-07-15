@@ -9,7 +9,8 @@ const Index: React.FC = () => {
     phone: '',
     address: '',
     investmentAmount: '',
-    timeframe: ''
+    timeframe: '',
+    notes: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
@@ -81,7 +82,8 @@ const Index: React.FC = () => {
       phone: '',
       address: '',
       investmentAmount: '',
-      timeframe: ''
+      timeframe: '',
+      notes: ''
     });
   };
 
@@ -215,11 +217,11 @@ const Index: React.FC = () => {
                 </div>
               )}
 
-              <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
+              <div className="bg-black border border-gray-600 rounded-xl p-8 md:p-12 shadow-2xl">
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-white">
                         First Name *
                       </label>
                       <input
@@ -235,7 +237,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="lastName" className="block text-sm font-medium text-white">
                         Last Name *
                       </label>
                       <input
@@ -253,7 +255,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="email" className="block text-sm font-medium text-white">
                         Email Address *
                       </label>
                       <input
@@ -269,7 +271,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="phone" className="block text-sm font-medium text-white">
                         Phone Number *
                       </label>
                       <input
@@ -286,7 +288,7 @@ const Index: React.FC = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="address" className="block text-sm font-medium text-white">
                       Full Address *
                     </label>
                     <textarea
@@ -303,7 +305,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-white">
                         Investment Amount *
                       </label>
                       <select
@@ -324,7 +326,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="timeframe" className="block text-sm font-medium text-white">
                         Investment Timeframe *
                       </label>
                       <select
@@ -344,9 +346,24 @@ const Index: React.FC = () => {
                     </div>
                   </div>
 
+                  <div className="space-y-2">
+                    <label htmlFor="notes" className="block text-sm font-medium text-white">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
+                      placeholder="Any additional information, preferred contact times, or special requirements..."
+                    />
+                  </div>
+
                   <button
                     type="submit"
-                    className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                    className="group relative w-full bg-blue-600 text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-blue-700 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Secure IPO Position Now
