@@ -96,7 +96,7 @@ const Index: React.FC = () => {
                 <img 
                   src="/lovable-uploads/8c8582dd-5800-41e6-92e5-bf016af7186e.png" 
                   alt="Revolut Technology Stack" 
-                  className="w-full h-80 object-contain"
+                  className="w-full h-96 object-contain"
                 />
               </div>
             </div>
