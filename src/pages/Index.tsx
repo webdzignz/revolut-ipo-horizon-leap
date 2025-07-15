@@ -152,12 +152,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-center justify-center">
-              <div className="relative w-full max-w-3xl h-full">
+            <div className="relative h-[600px] flex items-center justify-center">
+              <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute -top-32 right-0 h-[calc(100%+200px)] w-auto object-cover object-top scale-150"
+                  className="absolute -top-16 right-0 h-[500px] w-auto object-cover object-top"
                 />
                 
                 {/* Floating UI Elements */}
