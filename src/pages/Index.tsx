@@ -9,8 +9,7 @@ const Index: React.FC = () => {
     phone: '',
     address: '',
     investmentAmount: '',
-    timeframe: '',
-    notes: ''
+    timeframe: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
@@ -82,8 +81,7 @@ const Index: React.FC = () => {
       phone: '',
       address: '',
       investmentAmount: '',
-      timeframe: '',
-      notes: ''
+      timeframe: ''
     });
   };
 
@@ -132,10 +130,10 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative pb-24 pt-24">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-center">
+        <section className="px-6 relative pb-24">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
-            <div className="space-y-8 z-10">
+            <div className="space-y-8 z-10 pt-20">
               <h1 className="text-6xl md:text-7xl font-bold leading-tight">
                 <div className="text-white">REVOLUT LOOKS TO</div>
                 <div className="text-white">RAISE AT $65 BILLION</div>
@@ -152,12 +150,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[600px] flex items-center justify-center">
+            <div className="relative h-[800px] flex items-start justify-end -mt-32">
               <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute -top-40 right-0 h-[900px] w-auto object-cover object-top"
+                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-125"
                 />
                 
                 {/* Floating UI Elements */}
@@ -217,11 +215,11 @@ const Index: React.FC = () => {
                 </div>
               )}
 
-              <div className="bg-black border border-gray-600 rounded-xl p-8 md:p-12 shadow-2xl">
+              <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-sm font-medium text-white">
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                         First Name *
                       </label>
                       <input
@@ -237,7 +235,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-sm font-medium text-white">
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
                         Last Name *
                       </label>
                       <input
@@ -255,7 +253,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-white">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                         Email Address *
                       </label>
                       <input
@@ -271,7 +269,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-sm font-medium text-white">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                         Phone Number *
                       </label>
                       <input
@@ -288,7 +286,7 @@ const Index: React.FC = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="address" className="block text-sm font-medium text-white">
+                    <label htmlFor="address" className="block text-sm font-medium text-gray-700">
                       Full Address *
                     </label>
                     <textarea
@@ -305,7 +303,7 @@ const Index: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-white">
+                      <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
                         Investment Amount *
                       </label>
                       <select
@@ -326,7 +324,7 @@ const Index: React.FC = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="timeframe" className="block text-sm font-medium text-white">
+                      <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
                         Investment Timeframe *
                       </label>
                       <select
@@ -346,24 +344,9 @@ const Index: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label htmlFor="notes" className="block text-sm font-medium text-white">
-                      Additional Notes
-                    </label>
-                    <textarea
-                      id="notes"
-                      name="notes"
-                      value={formData.notes}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
-                      placeholder="Any additional information, preferred contact times, or special requirements..."
-                    />
-                  </div>
-
                   <button
                     type="submit"
-                    className="group relative w-full bg-blue-600 text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-blue-700 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                    className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Secure IPO Position Now
