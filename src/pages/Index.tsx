@@ -215,9 +215,9 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-16 items-start">
-            {/* Left side - Form */}
-            <div className="w-full">
+          <div className="max-w-7xl mx-auto grid grid-cols-3 gap-12 items-start">
+            {/* Left side - Form (spans 2 columns) */}
+            <div className="col-span-2 w-full">
               {showSuccess && (
                 <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
                   <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
