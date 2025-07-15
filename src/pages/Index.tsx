@@ -116,44 +116,44 @@ const Index: React.FC = () => {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 gap-16 items-center">
+          <div className="max-w-7xl mx-auto px-6 flex items-center">
             {/* Left Content */}
-            <div className="space-y-8">
-              <h1 className="text-white font-light leading-none">
-                <div className="text-7xl mb-2">REVOLUT LOOKS</div>
-                <div className="text-7xl mb-2">TO</div>
-                <div className="text-7xl mb-2">RAISE AT $65</div>
-                <div className="text-7xl mb-2">BILLION</div>
-                <div className="text-7xl">VALUATION</div>
+            <div className="flex-1 space-y-6">
+              <h1 className="text-white font-light leading-[0.9]">
+                <div className="text-8xl">REVOLUT LOOKS</div>
+                <div className="text-8xl">TO</div>
+                <div className="text-8xl">RAISE AT $65</div>
+                <div className="text-8xl">BILLION</div>
+                <div className="text-8xl">VALUATION</div>
               </h1>
               
-              <p className="text-white text-lg leading-relaxed max-w-md mt-8">
+              <p className="text-white/90 text-lg leading-relaxed max-w-lg pt-6">
                 Revolut is attempting to raise $1 billion in a new funding round that would give the U.K.-based fintech startup a valuation of $65 billion, the Financial Times first reported.
               </p>
               
-              <button className="bg-white/20 text-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white/30 transition-colors mt-8">
+              <button className="bg-white/20 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-white/30 transition-colors mt-8 backdrop-blur-sm">
                 Register Interest
               </button>
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[700px] flex justify-end">
-              <div className="relative w-full h-full">
+            <div className="flex-1 relative h-[85vh] flex justify-center items-center">
+              <div className="relative w-full h-full max-w-lg">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute right-0 top-0 h-full w-auto object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 
                 {/* Floating UI Elements */}
-                <div className="absolute top-[30%] left-[10%] bg-white rounded-2xl p-6 shadow-lg">
-                  <div className="text-3xl font-bold text-black">$65 Billion</div>
-                  <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
+                <div className="absolute top-[15%] -left-[15%] bg-white rounded-xl p-4 shadow-lg">
+                  <div className="text-2xl font-bold text-black">$65 Billion</div>
+                  <div className="text-sm text-gray-600">Valuation Target</div>
                 </div>
                 
-                <div className="absolute bottom-[25%] right-[15%] bg-white rounded-2xl p-6 shadow-lg min-w-[180px]">
+                <div className="absolute bottom-[20%] -right-[10%] bg-white rounded-xl p-4 shadow-lg min-w-[160px]">
                   <div className="text-center">
-                    <div className="text-lg font-semibold text-black mb-1">Sign Up for Info</div>
+                    <div className="text-base font-semibold text-black">Sign Up for Info</div>
                     <div className="text-sm text-gray-500">Get exclusive updates</div>
                   </div>
                 </div>
