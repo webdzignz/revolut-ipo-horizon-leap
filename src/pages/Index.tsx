@@ -200,22 +200,27 @@ const Index: React.FC = () => {
                   </span>
                 </h2>
                 
-                <div className="relative">
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
-                  
+                <div className="grid grid-cols-1 gap-8">
                   {milestones.map((milestone, index) => (
-                    <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                        <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-4">
-                          <div className="text-xl font-bold text-blue-600 mb-1">{milestone.year}</div>
-                          <div className="text-sm font-semibold text-gray-800 mb-1">{milestone.event}</div>
-                          <div className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                    <div 
+                      key={index} 
+                      className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                      <div className="relative z-10">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span className="text-lg font-bold text-green-600">{milestone.year}</span>
+                          </div>
+                          <div className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                             {milestone.value}
                           </div>
                         </div>
+                        <h3 className="text-lg font-bold mb-2 text-black group-hover:text-green-600 transition-colors duration-300">
+                          {milestone.event}
+                        </h3>
+                        <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"></div>
                       </div>
-                      
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
                     </div>
                   ))}
                 </div>
