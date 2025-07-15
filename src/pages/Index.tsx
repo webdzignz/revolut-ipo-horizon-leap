@@ -185,14 +185,9 @@ const Index: React.FC = () => {
                   Why Revolut Leads
                 </span>
               </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                <span className="text-gray-700">
-                  Growth Journey
-                </span>
-              </h3>
               <h3 className="text-2xl md:text-3xl font-semibold mb-12">
                 <span className="text-gray-700">
-                  A Comprehensive Ecosystem
+                  Growth Journey
                 </span>
               </h3>
             </div>
