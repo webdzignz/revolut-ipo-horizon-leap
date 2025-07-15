@@ -175,109 +175,6 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        {/* Combined Features and Timeline Section */}
-        <section className="px-6 py-20 bg-white">
-          <div className="max-w-7xl mx-auto">
-            {/* Section Title */}
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
-                <span className="text-black">
-                  Why Revolut Leads
-                </span>
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-12">
-                <span className="text-gray-700">
-                  Growth Journey
-                </span>
-              </h3>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* Growth Journey Timeline - Left Side */}
-              <div>
-                
-                <div className="relative pl-8">
-                  {/* Connecting line */}
-                  <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {milestones.map((milestone, index) => (
-                      <div 
-                        key={index} 
-                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                      >
-                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                        <div className="relative z-10">
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg font-bold text-black">{milestone.year}</span>
-                            </div>
-                            <div className="text-xl font-bold text-black">
-                              {milestone.value}
-                            </div>
-                          </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
-                            {milestone.event}
-                          </h3>
-                          <div className="w-full h-1 bg-black rounded-full"></div>
-                        </div>
-                        
-                        {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Features - Right Side */}
-              <div>
-                
-                <div className="relative pr-8">
-                  {/* Connecting line */}
-                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {features.map((feature, index) => {
-                      const Icon = feature.icon;
-                      return (
-                        <div 
-                          key={index} 
-                          className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                        >
-                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                          <div className="relative z-10 flex flex-col justify-between h-full">
-                            <div className="flex items-start gap-3">
-                              <div className="w-10 h-10 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                <Icon className="w-5 h-5 text-black" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h3 className="text-base font-bold mb-1 text-black group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.title}
-                                </h3>
-                                <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.description}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="text-lg font-bold text-black mt-2">
-                              {feature.metric}
-                            </div>
-                          </div>
-                          
-                          {/* Timeline dot */}
-                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Enhanced Investment Form */}
         <section className="px-6 py-20">
           <div className="max-w-2xl mx-auto w-1/2">
@@ -454,6 +351,109 @@ const Index: React.FC = () => {
                   </span>
                 </button>
               </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Combined Features and Timeline Section */}
+        <section className="px-6 py-20 bg-white">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Title */}
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-bold mb-8">
+                <span className="text-black">
+                  Why Revolut Leads
+                </span>
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-semibold mb-12">
+                <span className="text-gray-700">
+                  Growth Journey
+                </span>
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              
+              {/* Growth Journey Timeline - Left Side */}
+              <div>
+                
+                <div className="relative pl-8">
+                  {/* Connecting line */}
+                  <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                  
+                  <div className="space-y-8">
+                    {milestones.map((milestone, index) => (
+                      <div 
+                        key={index} 
+                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
+                      >
+                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="flex items-center justify-between mb-4">
+                            <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-lg font-bold text-black">{milestone.year}</span>
+                            </div>
+                            <div className="text-xl font-bold text-black">
+                              {milestone.value}
+                            </div>
+                          </div>
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
+                            {milestone.event}
+                          </h3>
+                          <div className="w-full h-1 bg-black rounded-full"></div>
+                        </div>
+                        
+                        {/* Timeline dot */}
+                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Features - Right Side */}
+              <div>
+                
+                <div className="relative pr-8">
+                  {/* Connecting line */}
+                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                  
+                  <div className="space-y-8">
+                    {features.map((feature, index) => {
+                      const Icon = feature.icon;
+                      return (
+                        <div 
+                          key={index} 
+                          className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
+                        >
+                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                          <div className="relative z-10 flex flex-col justify-between h-full">
+                            <div className="flex items-start gap-3">
+                              <div className="w-10 h-10 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <Icon className="w-5 h-5 text-black" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h3 className="text-base font-bold mb-1 text-black group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                                  {feature.title}
+                                </h3>
+                                <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300 leading-tight">
+                                  {feature.description}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="text-lg font-bold text-black mt-2">
+                              {feature.metric}
+                            </div>
+                          </div>
+                          
+                          {/* Timeline dot */}
+                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
