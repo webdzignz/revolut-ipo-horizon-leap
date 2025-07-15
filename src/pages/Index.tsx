@@ -86,10 +86,10 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-foreground font-inter">
+    <div className="min-h-screen bg-gradient-to-br from-background to-secondary text-foreground font-inter overflow-hidden">
       {/* Animated Background with Clouds */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400"></div>
+        <div className="absolute inset-0 bg-[var(--gradient-sky)]"></div>
         
         {/* Cloud Elements */}
         <div className="absolute top-10 left-20 w-64 h-32 bg-white/40 rounded-full blur-xl animate-float opacity-70"></div>
@@ -130,7 +130,7 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative min-h-screen flex items-center pt-20">
+        <section className="px-6 relative h-[900px] flex items-center">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center h-full">
             {/* Left Content */}
             <div className="space-y-8 z-10">
@@ -150,7 +150,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-full flex items-center justify-end">
+            <div className="relative h-[800px] flex items-start justify-end">
               <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
@@ -176,7 +176,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Combined Features and Timeline Section */}
-        <section className="px-6 py-20 bg-white -mt-0">
+        <section className="px-6 py-20 bg-white -mt-16">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
