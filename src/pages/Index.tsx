@@ -200,29 +200,37 @@ const Index: React.FC = () => {
                   </span>
                 </h2>
                 
-                <div className="grid grid-cols-1 gap-8">
-                  {milestones.map((milestone, index) => (
-                    <div 
-                      key={index} 
-                      className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                      <div className="relative z-10">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-lg font-bold text-green-600">{milestone.year}</span>
+                <div className="relative">
+                  {/* Connecting line */}
+                  <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                  
+                  <div className="grid grid-cols-1 gap-8">
+                    {milestones.map((milestone, index) => (
+                      <div 
+                        key={index} 
+                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="flex items-center justify-between mb-4">
+                            <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-lg font-bold text-primary">{milestone.year}</span>
+                            </div>
+                            <div className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                              {milestone.value}
+                            </div>
                           </div>
-                          <div className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                            {milestone.value}
-                          </div>
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-primary transition-colors duration-300">
+                            {milestone.event}
+                          </h3>
+                          <div className="w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
                         </div>
-                        <h3 className="text-lg font-bold mb-2 text-black group-hover:text-green-600 transition-colors duration-300">
-                          {milestone.event}
-                        </h3>
-                        <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"></div>
+                        
+                        {/* Timeline dot */}
+                        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full border-2 border-white shadow-lg"></div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
 
