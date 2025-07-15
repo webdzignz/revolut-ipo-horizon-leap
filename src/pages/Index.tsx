@@ -82,6 +82,15 @@ const Index: React.FC = () => {
               <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
                 Join now
               </button>
+              
+              {/* Stats Image */}
+              <div className="mt-8">
+                <img 
+                  src="/lovable-uploads/c8d2f23f-9763-450f-879b-d04268f00419.png" 
+                  alt="Revolut Stats - 52.5M customers, #1 finance app, $38B balances, $4B revenue" 
+                  className="w-full max-w-2xl h-auto object-contain"
+                />
+              </div>
             </div>
 
             {/* Right Content - Hero Image */}
