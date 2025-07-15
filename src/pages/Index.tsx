@@ -138,9 +138,9 @@ const Index: React.FC = () => {
               {/* Left Content */}
               <div className="space-y-6 z-10">
                 <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                  <div className="text-white">REVOLUT LOOKS TO</div>
-                  <div className="text-white">RAISE AT $65</div>
-                  <div className="text-white">BILLION</div>
+                  <div className="text-white">REVOLUT LOOKS</div>
+                  <div className="text-white">TO RAISE AT</div>
+                  <div className="text-white">$65 BILLION</div>
                   <div className="text-white">VALUATION</div>
                 </h1>
                 
