@@ -68,9 +68,8 @@ const Index: React.FC = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl font-bold leading-tight text-black">
-                  Revolut IPO:<br />
-                  What You Need<br />
-                  to Know
+                  Revolut IPO, What You<br />
+                  Need to Know and Why
                 </h1>
                 
                 <div className="flex items-center gap-2 text-2xl font-bold text-green-600">
