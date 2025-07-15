@@ -83,14 +83,6 @@ const Index: React.FC = () => {
                 Join now
               </button>
               
-              {/* Stats Image */}
-              <div className="mt-8 -mx-6 sm:-mx-12 md:-mx-24 lg:-mx-48 xl:-mx-64 2xl:-mx-96 3xl:-mx-[50vw]">
-                <img 
-                  src="/lovable-uploads/c8d2f23f-9763-450f-879b-d04268f00419.png" 
-                  alt="Revolut Stats - 52.5M customers, #1 finance app, $38B balances, $4B revenue" 
-                  className="w-full h-auto object-contain scale-110"
-                />
-              </div>
             </div>
 
             {/* Right Content - Hero Image */}
