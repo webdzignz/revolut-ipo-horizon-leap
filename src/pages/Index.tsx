@@ -87,11 +87,11 @@ const Index: React.FC = () => {
 
             {/* Right Content - Hero Image */}
             <div className="relative flex items-center justify-center">
-              <div className="w-full max-h-[500px]">
+              <div className="w-full">
                 <img 
                   src="/lovable-uploads/8c8582dd-5800-41e6-92e5-bf016af7186e.png" 
                   alt="Revolut Technology Stack" 
-                  className="w-full h-full object-contain max-h-[500px]"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
