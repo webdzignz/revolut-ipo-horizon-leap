@@ -176,47 +176,47 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Investment Form */}
-        <section className="px-6 py-20">
+        <section className="px-6 py-20 bg-white">
           <div className="max-w-2xl mx-auto w-1/2">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <span className="text-black">
                   Join the $65B IPO
                 </span>
               </h2>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-xl text-gray-700 mb-8">
                 Secure your position in the most anticipated fintech IPO of 2024
               </p>
               
-              <div className="flex items-center justify-center gap-8 text-sm text-white/70">
+              <div className="flex items-center justify-center gap-8 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-green-600" />
                   <span>Secure & Encrypted</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-green-600" />
                   <span>GDPR Compliant</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-green-600" />
                   <span>No Commitment</span>
                 </div>
               </div>
             </div>
 
             {showSuccess && (
-              <div className="bg-white/10 backdrop-blur-xl border border-green-500/30 text-white px-8 py-6 rounded-2xl mb-8 text-center">
-                <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
+              <div className="bg-green-50 border border-green-300 text-green-800 px-8 py-6 rounded-2xl mb-8 text-center">
+                <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-600" />
                 <h3 className="text-lg font-semibold mb-2">IPO Registration Confirmed!</h3>
                 <p>You're now on the priority list for Revolut's $65B IPO. Our team will contact you within 12 hours with exclusive access details and next steps.</p>
               </div>
             )}
 
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12">
+            <div className="bg-gray-50 border border-gray-300 rounded-3xl p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="firstName" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                       First Name *
                     </label>
                     <input
@@ -232,7 +232,7 @@ const Index: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="lastName" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
                       Last Name *
                     </label>
                     <input
@@ -250,7 +250,7 @@ const Index: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                       Email Address *
                     </label>
                     <input
@@ -266,7 +266,7 @@ const Index: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                       Phone Number *
                     </label>
                     <input
@@ -283,7 +283,7 @@ const Index: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="address" className="block text-sm font-medium text-white/90">
+                  <label htmlFor="address" className="block text-sm font-medium text-gray-700">
                     Full Address *
                   </label>
                   <textarea
@@ -300,7 +300,7 @@ const Index: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="investmentAmount" className="block text-sm font-medium text-gray-700">
                       Investment Amount *
                     </label>
                     <select
@@ -321,7 +321,7 @@ const Index: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="timeframe" className="block text-sm font-medium text-white/90">
+                    <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
                       Investment Timeframe *
                     </label>
                     <select
@@ -343,7 +343,7 @@ const Index: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="group relative w-full bg-white text-blue-600 py-5 px-8 rounded-xl font-semibold text-lg hover:bg-white/90 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  className="group relative w-full bg-black text-white py-5 px-8 rounded-xl font-semibold text-lg hover:bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Secure IPO Position Now
