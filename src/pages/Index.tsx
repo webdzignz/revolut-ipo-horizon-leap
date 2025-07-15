@@ -192,7 +192,36 @@ const Index: React.FC = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               
-              {/* Features - Left Side */}
+              {/* Growth Journey Timeline - Left Side */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-16">
+                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                    Growth Journey
+                  </span>
+                </h2>
+                
+                <div className="relative">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+                  
+                  {milestones.map((milestone, index) => (
+                    <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                        <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-4">
+                          <div className="text-xl font-bold text-blue-600 mb-1">{milestone.year}</div>
+                          <div className="text-sm font-semibold text-gray-800 mb-1">{milestone.event}</div>
+                          <div className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                            {milestone.value}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Features - Right Side */}
               <div>
                 
                 <div className="grid grid-cols-1 gap-8">
@@ -221,35 +250,6 @@ const Index: React.FC = () => {
                       </div>
                     );
                   })}
-                </div>
-              </div>
-
-              {/* Growth Journey Timeline - Right Side */}
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-16">
-                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                    Growth Journey
-                  </span>
-                </h2>
-                
-                <div className="relative">
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
-                  
-                  {milestones.map((milestone, index) => (
-                    <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                        <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-4">
-                          <div className="text-xl font-bold text-blue-600 mb-1">{milestone.year}</div>
-                          <div className="text-sm font-semibold text-gray-800 mb-1">{milestone.event}</div>
-                          <div className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                            {milestone.value}
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
