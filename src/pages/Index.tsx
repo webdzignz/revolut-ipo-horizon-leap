@@ -161,12 +161,12 @@ const Index: React.FC = () => {
                 />
                 
                 {/* Floating UI Elements */}
-                <div className="absolute top-1/4 left-8 bg-white rounded-3xl p-6 shadow-2xl">
+                <div className="absolute top-1/2 left-4 bg-white rounded-3xl p-6 shadow-2xl">
                   <div className="text-4xl font-bold text-black">$65 Billion</div>
                   <div className="text-sm text-gray-600 mt-1">Valuation Target</div>
                 </div>
                 
-                <div className="absolute bottom-1/4 right-4 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
+                <div className="absolute bottom-1/4 left-16 bg-white rounded-3xl p-6 shadow-2xl min-w-[200px]">
                   <div className="text-center">
                     <div className="text-lg font-semibold text-black mb-2">Sign Up for Info</div>
                     <div className="text-sm text-gray-500">Get exclusive updates</div>
