@@ -280,7 +280,7 @@ const Index: React.FC = () => {
 
         {/* Enhanced Investment Form */}
         <section className="px-6 py-20">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-2xl mx-auto w-1/2">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
