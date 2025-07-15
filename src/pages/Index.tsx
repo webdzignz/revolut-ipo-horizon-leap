@@ -130,7 +130,7 @@ const Index: React.FC = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="px-6 relative pb-24">
+        <section className="px-6 relative pb-0">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
             <div className="space-y-8 z-10 pt-20">
@@ -150,7 +150,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-start justify-end -mt-32">
+            <div className="relative h-[700px] flex items-start justify-end">
               <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
@@ -175,9 +175,86 @@ const Index: React.FC = () => {
           </div>
         </section>
 
+        {/* Combined Features and Timeline Section */}
+        <section className="px-6 py-20 bg-white -mt-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              
+              {/* Why Revolut Leads - Left Side */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  <span className="text-black">
+                    Why Revolut Leads
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 mb-16 max-w-lg">
+                  A comprehensive financial ecosystem built for the digital age
+                </p>
+                
+                <div className="grid grid-cols-1 gap-8">
+                  {features.map((feature, index) => {
+                    const Icon = feature.icon;
+                    return (
+                      <div 
+                        key={index} 
+                        className="group relative p-6 bg-gray-50 border border-gray-200 rounded-2xl hover:border-gray-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div className="relative z-10">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <Icon className="w-6 h-6 text-blue-600" />
+                          </div>
+                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-blue-600 transition-colors duration-300">
+                            {feature.title}
+                          </h3>
+                          <p className="text-gray-600 mb-3 text-sm group-hover:text-gray-700 transition-colors duration-300">
+                            {feature.description}
+                          </p>
+                          <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            {feature.metric}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Growth Journey Timeline - Right Side */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-16">
+                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                    Growth Journey
+                  </span>
+                </h2>
+                
+                <div className="relative">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+                  
+                  {milestones.map((milestone, index) => (
+                    <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                      <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                        <div className="bg-white backdrop-blur-xl border border-gray-200 rounded-2xl p-4">
+                          <div className="text-xl font-bold text-blue-600 mb-1">{milestone.year}</div>
+                          <div className="text-sm font-semibold text-gray-800 mb-1">{milestone.event}</div>
+                          <div className="text-lg font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                            {milestone.value}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-2 border-white shadow-lg"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Enhanced Investment Form */}
         <section className="px-6 py-20">
-          <div className="max-w-2xl mx-auto w-1/2">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
@@ -226,7 +303,7 @@ const Index: React.FC = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="Enter your first name"
                     />
                   </div>
@@ -242,7 +319,7 @@ const Index: React.FC = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -260,7 +337,7 @@ const Index: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -276,7 +353,7 @@ const Index: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -293,7 +370,7 @@ const Index: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     rows={3}
-                    className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
+                    className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl resize-none"
                     placeholder="Enter your full residential address"
                   />
                 </div>
@@ -309,14 +386,14 @@ const Index: React.FC = () => {
                       value={formData.investmentAmount}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                     >
-                      <option value="" className="bg-white text-black">Select investment amount</option>
-                      <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
-                      <option value="100000-250000" className="bg-white text-black">£100,000 - £250,000</option>
-                      <option value="250000-500000" className="bg-white text-black">£250,000 - £500,000</option>
-                      <option value="500000-1000000" className="bg-white text-black">£500,000 - £1,000,000</option>
-                      <option value="1000000+" className="bg-white text-black">£1,000,000+</option>
+                      <option value="" className="bg-gray-800 text-white">Select investment amount</option>
+                      <option value="50000-100000" className="bg-gray-800 text-white">£50,000 - £100,000</option>
+                      <option value="100000-250000" className="bg-gray-800 text-white">£100,000 - £250,000</option>
+                      <option value="250000-500000" className="bg-gray-800 text-white">£250,000 - £500,000</option>
+                      <option value="500000-1000000" className="bg-gray-800 text-white">£500,000 - £1,000,000</option>
+                      <option value="1000000+" className="bg-gray-800 text-white">£1,000,000+</option>
                     </select>
                   </div>
                   
@@ -330,13 +407,13 @@ const Index: React.FC = () => {
                       value={formData.timeframe}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
                     >
-                      <option value="" className="bg-white text-black">Select timeframe</option>
-                      <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
-                      <option value="short-term" className="bg-white text-black">Short-term (1-3 months)</option>
-                      <option value="medium-term" className="bg-white text-black">Medium-term (3-6 months)</option>
-                      <option value="long-term" className="bg-white text-black">Long-term (6+ months)</option>
+                      <option value="" className="bg-gray-800 text-white">Select timeframe</option>
+                      <option value="immediate" className="bg-gray-800 text-white">Immediate (Within 30 days)</option>
+                      <option value="short-term" className="bg-gray-800 text-white">Short-term (1-3 months)</option>
+                      <option value="medium-term" className="bg-gray-800 text-white">Medium-term (3-6 months)</option>
+                      <option value="long-term" className="bg-gray-800 text-white">Long-term (6+ months)</option>
                     </select>
                   </div>
                 </div>
@@ -355,103 +432,58 @@ const Index: React.FC = () => {
           </div>
         </section>
 
-        {/* Combined Features and Timeline Section */}
-        <section className="px-6 py-20 bg-white">
-          <div className="max-w-7xl mx-auto">
-            {/* Section Title */}
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
-                <span className="text-black">
-                  Why Revolut Leads
-                </span>
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-12">
-                <span className="text-gray-700">
-                  Growth Journey
-                </span>
-              </h3>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* Growth Journey Timeline - Left Side */}
-              <div>
+        {/* Terms and Conditions Section */}
+        <section className="px-6 py-12 bg-black/20 border-t border-gray-800/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Terms and Conditions / Disclaimer</h2>
+              <div className="text-xs text-gray-400 leading-relaxed space-y-4">
                 
-                <div className="relative pl-8">
-                  {/* Connecting line */}
-                  <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {milestones.map((milestone, index) => (
-                      <div 
-                        key={index} 
-                        className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                      >
-                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                        <div className="relative z-10">
-                          <div className="flex items-center justify-between mb-4">
-                            <div className="w-12 h-12 bg-black/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg font-bold text-black">{milestone.year}</span>
-                            </div>
-                            <div className="text-xl font-bold text-black">
-                              {milestone.value}
-                            </div>
-                          </div>
-                          <h3 className="text-lg font-bold mb-2 text-black group-hover:text-gray-700 transition-colors duration-300">
-                            {milestone.event}
-                          </h3>
-                          <div className="w-full h-1 bg-black rounded-full"></div>
-                        </div>
-                        
-                        {/* Timeline dot */}
-                        <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
-                      </div>
-                    ))}
-                  </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">IMPORTANT INVESTMENT DISCLAIMER</h3>
+                  <p><strong>THIS IS NOT AN OFFER TO SELL OR A SOLICITATION OF AN OFFER TO BUY SECURITIES.</strong> This website and its contents are for informational purposes only and do not constitute an offer to sell or a solicitation of an offer to buy any securities. No securities are being offered or sold through this website.</p>
                 </div>
-              </div>
 
-              {/* Features - Right Side */}
-              <div>
-                
-                <div className="relative pr-8">
-                  {/* Connecting line */}
-                  <div className="absolute right-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                  
-                  <div className="space-y-8">
-                    {features.map((feature, index) => {
-                      const Icon = feature.icon;
-                      return (
-                        <div 
-                          key={index} 
-                          className="group relative p-6 bg-white border border-gray-300 rounded-2xl hover:border-black transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl h-40"
-                        >
-                          <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                          <div className="relative z-10 flex flex-col justify-between h-full">
-                            <div className="flex items-start gap-3">
-                              <div className="w-10 h-10 bg-black/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                <Icon className="w-5 h-5 text-black" />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <h3 className="text-base font-bold mb-1 text-black group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.title}
-                                </h3>
-                                <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300 leading-tight">
-                                  {feature.description}
-                                </p>
-                              </div>
-                            </div>
-                            <div className="text-lg font-bold text-black mt-2">
-                              {feature.metric}
-                            </div>
-                          </div>
-                          
-                          {/* Timeline dot */}
-                          <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary-foreground rounded-full border-2 border-white shadow-lg"></div>
-                        </div>
-                      );
-                    })}
-                  </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Investment Risk Warning</h3>
+                  <p><strong>ALL INVESTMENTS INVOLVE RISK AND MAY RESULT IN LOSS.</strong> Past performance is not indicative of future results. The value of investments can go down as well as up. You may not get back the amount you originally invested. Investment in pre-IPO companies carries additional risks including illiquidity and potential total loss.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">No Financial Advice</h3>
+                  <p>The information provided on this website does not constitute financial, investment, tax, or legal advice. We strongly recommend that you consult with a qualified financial advisor before making any investment decisions, seek independent professional advice tailored to your specific circumstances, conduct your own due diligence before investing, and only invest amounts you can afford to lose.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">No Affiliation</h3>
+                  <p>This website is not affiliated with, endorsed by, or sponsored by Revolut Ltd. or any of its subsidiaries. We are an independent third-party platform collecting expressions of interest for potential investment opportunities.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Terms and Conditions</h3>
+                  <p><strong>Eligibility:</strong> You must be at least 18 years of age, legally competent to enter into contracts, not restricted from investing under applicable laws, and a qualified investor in your jurisdiction (where applicable).</p>
+                  <p className="mt-2"><strong>Data Collection:</strong> We collect personal information (name, email, phone, address), investment preferences, and website usage data. We use this information to contact you regarding investment opportunities, verify eligibility, comply with legal requirements, and improve our services. We implement appropriate security measures and will not sell your information without consent.</p>
+                  <p className="mt-2"><strong>Registration Process:</strong> Information submitted is an expression of interest only. No binding commitment is created. We may contact you to discuss opportunities. You may withdraw your interest at any time.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Limitation of Liability</h3>
+                  <p>TO THE FULLEST EXTENT PERMITTED BY LAW: We exclude all warranties, express or implied. We are not liable for any direct, indirect, incidental, or consequential damages. Our total liability shall not exceed the amount you paid to use this website (if any).</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Regulatory Compliance</h3>
+                  <p>This website complies with applicable securities laws. We maintain appropriate AML procedures and may conduct KYC checks as required. This website may not be available in all jurisdictions. It is your responsibility to ensure compliance with local laws and regulations.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-300 mb-2">Cookie Policy</h3>
+                  <p>We use essential cookies for website functionality, analytics cookies to understand usage, and marketing cookies for advertising (with your consent). You can control cookies through your browser settings.</p>
+                </div>
+
+                <div className="border-t border-gray-700/50 pt-4 mt-6">
+                  <p className="text-center"><strong>By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and Disclaimer.</strong></p>
+                  <p className="text-center mt-2"><strong>Last Updated:</strong> July 15, 2025</p>
                 </div>
               </div>
             </div>
@@ -459,96 +491,41 @@ const Index: React.FC = () => {
         </section>
 
         {/* Enhanced Footer */}
-        <footer className="border-t border-gray-300 px-6 py-16 bg-white">
+        <footer className="border-t border-white/20 px-6 py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Revolut IPO</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>IPO Overview</li>
-                  <li>Investment Information</li>
-                  <li>Registration Portal</li>
-                  <li>Investor Relations</li>
-                  <li>Financial Reports</li>
-                </ul>
+                <h3 className="text-lg font-semibold mb-4 text-white">Investment Disclaimer</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  This is not financial advice. All investments carry risk, including potential loss of principal. 
+                  Past performance does not guarantee future results.
+                </p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Contact</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>Investor Support</li>
-                  <li>General Inquiries</li>
-                  <li>Media Relations</li>
-                  <li>Partnership Opportunities</li>
-                  <li>Legal & Compliance</li>
-                </ul>
+                <h3 className="text-lg font-semibold mb-4 text-white">Regulatory Information</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  This offering is subject to regulatory approval and market conditions. 
+                  Available only to qualified investors in eligible jurisdictions.
+                </p>
               </div>
-
+              
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-black">Fast Links</h3>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>Terms & Conditions</li>
-                  <li>Privacy Policy</li>
-                  <li>Risk Disclosure</li>
-                  <li>Cookie Policy</li>
-                  <li>GDPR Compliance</li>
-                </ul>
+                <h3 className="text-lg font-semibold mb-4 text-white">Data Protection</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Your data is processed in accordance with GDPR regulations and our privacy policy. 
+                  Consent to contact regarding investment opportunities.
+                </p>
               </div>
             </div>
             
-            <div className="text-center pt-8 border-t border-gray-300">
-              <p className="text-gray-500 text-sm">
+            <div className="text-center pt-8 border-t border-white/20">
+              <p className="text-white/60 text-sm">
                 © 2024 Revolut Investment Opportunity Portal. For qualified investors only.
               </p>
             </div>
           </div>
         </footer>
-
-        {/* Terms and Conditions Section */}
-        <section className="px-6 py-8 bg-black/20 border-t border-gray-800/30">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6">
-              <h2 className="text-xl font-bold text-white mb-4">Terms and Conditions / Disclaimer</h2>
-              <div className="text-xs text-gray-400 leading-tight space-y-3 grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">INVESTMENT DISCLAIMER</h3>
-                  <p className="text-xs">NOT AN OFFER TO SELL. For informational purposes only. All investments involve risk and may result in loss.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Financial Advice</h3>
-                  <p className="text-xs">Information provided does not constitute financial advice. Consult a qualified advisor before investing.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">No Affiliation</h3>
-                  <p className="text-xs">Not affiliated with Revolut Ltd. Independent third-party platform collecting investment interest.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Eligibility & Data</h3>
-                  <p className="text-xs">Must be 18+, qualified investor. We collect data for investment opportunities and compliance.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Limitation of Liability</h3>
-                  <p className="text-xs">TO THE FULLEST EXTENT PERMITTED: We exclude all warranties and limit our liability.</p>
-                </div>
-
-                <div>
-                  <h3 className="text-xs font-semibold text-gray-300 mb-1">Compliance & Cookies</h3>
-                  <p className="text-xs">Complies with securities laws. Uses essential, analytics, and marketing cookies. You control settings.</p>
-                </div>
-
-                <div className="col-span-1 md:col-span-2 border-t border-gray-700/50 pt-3 mt-3 text-center">
-                  <p className="text-xs"><strong>By using this website, you agree to these Terms and Conditions.</strong></p>
-                  <p className="text-xs mt-1"><strong>Last Updated:</strong> July 15, 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
 
     </div>
