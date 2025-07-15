@@ -150,12 +150,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-start justify-end -mt-12">
-              <div className="relative w-full max-w-3xl h-full">
+            <div className="relative h-[800px] flex items-start justify-end -mt-20">
+              <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
                   alt="Woman in beige jacket" 
-                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-150"
+                  className="absolute top-0 right-0 h-full w-auto object-cover object-top scale-110"
                 />
                 
                 {/* Floating UI Elements */}
