@@ -307,7 +307,7 @@ const Index: React.FC = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       placeholder="Enter your first name"
                     />
                   </div>
@@ -323,7 +323,7 @@ const Index: React.FC = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       placeholder="Enter your last name"
                     />
                   </div>
@@ -341,7 +341,7 @@ const Index: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -357,7 +357,7 @@ const Index: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -374,7 +374,7 @@ const Index: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     rows={3}
-                    className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white placeholder-white/60 rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl resize-none"
+                    className="w-full px-4 py-4 bg-white border border-gray-300 text-black placeholder-gray-500 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300 resize-none"
                     placeholder="Enter your full residential address"
                   />
                 </div>
@@ -390,14 +390,14 @@ const Index: React.FC = () => {
                       value={formData.investmentAmount}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                     >
-                      <option value="" className="bg-gray-800 text-white">Select investment amount</option>
-                      <option value="50000-100000" className="bg-gray-800 text-white">£50,000 - £100,000</option>
-                      <option value="100000-250000" className="bg-gray-800 text-white">£100,000 - £250,000</option>
-                      <option value="250000-500000" className="bg-gray-800 text-white">£250,000 - £500,000</option>
-                      <option value="500000-1000000" className="bg-gray-800 text-white">£500,000 - £1,000,000</option>
-                      <option value="1000000+" className="bg-gray-800 text-white">£1,000,000+</option>
+                      <option value="" className="bg-white text-black">Select investment amount</option>
+                      <option value="50000-100000" className="bg-white text-black">£50,000 - £100,000</option>
+                      <option value="100000-250000" className="bg-white text-black">£100,000 - £250,000</option>
+                      <option value="250000-500000" className="bg-white text-black">£250,000 - £500,000</option>
+                      <option value="500000-1000000" className="bg-white text-black">£500,000 - £1,000,000</option>
+                      <option value="1000000+" className="bg-white text-black">£1,000,000+</option>
                     </select>
                   </div>
                   
@@ -411,13 +411,13 @@ const Index: React.FC = () => {
                       value={formData.timeframe}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-4 bg-white/20 border border-white/30 text-white rounded-xl focus:border-white/50 focus:ring-2 focus:ring-white/20 focus:outline-none transition-all duration-300 backdrop-blur-xl"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 text-black rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-300"
                     >
-                      <option value="" className="bg-gray-800 text-white">Select timeframe</option>
-                      <option value="immediate" className="bg-gray-800 text-white">Immediate (Within 30 days)</option>
-                      <option value="short-term" className="bg-gray-800 text-white">Short-term (1-3 months)</option>
-                      <option value="medium-term" className="bg-gray-800 text-white">Medium-term (3-6 months)</option>
-                      <option value="long-term" className="bg-gray-800 text-white">Long-term (6+ months)</option>
+                      <option value="" className="bg-white text-black">Select timeframe</option>
+                      <option value="immediate" className="bg-white text-black">Immediate (Within 30 days)</option>
+                      <option value="short-term" className="bg-white text-black">Short-term (1-3 months)</option>
+                      <option value="medium-term" className="bg-white text-black">Medium-term (3-6 months)</option>
+                      <option value="long-term" className="bg-white text-black">Long-term (6+ months)</option>
                     </select>
                   </div>
                 </div>
@@ -497,15 +497,7 @@ const Index: React.FC = () => {
         {/* Enhanced Footer */}
         <footer className="border-t border-white/20 px-6 py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Investment Disclaimer</h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  This is not financial advice. All investments carry risk, including potential loss of principal. 
-                  Past performance does not guarantee future results.
-                </p>
-              </div>
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-white">Regulatory Information</h3>
                 <p className="text-white/70 text-sm leading-relaxed">
