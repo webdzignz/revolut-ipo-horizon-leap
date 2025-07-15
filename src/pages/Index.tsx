@@ -152,7 +152,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Woman Image */}
-            <div className="relative h-[800px] flex items-start justify-end -mt-48">
+            <div className="relative h-[800px] flex items-start justify-end -mt-64">
               <div className="relative w-full max-w-2xl h-full">
                 <img 
                   src="/lovable-uploads/d931b75e-5958-4017-bd44-50b2cbf9e6fa.png" 
