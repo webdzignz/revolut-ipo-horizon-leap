@@ -137,21 +137,21 @@ const Index: React.FC = () => {
             <div className="grid grid-cols-2 gap-16 items-center">
               {/* Left Content */}
               <div className="space-y-6 z-10">
-                <h1 className="font-bold leading-tight w-full max-w-md">
-                  <div className="text-white text-6xl md:text-7xl w-full flex justify-between tracking-widest" style={{letterSpacing: '0.5em'}}>
-                    {"REVOLUT".split('').map((letter, i) => <span key={i}>{letter}</span>)}
+                <h1 className="font-bold leading-tight">
+                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
+                    REVOLUT
                   </div>
-                  <div className="text-white text-6xl md:text-7xl w-full flex justify-between tracking-wider" style={{letterSpacing: '0.2em'}}>
-                    {"LOOKS TO".split('').map((letter, i) => <span key={i}>{letter}</span>)}
+                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
+                    LOOKS TO
                   </div>
-                  <div className="text-white text-6xl md:text-7xl w-full flex justify-between tracking-wider" style={{letterSpacing: '0.2em'}}>
-                    {"RAISE AT".split('').map((letter, i) => <span key={i}>{letter}</span>)}
+                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
+                    RAISE AT
                   </div>
-                  <div className="text-white text-6xl md:text-7xl w-full flex justify-between tracking-tight" style={{letterSpacing: '-0.05em'}}>
-                    {"65 BILLION".split('').map((letter, i) => <span key={i}>{letter}</span>)}
+                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
+                    65 BILLION
                   </div>
-                  <div className="text-white text-6xl md:text-7xl w-full flex justify-between tracking-normal">
-                    {"VALUATION".split('').map((letter, i) => <span key={i}>{letter}</span>)}
+                  <div className="text-white text-6xl md:text-7xl w-96" style={{textAlign: 'justify', textAlignLast: 'justify', whiteSpace: 'nowrap'}}>
+                    VALUATION
                   </div>
                 </h1>
                 
