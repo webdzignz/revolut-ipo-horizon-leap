@@ -71,9 +71,9 @@ const Index: React.FC = () => {
       {/* Scrolling Banner */}
       <section className="bg-black py-1 overflow-hidden" style={{ marginTop: '100px' }}>
         <div className="relative">
-          <div className="flex animate-scroll gap-4 whitespace-nowrap">
+          <div className="flex animate-scroll gap-8 whitespace-nowrap">
             {/* First set */}
-            <div className="flex gap-4 shrink-0">
+            <div className="flex gap-8 shrink-0">
               <div className="text-center p-1.5 bg-black rounded-lg shadow-sm min-w-24">
                 <Calendar className="w-3.5 h-3.5 mx-auto mb-1 text-white" />
                 <div className="text-sm font-bold text-white">2015</div>
@@ -124,7 +124,7 @@ const Index: React.FC = () => {
             </div>
             
             {/* Duplicate set for seamless loop */}
-            <div className="flex gap-4 shrink-0">
+            <div className="flex gap-8 shrink-0">
               <div className="text-center p-1.5 bg-black rounded-lg shadow-sm min-w-24">
                 <Calendar className="w-3.5 h-3.5 mx-auto mb-1 text-white" />
                 <div className="text-sm font-bold text-white">2015</div>
