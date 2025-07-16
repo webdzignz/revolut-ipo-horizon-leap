@@ -352,88 +352,77 @@ const Index: React.FC = () => {
             </p>
           </div>
 
-          {/* Step 1 */}
-          <div className="mb-20">
-            <div className="bg-green-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-1">
-                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
-                    Step 1
-                  </div>
-                  <h3 className="text-3xl font-bold text-black mb-4">Expected Timeline</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Revolut is targeting a 2025 IPO launch with preparation already underway. 
-                    The company has secured necessary banking licenses and achieved profitability, 
-                    positioning itself for a successful public debut.
-                  </p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📅</div>
-                      <div className="text-2xl font-bold text-black">2025</div>
-                      <div className="text-gray-600">IPO Launch</div>
-                    </div>
-                  </div>
-                </div>
+          {/* 2x2 Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            
+            {/* Top Left - Dark Background */}
+            <div className="bg-black text-white p-8 rounded-3xl">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Expected Timeline</div>
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                  FROM STARTUP TO<br />
+                  IPO, EASILY
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Revolut is targeting a 2025 IPO launch with preparation already underway. The company has secured necessary banking licenses and achieved profitability.
+                </p>
+                <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                  Learn Timeline
+                </button>
               </div>
             </div>
-          </div>
 
-          {/* Step 2 */}
-          <div className="mb-20">
-            <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-                <div className="flex-1">
-                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
-                    Step 2
-                  </div>
-                  <h3 className="text-3xl font-bold text-black mb-4">Valuation & Growth</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Currently valued at $45 billion with 45+ million users across 38 countries. 
-                    Revenue grew to $2.2B in 2023 with $545M pre-tax profit, demonstrating 
-                    strong financial performance and global expansion.
-                  </p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">📈</div>
-                      <div className="text-2xl font-bold text-black">$45B</div>
-                      <div className="text-gray-600">Valuation</div>
-                    </div>
-                  </div>
-                </div>
+            {/* Top Right - Light Background */}
+            <div className="bg-gray-50 text-black p-8 rounded-3xl">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-600 uppercase tracking-wide">Valuation Growth</div>
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                  DECLARE THAT<br />
+                  YOU INVEST
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Currently valued at $45 billion with 45+ million users across 38 countries. Revenue grew to $2.2B in 2023 with $545M pre-tax profit.
+                </p>
+                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                  View Growth
+                </button>
               </div>
             </div>
-          </div>
 
-          {/* Step 3 */}
-          <div className="mb-20">
-            <div className="bg-purple-50 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-1">
-                  <div className="bg-black text-white rounded-full w-16 h-16 flex items-center justify-center text-lg font-bold mb-6">
-                    Step 3
-                  </div>
-                  <h3 className="text-3xl font-bold text-black mb-4">Investment Opportunity</h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    With backing from Tiger Global, Coatue, and D1 Capital, Revolut offers 
-                    exposure to the rapidly growing fintech sector. Multiple revenue streams 
-                    and global expansion plans make it an attractive investment opportunity.
-                  </p>
-                </div>
-                <div className="flex-1 flex justify-center">
-                  <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center border">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">💼</div>
-                      <div className="text-2xl font-bold text-black">Invest</div>
-                      <div className="text-gray-600">Opportunity</div>
-                    </div>
-                  </div>
-                </div>
+            {/* Bottom Left - Light Background */}
+            <div className="bg-gray-50 text-black p-8 rounded-3xl">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-600 uppercase tracking-wide">Investment Strategy</div>
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                  INVEST IN FINTECH<br />
+                  TOGETHER
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Join institutional investors like Tiger Global, Coatue, and D1 Capital. Multiple revenue streams and global expansion plans make it attractive.
+                </p>
+                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                  Join Strategy
+                </button>
               </div>
             </div>
+
+            {/* Bottom Right - Dark Background */}
+            <div className="bg-black text-white p-8 rounded-3xl">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Market Leadership</div>
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                  WE'VE GOT<br />
+                  EXPERIENCE
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  We built an app to make all things finance easy. And our IPO preparation is no different — every step is calculated, and going public couldn't be simpler.
+                </p>
+                <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
