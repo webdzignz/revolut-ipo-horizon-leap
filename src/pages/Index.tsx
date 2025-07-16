@@ -199,7 +199,7 @@ const Index: React.FC = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Revolut IPO: Banking Coming Soon
+                  Revolut IPO: Banking on the Future
                 </h1>
               </div>
               
