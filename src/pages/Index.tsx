@@ -108,43 +108,41 @@ const Index: React.FC = () => {
               <h2 className="text-2xl font-bold text-black">How to Register Your Interest in the Revolut IPO</h2>
               
               {/* Step 1 */}
-              <div className="border-l-4 border-black pl-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</div>
-                  <h3 className="text-lg font-bold text-black">Complete the Registration Form</h3>
+              <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
+                  <h3 className="text-xl font-bold text-black">Complete the Registration Form</h3>
                 </div>
-                <div className="space-y-2 text-gray-600">
-                  <p>Fill out the form carefully. Double-check all information before clicking Send.</p>
-                  <p>Ensure your name, phone number, and email address are correct.</p>
-                  <p>Use the "Other Info" section to include any alternative contact details or specific requirements.</p>
-                  <p>You'll have the option to book a call with a licensed investment expert (FCA-regulated).</p>
+                <div className="space-y-3 text-gray-700 leading-relaxed">
+                  <p>Fill out the form on the IPO page carefully. Double-check all information before clicking Send. Ensure your name, phone number, and email address are correct.</p>
+                  <p>Use the "Other Info" section to include any alternative contact details and any specific requirements or personal notes relevant to your situation or the investment.</p>
+                  <p>You'll also have the option to book a call with a licensed investment expert (FCA-regulated). All expert calls will come from a London 0204 number.</p>
                 </div>
               </div>
 
               {/* Step 2 */}
-              <div className="border-l-4 border-black pl-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</div>
-                  <h3 className="text-lg font-bold text-black">Submit Your Details & Expect a Call</h3>
+              <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
+                  <h3 className="text-xl font-bold text-black">Submit Your Details & Expect a Call</h3>
                 </div>
-                <div className="space-y-2 text-gray-600">
-                  <p>Submit your details, and they'll be securely processed.</p>
-                  <p>If you didn't book a time, you'll receive a call from a licensed representative within 48 hours.</p>
-                  <p>All calls will come from a London-based number starting with 0204.</p>
+                <div className="space-y-3 text-gray-700 leading-relaxed">
+                  <p>Submit your details, and once received, they'll be securely processed. If you didn't book a time, you'll still receive a call from a licensed representative within 48 hours.</p>
+                  <p>This call will walk you through the opportunity and next steps. All calls will come from a London-based number starting with 0204.</p>
+                  <p>Booking a time guarantees a scheduled call at your convenience, making the process more efficient for both parties.</p>
                 </div>
               </div>
 
               {/* Step 3 */}
-              <div className="border-l-4 border-black pl-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</div>
-                  <h3 className="text-lg font-bold text-black">Get Ready for Your Call</h3>
+              <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
+                  <h3 className="text-xl font-bold text-black">Get Ready for Your Call</h3>
                 </div>
-                <div className="space-y-2 text-gray-600">
-                  <p>Expect a call within 48 hours of submitting your information.</p>
-                  <p>Do some light research on Revolut's IPO beforehand.</p>
-                  <p>Come prepared with questions for the expert.</p>
-                  <p>The expert will give an overview and build a tailored strategy that fits your profile.</p>
+                <div className="space-y-3 text-gray-700 leading-relaxed">
+                  <p>If you've booked an appointment, you'll receive your call at the scheduled time. If not, expect a call within 48 hours of submitting your information.</p>
+                  <p>It's strongly advised to do some light research on Revolut's IPO beforehand. Come prepared with any questions you want to ask the expert.</p>
+                  <p>The expert will give an overview of the Revolut IPO, ask about your goals and experience level, and use that info to build a tailored strategy that fits your profile.</p>
                 </div>
               </div>
             </div>
