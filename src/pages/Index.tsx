@@ -231,16 +231,15 @@ const Index: React.FC = () => {
             </div>
           </div>
 
-          {/* Main Heading */}
-          <div className="mb-12 text-center mt-6">
-            <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
-          </div>
-
           {/* Bottom Content - Steps and Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-10">
             {/* Left Content - Registration Steps */}
             <div className="space-y-8 flex flex-col">
+              {/* Heading moved here */}
+              <div className="mb-6">
+                <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
+                <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
+              </div>
               
               {/* Step 1 */}
               <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
