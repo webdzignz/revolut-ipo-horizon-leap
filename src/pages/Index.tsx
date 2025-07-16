@@ -101,16 +101,51 @@ const Index: React.FC = () => {
             </button>
           </div>
 
-          {/* Bottom Content - Image and Form */}
+          {/* Bottom Content - Steps and Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Content - Hero Image */}
-            <div className="relative flex justify-start">
-              <div className="w-full max-w-2xl">
-                <img 
-                  src="/lovable-uploads/943e8591-0be8-4e3d-9bcc-2bf79968ec68.png" 
-                  alt="Revolut Statistics - 10,000+ employees, 45M customers, $22B in deposits" 
-                  className="w-full h-[500px] object-contain"
-                />
+            {/* Left Content - Registration Steps */}
+            <div className="space-y-8">
+              <h2 className="text-2xl font-bold text-black">How to Register Your Interest in the Revolut IPO</h2>
+              
+              {/* Step 1 */}
+              <div className="border-l-4 border-black pl-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</div>
+                  <h3 className="text-lg font-bold text-black">Complete the Registration Form</h3>
+                </div>
+                <div className="space-y-2 text-gray-600">
+                  <p>Fill out the form carefully. Double-check all information before clicking Send.</p>
+                  <p>Ensure your name, phone number, and email address are correct.</p>
+                  <p>Use the "Other Info" section to include any alternative contact details or specific requirements.</p>
+                  <p>You'll have the option to book a call with a licensed investment expert (FCA-regulated).</p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="border-l-4 border-black pl-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</div>
+                  <h3 className="text-lg font-bold text-black">Submit Your Details & Expect a Call</h3>
+                </div>
+                <div className="space-y-2 text-gray-600">
+                  <p>Submit your details, and they'll be securely processed.</p>
+                  <p>If you didn't book a time, you'll receive a call from a licensed representative within 48 hours.</p>
+                  <p>All calls will come from a London-based number starting with 0204.</p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="border-l-4 border-black pl-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</div>
+                  <h3 className="text-lg font-bold text-black">Get Ready for Your Call</h3>
+                </div>
+                <div className="space-y-2 text-gray-600">
+                  <p>Expect a call within 48 hours of submitting your information.</p>
+                  <p>Do some light research on Revolut's IPO beforehand.</p>
+                  <p>Come prepared with questions for the expert.</p>
+                  <p>The expert will give an overview and build a tailored strategy that fits your profile.</p>
+                </div>
               </div>
             </div>
 
