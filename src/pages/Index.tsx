@@ -74,49 +74,49 @@ const Index: React.FC = () => {
             {/* First set */}
             <div className="flex gap-6 shrink-0">
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Calendar className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Calendar className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">2015</div>
                 <div className="text-xs text-gray-600">Founded</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <MapPin className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <MapPin className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">London</div>
                 <div className="text-xs text-gray-600">Headquarters</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Users className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Users className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">8,125+</div>
                 <div className="text-xs text-gray-600">Employees</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <DollarSign className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <DollarSign className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£2.2B</div>
                 <div className="text-xs text-gray-600">Revenue</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <TrendingUp className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <TrendingUp className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£545M</div>
                 <div className="text-xs text-gray-600">Profit</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Target className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Target className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£45B</div>
                 <div className="text-xs text-gray-600">Valuation</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Globe className="w-5 h-5 mx-auto mb-2 text-gray-500" />
+                <Globe className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">30+</div>
                 <div className="text-xs text-gray-600">Licenses</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <BarChart3 className="w-5 h-5 mx-auto mb-2 text-gray-500" />
+                <BarChart3 className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">2023</div>
                 <div className="text-xs text-gray-600">UK License</div>
               </div>
@@ -125,49 +125,49 @@ const Index: React.FC = () => {
             {/* Duplicate set for seamless loop */}
             <div className="flex gap-6 shrink-0">
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Calendar className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Calendar className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">2015</div>
                 <div className="text-xs text-gray-600">Founded</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <MapPin className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <MapPin className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">London</div>
                 <div className="text-xs text-gray-600">Headquarters</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Users className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Users className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">8,125+</div>
                 <div className="text-xs text-gray-600">Employees</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <DollarSign className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <DollarSign className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£2.2B</div>
                 <div className="text-xs text-gray-600">Revenue</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <TrendingUp className="w-5 h-5 mx-auto mb-2 text-green-500" />
+                <TrendingUp className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£545M</div>
                 <div className="text-xs text-gray-600">Profit</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Target className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+                <Target className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">£45B</div>
                 <div className="text-xs text-gray-600">Valuation</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <Globe className="w-5 h-5 mx-auto mb-2 text-gray-500" />
+                <Globe className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">30+</div>
                 <div className="text-xs text-gray-600">Licenses</div>
               </div>
               
               <div className="text-center p-3 bg-white rounded-lg shadow-sm min-w-32">
-                <BarChart3 className="w-5 h-5 mx-auto mb-2 text-gray-500" />
+                <BarChart3 className="w-5 h-5 mx-auto mb-2 text-black" />
                 <div className="text-lg font-bold text-black">2023</div>
                 <div className="text-xs text-gray-600">UK License</div>
               </div>
