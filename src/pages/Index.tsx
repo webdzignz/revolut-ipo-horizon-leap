@@ -49,7 +49,7 @@ const Index: React.FC = () => {
             <img 
               src="/lovable-uploads/f75b334c-2922-4196-9eb1-fd6f26b9c95e.png" 
               alt="Revolut Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           <div className="flex items-center gap-8">
@@ -68,11 +68,11 @@ const Index: React.FC = () => {
 
       
       {/* Scrolling Banner */}
-      <section className="bg-black py-3 overflow-hidden" style={{ marginTop: '80px' }}>
+      <section className="bg-black py-2 overflow-hidden" style={{ marginTop: '80px' }}>
         <div className="relative">
-          <div className="flex animate-scroll gap-6 whitespace-nowrap">
+          <div className="flex animate-scroll gap-4 whitespace-nowrap">
             {/* First set */}
-            <div className="flex gap-6 shrink-0">
+            <div className="flex gap-4 shrink-0">
               <div className="text-center p-2 bg-black rounded-lg shadow-sm min-w-28">
                 <Calendar className="w-4 h-4 mx-auto mb-1 text-white" />
                 <div className="text-base font-bold text-white">2015</div>
@@ -123,7 +123,7 @@ const Index: React.FC = () => {
             </div>
             
             {/* Duplicate set for seamless loop */}
-            <div className="flex gap-6 shrink-0">
+            <div className="flex gap-4 shrink-0">
               <div className="text-center p-2 bg-black rounded-lg shadow-sm min-w-28">
                 <Calendar className="w-4 h-4 mx-auto mb-1 text-white" />
                 <div className="text-base font-bold text-white">2015</div>
