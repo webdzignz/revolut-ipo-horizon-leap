@@ -165,7 +165,7 @@ const Index: React.FC = () => {
                     <img 
                       src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                       alt="Revolut Logo" 
-                      className="h-8 w-auto"
+                      className="h-12 w-auto"
                     />
                   </div>
                   
