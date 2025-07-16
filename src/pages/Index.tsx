@@ -45,12 +45,13 @@ const Index: React.FC = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <img 
               src="/lovable-uploads/f75b334c-2922-4196-9eb1-fd6f26b9c95e.png" 
               alt="Revolut Logo" 
               className="h-16 w-auto"
             />
+            <span className="text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
           </div>
           <div className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-8 text-gray-700">
