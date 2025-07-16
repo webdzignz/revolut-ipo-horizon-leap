@@ -113,10 +113,12 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
                   <h3 className="text-xl font-bold text-black">Complete the Registration Form</h3>
                 </div>
-                <div className="space-y-2 text-gray-700 leading-relaxed text-sm">
-                  <p>Fill out the form carefully. Double-check all information and ensure your contact details are correct.</p>
-                  <p>Use "Other Info" for alternative contacts or specific requirements. Book a call with an FCA-regulated expert (London 0204 number).</p>
-                </div>
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Fill out the form carefully and double-check all information</li>
+                  <li>Ensure your name, phone number, and email address are correct</li>
+                  <li>Use "Other Info" for alternative contacts or specific requirements</li>
+                  <li>Book a call with an FCA-regulated expert (London 0204 number)</li>
+                </ul>
               </div>
 
               {/* Step 2 */}
@@ -125,10 +127,12 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
                   <h3 className="text-xl font-bold text-black">Submit Your Details & Expect a Call</h3>
                 </div>
-                <div className="space-y-2 text-gray-700 leading-relaxed text-sm">
-                  <p>Submit your details and they'll be securely processed. You'll receive a call from a licensed representative within 48 hours.</p>
-                  <p>All calls come from London 0204 numbers. Booking a time guarantees a scheduled call at your convenience.</p>
-                </div>
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Submit your details and they'll be securely processed</li>
+                  <li>You'll receive a call from a licensed representative within 48 hours</li>
+                  <li>All calls come from London 0204 numbers</li>
+                  <li>Booking a time guarantees a scheduled call at your convenience</li>
+                </ul>
               </div>
 
               {/* Step 3 */}
@@ -137,10 +141,12 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
                   <h3 className="text-xl font-bold text-black">Get Ready for Your Call</h3>
                 </div>
-                <div className="space-y-2 text-gray-700 leading-relaxed text-sm">
-                  <p>Expect a call within 48 hours. Do light research on Revolut's IPO beforehand and prepare questions.</p>
-                  <p>The expert will give an overview and build a tailored strategy based on your goals and experience level.</p>
-                </div>
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Expect a call within 48 hours of submitting</li>
+                  <li>Do light research on Revolut's IPO beforehand</li>
+                  <li>Prepare questions for the expert</li>
+                  <li>Expert will provide overview and tailored strategy</li>
+                </ul>
               </div>
             </div>
 
