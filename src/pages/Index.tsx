@@ -217,7 +217,7 @@ const Index: React.FC = () => {
               </p>
 
               <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
-                Join now
+                More Info
               </button>
             </div>
 
