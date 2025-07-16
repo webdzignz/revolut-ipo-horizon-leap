@@ -550,7 +550,7 @@ const Index: React.FC = () => {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">IPO HIGHLIGHTS</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">FUNDAMENTAL DATA</h2>
             <p className="text-xl text-gray-600">Everything you need to know about Revolut's upcoming public offering</p>
           </div>
 
