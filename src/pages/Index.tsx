@@ -43,7 +43,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black px-6 py-4 border-b border-gray-800 rounded-3xl">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200 rounded-3xl">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img 
@@ -53,14 +53,14 @@ const Index: React.FC = () => {
             />
           </div>
           <div className="flex items-center gap-8">
-            <nav className="hidden md:flex items-center gap-8 text-white">
-              <span className="hover:text-gray-200 cursor-pointer">Introduction</span>
-              <span className="hover:text-gray-200 cursor-pointer">Request Info</span>
-              <span className="hover:text-gray-200 cursor-pointer">Contact Us</span>
+            <nav className="hidden md:flex items-center gap-8 text-gray-700">
+              <span className="hover:text-black cursor-pointer">Introduction</span>
+              <span className="hover:text-black cursor-pointer">Request Info</span>
+              <span className="hover:text-black cursor-pointer">Contact Us</span>
             </nav>
             <div className="flex items-center gap-4">
-              <button className="text-gray-300 hover:text-white transition-colors">Log in</button>
-              <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors">Sign up</button>
+              <button className="text-gray-700 hover:text-black transition-colors">Log in</button>
+              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">Sign up</button>
             </div>
           </div>
         </div>
