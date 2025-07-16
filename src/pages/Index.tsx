@@ -255,7 +255,7 @@ const Index: React.FC = () => {
               <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
                 <li className="pl-2 -indent-2">- Use "additional notes" for alternative contacts or specific requirements</li>
-                <li className="pl-2 -indent-2">- Book a call with a regulated expert (London 0204 number)</li>
+                <li className="pl-2 -indent-2">- Book a call with a regulated expert (+44 0204 number)</li>
               </ul>
             </div>
 
