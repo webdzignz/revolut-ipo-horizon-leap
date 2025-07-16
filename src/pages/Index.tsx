@@ -160,6 +160,15 @@ const Index: React.FC = () => {
             <div className="w-full">
               <div className="mt-20">
                 <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-3xl">{/* Increased from max-w-2xl to max-w-3xl for ~1 inch wider */}
+                  {/* Logo at top left */}
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                      alt="Revolut Logo" 
+                      className="h-8 w-auto"
+                    />
+                  </div>
+                  
                   <div className="mb-6">
                     <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
                       REGISTER YOUR INVESTMENT INTEREST
