@@ -115,7 +115,7 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
                   <h3 className="text-xl font-bold text-black">Complete the Registration Form</h3>
                 </div>
-                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside ml-4">
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside pl-5">
                   <li>Fill out the form carefully and double-check all information</li>
                   <li>Use "Other Info" for alternative contacts or specific requirements</li>
                   <li>Book a call with an FCA-regulated expert (London 0204 number)</li>
@@ -128,7 +128,7 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
                   <h3 className="text-xl font-bold text-black">Submit Your Details & Expect a Call</h3>
                 </div>
-                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside ml-4">
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside pl-5">
                   <li>Submit your details and they'll be securely processed</li>
                   <li>You'll receive a call from a licensed representative within 48 hours</li>
                   <li>All calls come from London 0204 numbers</li>
@@ -142,7 +142,7 @@ const Index: React.FC = () => {
                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
                   <h3 className="text-xl font-bold text-black">Get Ready for Your Call</h3>
                 </div>
-                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside ml-4">
+                <ul className="space-y-1 text-gray-700 text-sm list-disc list-outside pl-5">
                   <li>Expect a call within 48 hours of submitting</li>
                   <li>Do light research on Revolut's IPO beforehand</li>
                   <li>Prepare questions for the expert</li>
