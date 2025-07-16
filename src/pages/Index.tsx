@@ -104,7 +104,7 @@ const Index: React.FC = () => {
           {/* Bottom Content - Steps and Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Content - Registration Steps */}
-            <div className="space-y-8">
+            <div className="space-y-8 flex flex-col">
               <h2 className="text-2xl font-bold text-black">How to Register Your Interest in the Revolut IPO</h2>
               
               {/* Step 1 */}
@@ -151,16 +151,8 @@ const Index: React.FC = () => {
 
             {/* Right Content - Investment Form */}
             <div className="w-full flex flex-col justify-start">
-              <div className="bg-black p-8 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl min-h-[600px]">
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
-                    REGISTER YOUR INVESTMENT INTEREST
-                  </h2>
-                  <p className="text-gray-300 text-sm">
-                    Get priority access to IPO updates and investment opportunities
-                  </p>
-                </div>
-
+              <div className="mt-16">
+                <div className="bg-black p-8 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl min-h-[600px]">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name and Numbers on same row */}
                   <div className="grid grid-cols-2 gap-4">
@@ -265,6 +257,7 @@ const Index: React.FC = () => {
                     Register Interest
                   </button>
                 </form>
+                </div>
               </div>
             </div>
           </div>
