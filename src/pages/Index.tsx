@@ -551,10 +551,11 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-black font-bold text-sm">R</span>
-                </div>
-                <h3 className="text-xl font-bold">Revolut</h3>
+                <img 
+                  src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                  alt="Revolut Logo" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400">
                 The world&apos;s fastest-growing digital bank, preparing for a landmark IPO in 2025.
