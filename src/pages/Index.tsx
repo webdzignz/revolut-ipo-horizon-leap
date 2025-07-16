@@ -43,7 +43,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-black px-6 py-4 border-b border-gray-800 rounded-3xl">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black px-6 py-4 border-b border-gray-800 rounded-3xl">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img 
@@ -67,7 +67,7 @@ const Index: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-20 pb-24">
+      <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           {/* Top Content - Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
