@@ -150,9 +150,9 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Investment Form */}
-            <div className="w-full">
-              <div className="bg-black p-6 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
-                <div className="mb-6">
+            <div className="w-full flex flex-col justify-start">
+              <div className="bg-black p-8 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl min-h-[600px]">
+                <div className="mb-8">
                   <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
                     REGISTER YOUR INVESTMENT INTEREST
                   </h2>
