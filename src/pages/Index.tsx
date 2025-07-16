@@ -110,7 +110,7 @@ const Index: React.FC = () => {
               <img 
                 src="/lovable-uploads/6d7c94bd-a5d6-4854-9462-2e1d094770e9.png" 
                 alt="Join us on the Revolut rocket to plant profit" 
-                className="w-full max-w-md lg:max-w-lg xl:max-w-xl rounded-2xl shadow-2xl"
+                className="w-full max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
               />
             </div>
           </div>
