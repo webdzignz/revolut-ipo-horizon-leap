@@ -183,13 +183,13 @@ const Index: React.FC = () => {
           {/* Top Content - Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             {/* Left Content */}
-            <div className="space-y-8" style={{ transform: `translateY(${scrollY * 0.1}px)` }}>
+            <div className="space-y-8">
               <div className="space-y-6">
-                <div className="text-sm text-gray-500 uppercase tracking-wide font-medium" style={{ transform: `translateY(${scrollY * 0.05}px)` }}>
+                <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
@@ -197,43 +197,42 @@ const Index: React.FC = () => {
                   />
                   <span>IPO</span>
                 </h1>
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight" style={{ transform: `translateY(${scrollY * 0.12}px)` }}>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
                   Is Coming Soon
                 </h2>
-                <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight" style={{ transform: `translateY(${scrollY * 0.08}px)` }}>
+                <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
                   Invest In Future
                 </h3>
-                <h4 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight" style={{ transform: `translateY(${scrollY * 0.06}px)` }}>
+                <h4 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
                   Starting Today
                 </h4>
                 
-                <div className="text-xl text-black font-medium" style={{ transform: `translateY(${scrollY * 0.04}px)` }}>
+                <div className="text-xl text-black font-medium">
                   Expected 2025
                 </div>
               </div>
               
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg" style={{ transform: `translateY(${scrollY * 0.08}px)` }}>
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                 Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
               </p>
 
-              <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors" style={{ transform: `translateY(${scrollY * 0.05}px)` }}>
+              <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
                 Join now
               </button>
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="flex justify-center lg:justify-end" style={{ transform: `translateY(${scrollY * -0.1}px)` }}>
+            <div className="flex justify-center lg:justify-end">
               <img 
                 src="/lovable-uploads/d5371364-cf23-4fa1-9ce8-467e8b3fda66.png" 
                 alt="Woman holding Revolut card" 
                 className="w-full max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
-                style={{ transform: `translateY(${scrollY * -0.05}px)` }}
               />
             </div>
           </div>
 
           {/* Main Heading */}
-          <div className="mb-12 text-center mt-6" style={{ transform: `translateY(${scrollY * 0.03}px)` }}>
+          <div className="mb-12 text-center mt-6">
             <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
             <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
           </div>
