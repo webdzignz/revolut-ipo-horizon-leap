@@ -53,10 +53,10 @@ const Index: React.FC = () => {
             />
           </div>
           <div className="flex items-center gap-8">
-            <nav className="hidden md:flex items-center gap-8 text-gray-300">
-              <span className="hover:text-white cursor-pointer">Introduction</span>
-              <span className="hover:text-white cursor-pointer">Request Info</span>
-              <span className="hover:text-white cursor-pointer">Contact Us</span>
+            <nav className="hidden md:flex items-center gap-8 text-white">
+              <span className="hover:text-gray-200 cursor-pointer">Introduction</span>
+              <span className="hover:text-gray-200 cursor-pointer">Request Info</span>
+              <span className="hover:text-gray-200 cursor-pointer">Contact Us</span>
             </nav>
             <div className="flex items-center gap-4">
               <button className="text-gray-300 hover:text-white transition-colors">Log in</button>
@@ -68,7 +68,7 @@ const Index: React.FC = () => {
 
       
       {/* Scrolling Banner */}
-      <section className="bg-gray-100 py-3 overflow-hidden" style={{ marginTop: '80px' }}>
+      <section className="bg-black py-3 overflow-hidden" style={{ marginTop: '80px' }}>
         <div className="relative">
           <div className="flex animate-scroll gap-6 whitespace-nowrap">
             {/* First set */}
