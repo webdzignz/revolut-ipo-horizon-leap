@@ -213,7 +213,7 @@ const Index: React.FC = () => {
               </div>
               
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                Get early access insights into one of the world's fastest-growing digital banks and make international transfers at speed — with great rates. No matter how much you need to invest.
+                Get early access to Revolut's IPO — one of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
               </p>
 
               <button className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors">
