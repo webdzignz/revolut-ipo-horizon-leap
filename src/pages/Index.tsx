@@ -188,6 +188,14 @@ const Index: React.FC = () => {
                 
                 <div className="flex justify-start -mt-12">
                   <img 
+                    src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
+                    alt="Revolution" 
+                    className="h-16 md:h-20 lg:h-24 w-auto mb-4"
+                  />
+                </div>
+                
+                <div className="flex justify-start -mt-8">
+                  <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
                     className="h-24 md:h-32 lg:h-40 w-auto"
