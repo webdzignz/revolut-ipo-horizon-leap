@@ -108,7 +108,7 @@ const Index: React.FC = () => {
             {/* Right Content - Hero Image */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/lovable-uploads/194bb16c-7200-472f-a0ab-89f0d5b0c2ee.png" 
+                src="/lovable-uploads/6fa59685-2039-4c32-9a50-5770099ba15f.png" 
                 alt="Revolut App Interface" 
                 className="w-full max-w-md lg:max-w-lg xl:max-w-xl rounded-2xl shadow-2xl"
               />
