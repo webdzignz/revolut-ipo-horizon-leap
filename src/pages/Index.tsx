@@ -471,8 +471,10 @@ const Index: React.FC = () => {
             </p>
           </div>
 
-          {/* 2x2 Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {/* Grid Layout for all boxes */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto mb-8">
+            
+            {/* Row 1 */}
             
             {/* Top Left - Dark Background */}
             <div className="bg-black text-white p-8 rounded-3xl">
@@ -542,20 +544,7 @@ const Index: React.FC = () => {
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* Fundamental Data Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">FUNDAMENTAL DATA</h2>
-            <p className="text-xl text-gray-600">Everything you need to know about Revolut's upcoming public offering</p>
-          </div>
-
-           {/* 2x2 Grid Layout matching the style above */}
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Row 2 - Additional 3 boxes */}
             
             {/* IPO Timeline - Dark Background */}
             <div className="bg-black text-white p-8 rounded-3xl">
@@ -591,25 +580,26 @@ const Index: React.FC = () => {
               </div>
             </div>
 
-            {/* Services & Products - Light Background */}
-            <div className="bg-gray-50 text-black p-8 rounded-3xl">
+            {/* Services & Products - Light Background (spans full width on odd count) */}
+            <div className="bg-gray-50 text-black p-8 rounded-3xl lg:col-span-2">
               <div className="space-y-4">
                 <div className="text-sm text-gray-600 uppercase tracking-wide">Services & Products</div>
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  WHAT DOES REVOLUT<br />
-                  OFFER?
+                  WHAT DOES REVOLUT OFFER?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Multi-currency accounts, stock & crypto trading, AI budgeting tools, low-fee transfers, and premium subscriptions with global reach.
+                  Multi-currency accounts, stock & crypto trading, AI budgeting tools, low-fee transfers, and premium subscriptions with global reach across 38+ countries.
                 </p>
                 <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
                   View Services
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
 
 
       {/* Footer */}
