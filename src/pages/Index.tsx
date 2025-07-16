@@ -35,7 +35,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-black px-6 py-4 border-b border-gray-800">
+      <header className="bg-black px-6 py-4 border-b border-gray-800 rounded-b-3xl">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img 
