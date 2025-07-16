@@ -78,16 +78,16 @@ const Index: React.FC = () => {
                   />
                   <span>IPO</span>
                 </h1>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black uppercase tracking-tight">
                   Is Coming
                 </h2>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black uppercase tracking-tight">
                   Invest In
                 </h3>
-                <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h4 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
                   Tomorrow
                 </h4>
-                <h5 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h5 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-black uppercase tracking-tight">
                   Today
                 </h5>
                 
