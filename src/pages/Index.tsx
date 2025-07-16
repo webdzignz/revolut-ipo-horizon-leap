@@ -7,7 +7,8 @@ const Index: React.FC = () => {
     numbers: '',
     investmentAmount: '',
     timeframe: '',
-    notes: ''
+    notes: '',
+    appointment: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -26,7 +27,8 @@ const Index: React.FC = () => {
       numbers: '',
       investmentAmount: '',
       timeframe: '',
-      notes: ''
+      notes: '',
+      appointment: ''
     });
   };
 
@@ -152,7 +154,7 @@ const Index: React.FC = () => {
             {/* Right Content - Investment Form */}
             <div className="w-full">
               <div className="mt-20">
-                <div className="bg-black p-6 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
+                <div className="bg-black p-6 pb-16 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
                   <div className="mb-6">
                     <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
                       REGISTER YOUR INVESTMENT INTEREST
@@ -258,10 +260,24 @@ const Index: React.FC = () => {
                     />
                   </div>
 
+                  {/* Appointment Field */}
+                  <div className="space-y-1">
+                    <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Book Appointment with Expert
+                    </label>
+                    <input
+                      type="datetime-local"
+                      id="appointment"
+                      name="appointment"
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    />
+                    <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                  </div>
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-6"
+                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
                   >
                     Register Interest
                   </button>
