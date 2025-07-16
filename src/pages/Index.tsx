@@ -113,7 +113,7 @@ const Index: React.FC = () => {
           </div>
 
           {/* Main Heading */}
-          <div className="mb-12 text-center">
+          <div className="mb-12 text-center mt-6">
             <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
             <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
           </div>
