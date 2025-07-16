@@ -116,9 +116,9 @@ const Index: React.FC = () => {
                   <h3 className="text-xl font-bold text-black">Complete the Registration Form</h3>
                 </div>
                 <ul className="space-y-1 text-gray-700 text-sm list-none ml-[52px]">
-                  <li>- Fill out the form carefully and double-check all information</li>
-                  <li>- Use "Other Info" for alternative contacts or specific requirements</li>
-                  <li>- Book a call with an FCA-regulated expert (London 0204 number)</li>
+                  <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
+                  <li className="pl-2 -indent-2">- Use "Other Info" for alternative contacts or specific requirements</li>
+                  <li className="pl-2 -indent-2">- Book a call with an FCA-regulated expert (London 0204 number)</li>
                 </ul>
               </div>
 
@@ -129,10 +129,10 @@ const Index: React.FC = () => {
                   <h3 className="text-xl font-bold text-black">Submit Your Details & Expect a Call</h3>
                 </div>
                 <ul className="space-y-1 text-gray-700 text-sm list-none ml-[52px]">
-                  <li>- Submit your details and they'll be securely processed</li>
-                  <li>- You'll receive a call from a licensed representative within 48 hours</li>
-                  <li>- All calls come from London 0204 numbers</li>
-                  <li>- Booking a time guarantees a scheduled call at your convenience</li>
+                  <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
+                  <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
+                  <li className="pl-2 -indent-2">- All calls come from London 0204 numbers</li>
+                  <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
                 </ul>
               </div>
 
