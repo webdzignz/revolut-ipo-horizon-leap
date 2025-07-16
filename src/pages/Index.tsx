@@ -190,7 +190,7 @@ const Index: React.FC = () => {
                   <img 
                     src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
                     alt="Revolution" 
-                    className="h-16 md:h-20 lg:h-24 w-auto mb-4"
+                    className="h-18 md:h-22 lg:h-28 w-auto mb-4"
                   />
                 </div>
                 
