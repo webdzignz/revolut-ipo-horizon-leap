@@ -263,7 +263,7 @@ const Index: React.FC = () => {
             <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
-                <h3 className="text-2xl font-bold text-black">Submit Your Details & Expect a Call</h3>
+                <h3 className="text-2xl font-bold text-black">Submit your details</h3>
               </div>
               <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
