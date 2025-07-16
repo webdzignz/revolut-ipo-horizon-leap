@@ -194,14 +194,6 @@ const Index: React.FC = () => {
                   />
                 </div>
                 
-                <div className="flex justify-start -mt-8">
-                  <img 
-                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                    alt="Revolut" 
-                    className="h-24 md:h-32 lg:h-40 w-auto"
-                  />
-                </div>
-                
                 <div className="text-xl text-black font-medium mb-4">
                   IPO Announcement • Expected 2025
                 </div>
