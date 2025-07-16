@@ -68,7 +68,7 @@ const Index: React.FC = () => {
 
       
       {/* Scrolling Banner */}
-      <section className="bg-gray-100 py-4 overflow-hidden">
+      <section className="bg-gray-100 py-6 overflow-hidden mt-4">
         <div className="relative">
           <div className="flex animate-scroll gap-6 whitespace-nowrap">
             {/* First set */}
