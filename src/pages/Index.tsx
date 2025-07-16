@@ -186,7 +186,7 @@ const Index: React.FC = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-start">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
