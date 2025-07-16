@@ -604,9 +604,9 @@ const Index: React.FC = () => {
       </footer>
 
       {/* Disclaimer Section */}
-      <section className="bg-white py-8 border-t border-gray-200">
+      <section className="bg-white py-4 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs text-black leading-relaxed space-y-4">
+          <div className="text-[10px] text-black leading-tight space-y-1">
             <p>© 2025 Revolut Bank UAB</p>
             
             <p>
