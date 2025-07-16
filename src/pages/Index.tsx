@@ -544,51 +544,6 @@ const Index: React.FC = () => {
       </section>
 
 
-      {/* Global Reach Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4 flex items-center justify-center gap-3">
-              <Globe className="w-10 h-10" />
-              Global Reach & Growth
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-3xl font-bold text-blue-600">45M+</div>
-              <div className="text-gray-600">Users in 38 countries</div>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-3xl font-bold text-green-600">12M</div>
-              <div className="text-gray-600">New Users (2023)</div>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-3xl font-bold text-blue-600">73%</div>
-              <div className="text-gray-600">Transaction Growth YoY</div>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-              <div className="text-3xl font-bold text-green-600">38%</div>
-              <div className="text-gray-600">Balance Growth YoY</div>
-            </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <h3 className="text-xl font-semibold text-black mb-4">Markets Launched</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {["US", "Brazil", "Australia", "Singapore", "Japan", "New Zealand"].map((market) => (
-                <span key={market} className="px-4 py-2 bg-white rounded-full text-sm font-medium border border-gray-200">
-                  {market}
-                </span>
-              ))}
-            </div>
-            <p className="text-gray-600 mt-4">Planned Expansion: India, Mexico & more</p>
-          </div>
-        </div>
-      </section>
 
 
       {/* Footer */}
