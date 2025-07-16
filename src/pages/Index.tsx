@@ -625,51 +625,48 @@ const Index: React.FC = () => {
             </div>
           </div>
           
-          
-          {/* Disclaimer Section within Footer */}
-          <div className="border-t border-gray-800 mt-8 pt-8 bg-white w-full">
-            <div className="py-6">
-              <div className="max-w-5xl mx-auto px-6" style={{marginLeft: '1in', marginRight: '1in'}}>
-                <div className="text-[10px] text-black leading-tight space-y-2">
-                <p>© 2025 Revolut Bank UAB</p>
-                
-                <p>
-                  If you would like to find out more about which Revolut entity you receive services from please click here. 
-                  If you have any other questions, please reach out to us via the in-app chat in the Revolut app. 
-                  Revolut Bank UAB is a bank established in the Republic of Lithuania, registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 304580906, FI code 70700. 
-                  Revolut Bank UAB is licensed by the European Central Bank and regulated by the Bank of Lithuania. 
-                  Revolut Bank UAB provides credit, payment, current account and demand deposit account services.
-                </p>
-                
-                <p>
-                  Insurance distribution service is provided by Revolut Insurance Europe UAB which is authorised by the Bank of Lithuania as an insurance broker undertaking. 
-                  Registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 305910164.
-                </p>
-                
-                <p>
-                  Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). 
-                  Registered address: 7 Westferry Circus, Canary Wharf, London, England, E14 4HD. 
-                  Insurance related-products for Revolut Ltd customers are provided by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance mediation services (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities.
-                </p>
-                
-                <p>
-                  Investment services in the European Economic Area ("EEA") are provided by Revolut Securities Europe UAB (registration code 305799582, address Konstitucijos ave. 21B, Vilnius, Lithuania, LT-08130) which is authorised by the Bank of Lithuania as a brokerage firm.
-                </p>
-              </div>
-            </div>
-          </div>
-          
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">© 2024 Revolut. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
-                </div>
-              </div>
             </div>
           </div>
+        </div>
       </footer>
+      
+      {/* Full-width disclaimer section */}
+      <div className="bg-white w-full">
+        <div className="py-6 px-6">
+          <div className="text-[10px] text-black leading-tight space-y-2">
+            <p>© 2025 Revolut Bank UAB</p>
+            
+            <p>
+              If you would like to find out more about which Revolut entity you receive services from please click here. 
+              If you have any other questions, please reach out to us via the in-app chat in the Revolut app. 
+              Revolut Bank UAB is a bank established in the Republic of Lithuania, registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 304580906, FI code 70700. 
+              Revolut Bank UAB is licensed by the European Central Bank and regulated by the Bank of Lithuania. 
+              Revolut Bank UAB provides credit, payment, current account and demand deposit account services.
+            </p>
+            
+            <p>
+              Insurance distribution service is provided by Revolut Insurance Europe UAB which is authorised by the Bank of Lithuania as an insurance broker undertaking. 
+              Registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 305910164.
+            </p>
+            
+            <p>
+              Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). 
+              Registered address: 7 Westferry Circus, Canary Wharf, London, England, E14 4HD. 
+              Insurance related-products for Revolut Ltd customers are provided by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance mediation services (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities.
+            </p>
+            
+            <p>
+              Investment services in the European Economic Area ("EEA") are provided by Revolut Securities Europe UAB (registration code 305799582, address Konstitucijos ave. 21B, Vilnius, Lithuania, LT-08130) which is authorised by the Bank of Lithuania as a brokerage firm.
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
   );
