@@ -627,9 +627,9 @@ const Index: React.FC = () => {
           
           
           {/* Disclaimer Section within Footer */}
-          <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="border-t border-gray-800 mt-8 pt-8 bg-white rounded-lg p-6">
             <div className="max-w-5xl mx-auto" style={{marginLeft: '1in', marginRight: '1in'}}>
-              <div className="text-[10px] text-white leading-tight space-y-2">
+              <div className="text-[10px] text-black leading-tight space-y-2">
                 <p>© 2025 Revolut Bank UAB</p>
                 
                 <p>
