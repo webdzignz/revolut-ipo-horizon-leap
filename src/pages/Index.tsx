@@ -231,6 +231,153 @@ const Index: React.FC = () => {
             </div>
           </div>
 
+          {/* IPO Highlight Information Section */}
+          <section className="bg-gray-50 py-16 -mx-6">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">IPO HIGHLIGHTS</h2>
+                <p className="text-xl text-gray-600">Everything you need to know about Revolut's upcoming public offering</p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* When is Revolut going public? */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Calendar className="w-8 h-8 text-black" />
+                    <h3 className="text-2xl font-bold text-black">IPO Timeline</h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-gray-700">
+                    <p className="font-medium text-black">When is Revolut going public?</p>
+                    <p className="text-sm leading-relaxed">
+                      As of February 2025, Revolut has not confirmed an exact date for its IPO. However, the company is actively preparing for a potential listing sometime this year, following a recent valuation of around $45 billion.
+                    </p>
+                    
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-black">Key Factors:</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-start gap-2">
+                          <TrendingUp className="w-4 h-4 mt-0.5 text-green-600" />
+                          <span><strong>Financial Performance:</strong> $2.2B revenue, $545M pre-tax profits in 2023</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Building2 className="w-4 h-4 mt-0.5 text-blue-600" />
+                          <span><strong>Regulatory Progress:</strong> Full UK banking license obtained July 2024</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <BarChart3 className="w-4 h-4 mt-0.5 text-purple-600" />
+                          <span><strong>Market Environment:</strong> Favorable IPO conditions expected in 2025</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <p className="text-sm bg-gray-100 p-3 rounded-lg">
+                      <strong>Potential Listing:</strong> Eyeing Nasdaq (U.S.) with UK government lobbying for London Stock Exchange
+                    </p>
+                  </div>
+                </div>
+
+                {/* What is Revolut? */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-6">
+                    <Globe className="w-8 h-8 text-black" />
+                    <h3 className="text-2xl font-bold text-black">Company Overview</h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-gray-700">
+                    <p className="font-medium text-black">What is Revolut?</p>
+                    <p className="text-sm leading-relaxed">
+                      Founded in 2015 by Nikolay Storonsky and Vlad Yatsenko, Revolut is a London-based fintech firm offering a mobile-first alternative to traditional banking.
+                    </p>
+                    
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-black">Key Milestones:</h4>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                          <span className="font-medium">2015</span>
+                          <span className="text-right text-xs">Launched in UK</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                          <span className="font-medium">2018</span>
+                          <span className="text-right text-xs">European banking license</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                          <span className="font-medium">2020</span>
+                          <span className="text-right text-xs">U.S. & Japan expansion</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                          <span className="font-medium">2021</span>
+                          <span className="text-right text-xs">$33B valuation</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                          <span className="font-medium">2024</span>
+                          <span className="text-right text-xs">50M+ users, UK license</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1">
+                          <span className="font-medium">2025</span>
+                          <span className="text-right text-xs">IPO preparations</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* What does Revolut offer? */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-6">
+                    <CreditCard className="w-8 h-8 text-black" />
+                    <h3 className="text-2xl font-bold text-black">Services & Products</h3>
+                  </div>
+                  
+                  <div className="space-y-4 text-gray-700">
+                    <p className="font-medium text-black">What does Revolut offer?</p>
+                    
+                    <div className="space-y-3">
+                      <ul className="space-y-3 text-sm">
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                          <span><strong>Multi-currency accounts</strong> with real-time interbank exchange rates</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                          <span><strong>Stock and crypto trading</strong> via the mobile app</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                          <span><strong>AI-driven budgeting tools</strong> for spending and savings management</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                          <span><strong>Low-fee international transfers</strong> across borders</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                          <span><strong>Premium subscription tiers</strong> with cashback, travel insurance, and lounge access</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div className="bg-black text-white p-4 rounded-lg">
+                      <p className="text-sm font-medium mb-2">Global Reach</p>
+                      <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div>
+                          <span className="font-semibold">50M+</span>
+                          <br />
+                          <span className="text-gray-300">Users Globally</span>
+                        </div>
+                        <div>
+                          <span className="font-semibold">30+</span>
+                          <br />
+                          <span className="text-gray-300">Countries</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Main Heading */}
           <div className="mb-12 text-center mt-12">
             <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
