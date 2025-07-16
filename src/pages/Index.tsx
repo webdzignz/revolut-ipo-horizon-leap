@@ -105,7 +105,7 @@ const Index: React.FC = () => {
             {/* Right Content - Hero Image */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/lovable-uploads/b58295cd-671d-4295-a103-a1c8d634bb0c.png" 
+                src="/lovable-uploads/d5371364-cf23-4fa1-9ce8-467e8b3fda66.png" 
                 alt="Woman holding Revolut card" 
                 className="w-full max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
               />
