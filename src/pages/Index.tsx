@@ -108,8 +108,8 @@ const Index: React.FC = () => {
             {/* Right Content - Hero Image */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/lovable-uploads/29c719d1-d8c4-4ce6-8254-e697eefa3e17.png" 
-                alt="100 Reasons Revolut is The Best Buy" 
+                src="/lovable-uploads/67627212-6679-4888-89a4-7dfcc02876ef.png" 
+                alt="The Salary Wants Out of Old Banks - Revolut" 
                 className="w-full max-w-md lg:max-w-lg xl:max-w-xl rounded-2xl shadow-2xl"
               />
             </div>
