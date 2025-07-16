@@ -70,7 +70,7 @@ const Index: React.FC = () => {
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight flex flex-wrap items-center gap-4">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
@@ -78,18 +78,15 @@ const Index: React.FC = () => {
                   />
                   <span>IPO</span>
                 </h1>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Is Coming
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Is Coming Soon
                 </h2>
                 <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Invest In
+                  Invest In Future
                 </h3>
-                <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Tomorrow
+                <h4 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
+                  Starting Today
                 </h4>
-                <h5 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
-                  Today
-                </h5>
                 
                 <div className="text-xl text-black font-medium">
                   Expected 2025
