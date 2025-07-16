@@ -115,7 +115,6 @@ const Index: React.FC = () => {
                 </div>
                 <ul className="space-y-1 text-gray-700 text-sm list-disc list-inside">
                   <li>Fill out the form carefully and double-check all information</li>
-                  <li>Ensure your name, phone number, and email address are correct</li>
                   <li>Use "Other Info" for alternative contacts or specific requirements</li>
                   <li>Book a call with an FCA-regulated expert (London 0204 number)</li>
                 </ul>
