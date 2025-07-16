@@ -189,14 +189,14 @@ const Index: React.FC = () => {
                   IPO ANNOUNCEMENT
                 </div>
                 
-                <div className="flex flex-wrap items-center gap-4 mb-4">
+                <div className="flex justify-center mb-6">
                   <img 
                     src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                     alt="Revolut" 
                     className="h-16 md:h-20 lg:h-24 w-auto"
                   />
                 </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4">
                   Revolut IPO: Banking on the Future
                 </h1>
                 
