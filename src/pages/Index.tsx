@@ -190,22 +190,22 @@ const Index: React.FC = () => {
                   <img 
                     src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
                     alt="Revolution" 
-                    className="h-18 md:h-22 lg:h-28 w-auto mb-4"
+                    className="h-20 md:h-24 lg:h-32 w-auto mb-8"
                   />
                 </div>
                 
-                <div className="text-xl text-black font-medium mb-4">
+                <div className="text-xl text-black font-medium mb-8">
                   IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-8">
                   Revolut IPO: Banking on the Future
                   <br />
                   Buy Now....
                 </h1>
               </div>
               
-              <p className="text-xl font-bold text-gray-600 leading-relaxed max-w-lg">
+              <p className="text-xl font-bold text-gray-600 leading-relaxed max-w-lg mb-8">
                 Get early access to Revolut's IPO — one of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
               </p>
 
