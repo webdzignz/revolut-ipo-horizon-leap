@@ -198,7 +198,7 @@ const Index: React.FC = () => {
                 </div>
                 
                 <div className="text-xl text-black font-medium mb-4">
-                  Expected 2025
+                  IPO Announcement • Expected 2025
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight">
