@@ -231,347 +231,203 @@ const Index: React.FC = () => {
             </div>
           </div>
 
-          {/* IPO Highlight Information Section */}
-          <section className="bg-gray-50 py-16 -mx-6">
-            <div className="max-w-7xl mx-auto px-6">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">IPO HIGHLIGHTS</h2>
-                <p className="text-xl text-gray-600">Everything you need to know about Revolut's upcoming public offering</p>
+        </div>
+      </section>
+
+      {/* Main Heading */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="mb-12 text-center mt-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
+        </div>
+
+        {/* Bottom Content - Steps and Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-16">
+          {/* Left Content - Registration Steps */}
+          <div className="space-y-8 flex flex-col">
+            
+            {/* Step 1 */}
+            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
+                <h3 className="text-2xl font-bold text-black">Complete the Registration Form</h3>
               </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* When is Revolut going public? */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Calendar className="w-8 h-8 text-black" />
-                    <h3 className="text-2xl font-bold text-black">IPO Timeline</h3>
-                  </div>
-                  
-                  <div className="space-y-4 text-gray-700">
-                    <p className="font-medium text-black">When is Revolut going public?</p>
-                    <p className="text-sm leading-relaxed">
-                      As of February 2025, Revolut has not confirmed an exact date for its IPO. However, the company is actively preparing for a potential listing sometime this year, following a recent valuation of around $45 billion.
-                    </p>
-                    
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-black">Key Factors:</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-start gap-2">
-                          <TrendingUp className="w-4 h-4 mt-0.5 text-green-600" />
-                          <span><strong>Financial Performance:</strong> $2.2B revenue, $545M pre-tax profits in 2023</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Building2 className="w-4 h-4 mt-0.5 text-blue-600" />
-                          <span><strong>Regulatory Progress:</strong> Full UK banking license obtained July 2024</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <BarChart3 className="w-4 h-4 mt-0.5 text-purple-600" />
-                          <span><strong>Market Environment:</strong> Favorable IPO conditions expected in 2025</span>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <p className="text-sm bg-gray-100 p-3 rounded-lg">
-                      <strong>Potential Listing:</strong> Eyeing Nasdaq (U.S.) with UK government lobbying for London Stock Exchange
-                    </p>
-                  </div>
-                </div>
-
-                {/* What is Revolut? */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Globe className="w-8 h-8 text-black" />
-                    <h3 className="text-2xl font-bold text-black">Company Overview</h3>
-                  </div>
-                  
-                  <div className="space-y-4 text-gray-700">
-                    <p className="font-medium text-black">What is Revolut?</p>
-                    <p className="text-sm leading-relaxed">
-                      Founded in 2015 by Nikolay Storonsky and Vlad Yatsenko, Revolut is a London-based fintech firm offering a mobile-first alternative to traditional banking.
-                    </p>
-                    
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-black">Key Milestones:</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
-                          <span className="font-medium">2015</span>
-                          <span className="text-right text-xs">Launched in UK</span>
-                        </div>
-                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
-                          <span className="font-medium">2018</span>
-                          <span className="text-right text-xs">European banking license</span>
-                        </div>
-                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
-                          <span className="font-medium">2020</span>
-                          <span className="text-right text-xs">U.S. & Japan expansion</span>
-                        </div>
-                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
-                          <span className="font-medium">2021</span>
-                          <span className="text-right text-xs">$33B valuation</span>
-                        </div>
-                        <div className="flex justify-between items-center py-1 border-b border-gray-100">
-                          <span className="font-medium">2024</span>
-                          <span className="text-right text-xs">50M+ users, UK license</span>
-                        </div>
-                        <div className="flex justify-between items-center py-1">
-                          <span className="font-medium">2025</span>
-                          <span className="text-right text-xs">IPO preparations</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* What does Revolut offer? */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                  <div className="flex items-center gap-3 mb-6">
-                    <CreditCard className="w-8 h-8 text-black" />
-                    <h3 className="text-2xl font-bold text-black">Services & Products</h3>
-                  </div>
-                  
-                  <div className="space-y-4 text-gray-700">
-                    <p className="font-medium text-black">What does Revolut offer?</p>
-                    
-                    <div className="space-y-3">
-                      <ul className="space-y-3 text-sm">
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
-                          <span><strong>Multi-currency accounts</strong> with real-time interbank exchange rates</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
-                          <span><strong>Stock and crypto trading</strong> via the mobile app</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
-                          <span><strong>AI-driven budgeting tools</strong> for spending and savings management</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
-                          <span><strong>Low-fee international transfers</strong> across borders</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
-                          <span><strong>Premium subscription tiers</strong> with cashback, travel insurance, and lounge access</span>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-black text-white p-4 rounded-lg">
-                      <p className="text-sm font-medium mb-2">Global Reach</p>
-                      <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div>
-                          <span className="font-semibold">50M+</span>
-                          <br />
-                          <span className="text-gray-300">Users Globally</span>
-                        </div>
-                        <div>
-                          <span className="font-semibold">30+</span>
-                          <br />
-                          <span className="text-gray-300">Countries</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+                <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
+                <li className="pl-2 -indent-2">- Use "Other Info" for alternative contacts or specific requirements</li>
+                <li className="pl-2 -indent-2">- Book a call with an FCA-regulated expert (London 0204 number)</li>
+              </ul>
             </div>
-          </section>
 
-          {/* Main Heading */}
-          <div className="mb-12 text-center mt-12">
-            <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
+            {/* Step 2 */}
+            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
+                <h3 className="text-2xl font-bold text-black">Submit Your Details & Expect a Call</h3>
+              </div>
+              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+                <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
+                <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
+                <li className="pl-2 -indent-2">- All calls come from London 0204 numbers</li>
+                <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
+              </ul>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
+                <h3 className="text-2xl font-bold text-black">Get Ready for Your Call</h3>
+              </div>
+              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+                <li>- Expect a call within 48 hours of submitting</li>
+                <li>- Do light research on Revolut's IPO beforehand</li>
+                <li>- Prepare questions for the expert</li>
+                <li>- Expert will provide overview and tailored strategy</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Bottom Content - Steps and Form */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-16">
-            {/* Left Content - Registration Steps */}
-            <div className="space-y-8 flex flex-col">
-              
-              {/* Step 1 */}
-              <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
-                   <h3 className="text-2xl font-bold text-black">Complete the Registration Form</h3>
-                 </div>
-                 <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
-                  <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
-                  <li className="pl-2 -indent-2">- Use "Other Info" for alternative contacts or specific requirements</li>
-                  <li className="pl-2 -indent-2">- Book a call with an FCA-regulated expert (London 0204 number)</li>
-                </ul>
-              </div>
+          {/* Right Content - Investment Form */}
+          <div className="w-full">
+            <div>
+              <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
+                {/* Logo at top left */}
+                <div className="mb-6">
+                  <img 
+                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                    alt="Revolut Logo" 
+                    className="h-12 w-auto"
+                  />
+                </div>
+                
+                <div className="mb-6">
+                  <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
+                    REGISTER YOUR INVESTMENT INTEREST
+                  </h2>
+                  <p className="text-gray-300 text-sm">
+                    Get priority access to IPO updates and investment opportunities
+                  </p>
+                </div>
 
-              {/* Step 2 */}
-              <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
-                   <h3 className="text-2xl font-bold text-black">Submit Your Details & Expect a Call</h3>
-                 </div>
-                 <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
-                   <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
-                   <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
-                   <li className="pl-2 -indent-2">- All calls come from London 0204 numbers</li>
-                   <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
-                 </ul>
-               </div>
-
-               {/* Step 3 */}
-               <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
-                 <div className="flex items-center gap-3 mb-4">
-                   <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
-                   <h3 className="text-2xl font-bold text-black">Get Ready for Your Call</h3>
-                 </div>
-                 <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
-                  <li>- Expect a call within 48 hours of submitting</li>
-                  <li>- Do light research on Revolut's IPO beforehand</li>
-                  <li>- Prepare questions for the expert</li>
-                  <li>- Expert will provide overview and tailored strategy</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Right Content - Investment Form */}
-            <div className="w-full">
-              <div>
-                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
-                  {/* Logo at top left */}
-                  <div className="mb-6">
-                    <img 
-                      src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                      alt="Revolut Logo" 
-                      className="h-12 w-auto"
-                    />
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
-                      REGISTER YOUR INVESTMENT INTEREST
-                    </h2>
-                    <p className="text-gray-300 text-sm">
-                      Get priority access to IPO updates and investment opportunities
-                    </p>
-                  </div>
-
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name and Numbers on same row */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Contact Number/s
-                      </label>
-                      <input
-                        type="text"
-                        id="numbers"
-                        name="numbers"
-                        value={formData.numbers}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                        placeholder="Phone number(s)"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Investment Amount and Timeframe on same row */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Investment Amount
-                      </label>
-                      <select
-                        id="investmentAmount"
-                        name="investmentAmount"
-                        value={formData.investmentAmount}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      >
-                        <option value="">Select amount</option>
-                        <option value="10000-50000">£10K - £50K</option>
-                        <option value="50000-100000">£50K - £100K</option>
-                        <option value="100000-250000">£100K - £250K</option>
-                        <option value="250000-500000">£250K - £500K</option>
-                        <option value="500000+">£500K+</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-1">
-                      <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Timeframe
-                      </label>
-                      <select
-                        id="timeframe"
-                        name="timeframe"
-                        value={formData.timeframe}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      >
-                        <option value="">Select timeframe</option>
-                        <option value="immediate">Immediate</option>
-                        <option value="3-months">3 months</option>
-                        <option value="6-months">6 months</option>
-                        <option value="1-year">1+ years</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Notes Field */}
+                <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Name and Numbers on same row */}
+                <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Additional Notes
-                    </label>
-                    <textarea
-                      id="notes"
-                      name="notes"
-                      value={formData.notes}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
-                      placeholder="Any specific questions or requirements..."
-                    />
-                  </div>
-
-                  {/* Appointment Field */}
-                  <div className="space-y-1">
-                    <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Book Appointment with Expert
+                    <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Full Name
                     </label>
                     <input
-                      type="datetime-local"
-                      id="appointment"
-                      name="appointment"
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      placeholder="Enter your full name"
                     />
-                    <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
                   </div>
 
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
-                  >
-                    Register Interest
-                  </button>
-                </form>
+                  <div className="space-y-1">
+                    <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Contact Number/s
+                    </label>
+                    <input
+                      type="text"
+                      id="numbers"
+                      name="numbers"
+                      value={formData.numbers}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      placeholder="Phone number(s)"
+                    />
+                  </div>
                 </div>
+
+                {/* Investment Amount and Timeframe on same row */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Investment Amount
+                    </label>
+                    <select
+                      id="investmentAmount"
+                      name="investmentAmount"
+                      value={formData.investmentAmount}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    >
+                      <option value="">Select amount</option>
+                      <option value="10000-50000">£10K - £50K</option>
+                      <option value="50000-100000">£50K - £100K</option>
+                      <option value="100000-250000">£100K - £250K</option>
+                      <option value="250000-500000">£250K - £500K</option>
+                      <option value="500000+">£500K+</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Timeframe
+                    </label>
+                    <select
+                      id="timeframe"
+                      name="timeframe"
+                      value={formData.timeframe}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    >
+                      <option value="">Select timeframe</option>
+                      <option value="immediate">Immediate</option>
+                      <option value="3-months">3 months</option>
+                      <option value="6-months">6 months</option>
+                      <option value="1-year">1+ years</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Notes Field */}
+                <div className="space-y-1">
+                  <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
+                    Additional Notes
+                  </label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    value={formData.notes}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
+                    placeholder="Any specific questions or requirements..."
+                  />
+                </div>
+
+                {/* Appointment Field */}
+                <div className="space-y-1">
+                  <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
+                    Book Appointment with Expert
+                  </label>
+                  <input
+                    type="datetime-local"
+                    id="appointment"
+                    name="appointment"
+                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                  />
+                  <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
+                >
+                  Register Interest
+                </button>
+              </form>
               </div>
             </div>
           </div>
@@ -690,6 +546,152 @@ const Index: React.FC = () => {
         </div>
       </section>
 
+      {/* IPO Highlight Information Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-black uppercase mb-4">IPO HIGHLIGHTS</h2>
+            <p className="text-xl text-gray-600">Everything you need to know about Revolut's upcoming public offering</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* When is Revolut going public? */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <Calendar className="w-8 h-8 text-black" />
+                <h3 className="text-2xl font-bold text-black">IPO Timeline</h3>
+              </div>
+              
+              <div className="space-y-4 text-gray-700">
+                <p className="font-medium text-black">When is Revolut going public?</p>
+                <p className="text-sm leading-relaxed">
+                  As of February 2025, Revolut has not confirmed an exact date for its IPO. However, the company is actively preparing for a potential listing sometime this year, following a recent valuation of around $45 billion.
+                </p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-black">Key Factors:</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <TrendingUp className="w-4 h-4 mt-0.5 text-green-600" />
+                      <span><strong>Financial Performance:</strong> $2.2B revenue, $545M pre-tax profits in 2023</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Building2 className="w-4 h-4 mt-0.5 text-blue-600" />
+                      <span><strong>Regulatory Progress:</strong> Full UK banking license obtained July 2024</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <BarChart3 className="w-4 h-4 mt-0.5 text-purple-600" />
+                      <span><strong>Market Environment:</strong> Favorable IPO conditions expected in 2025</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <p className="text-sm bg-gray-100 p-3 rounded-lg">
+                  <strong>Potential Listing:</strong> Eyeing Nasdaq (U.S.) with UK government lobbying for London Stock Exchange
+                </p>
+              </div>
+            </div>
+
+            {/* What is Revolut? */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <Globe className="w-8 h-8 text-black" />
+                <h3 className="text-2xl font-bold text-black">Company Overview</h3>
+              </div>
+              
+              <div className="space-y-4 text-gray-700">
+                <p className="font-medium text-black">What is Revolut?</p>
+                <p className="text-sm leading-relaxed">
+                  Founded in 2015 by Nikolay Storonsky and Vlad Yatsenko, Revolut is a London-based fintech firm offering a mobile-first alternative to traditional banking.
+                </p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-black">Key Milestones:</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                      <span className="font-medium">2015</span>
+                      <span className="text-right text-xs">Launched in UK</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                      <span className="font-medium">2018</span>
+                      <span className="text-right text-xs">European banking license</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                      <span className="font-medium">2020</span>
+                      <span className="text-right text-xs">U.S. & Japan expansion</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                      <span className="font-medium">2021</span>
+                      <span className="text-right text-xs">$33B valuation</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1 border-b border-gray-100">
+                      <span className="font-medium">2024</span>
+                      <span className="text-right text-xs">50M+ users, UK license</span>
+                    </div>
+                    <div className="flex justify-between items-center py-1">
+                      <span className="font-medium">2025</span>
+                      <span className="text-right text-xs">IPO preparations</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* What does Revolut offer? */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <div className="flex items-center gap-3 mb-6">
+                <CreditCard className="w-8 h-8 text-black" />
+                <h3 className="text-2xl font-bold text-black">Services & Products</h3>
+              </div>
+              
+              <div className="space-y-4 text-gray-700">
+                <p className="font-medium text-black">What does Revolut offer?</p>
+                
+                <div className="space-y-3">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                      <span><strong>Multi-currency accounts</strong> with real-time interbank exchange rates</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                      <span><strong>Stock and crypto trading</strong> via the mobile app</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                      <span><strong>AI-driven budgeting tools</strong> to manage spending and savings</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                      <span><strong>Low-fee international transfers</strong> across borders</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-black rounded-full mt-2"></div>
+                      <span><strong>Premium subscription tiers</strong> with cashback, travel insurance, and lounge access</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-black text-white p-4 rounded-lg">
+                  <p className="text-sm font-medium mb-2">Global Reach</p>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                      <span className="font-semibold">50M+</span>
+                      <br />
+                      <span className="text-gray-300">Users Globally</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">30+</span>
+                      <br />
+                      <span className="text-gray-300">Countries</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Footer */}
