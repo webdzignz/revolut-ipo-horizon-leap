@@ -185,9 +185,6 @@ const Index: React.FC = () => {
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <div className="text-sm text-gray-500 uppercase tracking-wide font-medium">
-                  IPO ANNOUNCEMENT
-                </div>
                 
                 <div className="flex justify-center mb-6">
                   <img 
