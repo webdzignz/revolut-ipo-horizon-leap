@@ -108,8 +108,8 @@ const Index: React.FC = () => {
             {/* Right Content - Hero Image */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src="/lovable-uploads/c1cd8c60-158d-48ed-9e2c-438d0b2ec004.png" 
-                alt="Financial Dashboard" 
+                src="/lovable-uploads/6fa59685-2039-4c32-9a50-5770099ba15f.png" 
+                alt="Revolut 100 Reasons" 
                 className="w-full max-w-md lg:max-w-lg xl:max-w-xl rounded-2xl shadow-2xl"
               />
             </div>
