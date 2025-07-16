@@ -103,11 +103,15 @@ const Index: React.FC = () => {
             </button>
           </div>
 
+          {/* Main Heading */}
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-black text-center">Talk to an expert / more info on the revolt IPO</h2>
+          </div>
+
           {/* Bottom Content - Steps and Form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Content - Registration Steps */}
             <div className="space-y-8 flex flex-col">
-              <h2 className="text-2xl font-bold text-black">How to Register Your Interest in the Revolut IPO</h2>
               
               {/* Step 1 */}
               <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
@@ -154,7 +158,7 @@ const Index: React.FC = () => {
             {/* Right Content - Investment Form */}
             <div className="w-full">
               <div className="mt-20">
-                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-2xl">
+                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-3xl">{/* Increased from max-w-2xl to max-w-3xl for ~1 inch wider */}
                   <div className="mb-6">
                     <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
                       REGISTER YOUR INVESTMENT INTEREST
