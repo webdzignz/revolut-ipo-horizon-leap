@@ -759,29 +759,17 @@ const Index: React.FC = () => {
       <div className="bg-white w-full">
         <div className="py-6 px-6 max-w-4xl mx-auto">
           <div className="text-[10px] text-black leading-tight space-y-2">
-            <p>© 2025 Revolut Bank UAB</p>
-            
             <p>
-              If you would like to find out more about which Revolut entity you receive services from please click here. 
-              If you have any other questions, please reach out to us via the in-app chat in the Revolut app. 
-              Revolut Bank UAB is a bank established in the Republic of Lithuania, registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 304580906, FI code 70700. 
-              Revolut Bank UAB is licensed by the European Central Bank and regulated by the Bank of Lithuania. 
-              Revolut Bank UAB provides credit, payment, current account and demand deposit account services.
+              <strong>Disclaimer:</strong><br/>
+              The content provided on this website is for informational and educational purposes only and does not constitute financial advice, investment recommendations, or an offer to buy or sell any securities. We are not a licensed financial advisor, broker-dealer, or investment firm. Our role is to introduce users to qualified third-party financial professionals and institutions who are authorized to provide regulated investment services.
             </p>
             
             <p>
-              Insurance distribution service is provided by Revolut Insurance Europe UAB which is authorised by the Bank of Lithuania as an insurance broker undertaking. 
-              Registered address: Konstitucijos ave. 21B, Vilnius, 08130, the Republic of Lithuania, number of registration 305910164.
+              While we strive to ensure that all information is accurate and up to date, we do not guarantee the completeness, reliability, or suitability of any content or third-party service mentioned. Any investment carries risk, including the potential loss of capital. You are solely responsible for conducting your own due diligence and should consult with a licensed financial advisor or registered investment professional before making any financial decisions.
             </p>
             
             <p>
-              Revolut Ltd (No. 08804411) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Firm Reference 900562). 
-              Registered address: 7 Westferry Circus, Canary Wharf, London, England, E14 4HD. 
-              Insurance related-products for Revolut Ltd customers are provided by Revolut Travel Ltd which is authorised by the Financial Conduct Authority to undertake insurance mediation services (FCA No: 780586) and by Revolut Ltd, an Appointed Representative of Revolut Travel Ltd in relation to insurance distribution activities.
-            </p>
-            
-            <p>
-              Investment services in the European Economic Area ("EEA") are provided by Revolut Securities Europe UAB (registration code 305799582, address Konstitucijos ave. 21B, Vilnius, Lithuania, LT-08130) which is authorised by the Bank of Lithuania as a brokerage firm.
+              By using this site, you acknowledge that we do not provide personalized financial advice and that any decisions made based on the information or introductions provided are made at your own risk.
             </p>
           </div>
         </div>
