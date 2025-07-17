@@ -49,30 +49,6 @@ const Index: React.FC = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  // Set logo width to text elements for symmetry
-  useEffect(() => {
-    const setLogoWidth = () => {
-      const logoImg = document.getElementById('hero-logo');
-      const textElements = document.querySelectorAll('.logo-width-match');
-      
-      if (logoImg && textElements.length > 0) {
-        const logoWidth = logoImg.offsetWidth;
-        textElements.forEach((element) => {
-          (element as HTMLElement).style.width = `${logoWidth}px`;
-        });
-      }
-    };
-
-    // Set width initially and on resize
-    setLogoWidth();
-    window.addEventListener('resize', setLogoWidth);
-    
-    // Set width after fonts load
-    document.fonts.ready.then(setLogoWidth);
-
-    return () => window.removeEventListener('resize', setLogoWidth);
-  }, []);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -359,25 +335,24 @@ const Index: React.FC = () => {
                 
                 <div className="flex justify-start" style={{ marginTop: '0.5in' }}>
                   <img 
-                    id="hero-logo"
                     src="/lovable-uploads/bc21313b-5651-4a1c-87ca-0c910f3c7794.png" 
                     alt="Revolut" 
                     className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 sm:mb-8"
                   />
                 </div>
                 
-                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8 logo-width-match">
+                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8 max-w-lg">
                   IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8 logo-width-match">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8 max-w-lg">
                   Revolut IPO Banking on the Future
                   <br />
                   Buy Now....
                 </h1>
               </div>
               
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8 italic font-bold logo-width-match">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg mb-6 sm:mb-8 italic font-bold">
                 "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
               </p>
 
