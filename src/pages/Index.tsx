@@ -49,8 +49,34 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
+              alt="Revolut Logo" 
+              className="h-20 w-auto"
+            />
+            <span className="text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
+          </div>
+          <div className="flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 text-gray-700">
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Request Info</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Contact Us</span>
+            </nav>
+            <div className="flex items-center gap-4">
+              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors" onClick={() => scrollToSection('form-section')}>Sign up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      
       {/* Scrolling Banner */}
-      <section className="bg-black py-1 overflow-hidden">
+      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: '110px' }}>
         <div className="relative">
           <div className="flex animate-scroll gap-8 whitespace-nowrap">
             {/* First set */}
@@ -158,34 +184,8 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* Header */}
-      <header className="fixed top-8 left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
-              alt="Revolut Logo" 
-              className="h-20 w-auto"
-            />
-            <span className="text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
-          </div>
-          <div className="flex items-center gap-8">
-            <nav className="hidden md:flex items-center gap-8 text-gray-700">
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Request Info</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Contact Us</span>
-            </nav>
-            <div className="flex items-center gap-4">
-              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors" onClick={() => scrollToSection('form-section')}>Sign up</button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-32 pb-24">
+      <section className="relative overflow-hidden bg-white pt-4 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           {/* Top Content - Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
