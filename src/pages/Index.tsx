@@ -13,12 +13,48 @@ const Index: React.FC = () => {
 
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Hero images array
+  const heroImages = [
+    {
+      src: "/lovable-uploads/d5371364-cf23-4fa1-9ce8-467e8b3fda66.png",
+      alt: "Woman holding Revolut card"
+    },
+    {
+      src: "/lovable-uploads/de223bd2-f548-4c90-ba82-03a64756de71.png", 
+      alt: "Man with headphones showing Revolut app"
+    },
+    {
+      src: "/lovable-uploads/643c0b1d-b8e5-47e8-aae7-c60504de625e.png",
+      alt: "Woman showing Revolut app"
+    },
+    {
+      src: "/lovable-uploads/3c35cd11-e080-4119-9e9a-154379b2fc5a.png",
+      alt: "Woman holding Revolut card"
+    },
+    {
+      src: "/lovable-uploads/20f0d219-1f1f-4d4a-aeca-e6704d264c75.png",
+      alt: "Woman showing Revolut app"
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hero image rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % heroImages.length
+      );
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -333,13 +369,16 @@ const Index: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Content - Hero Image */}
+            {/* Right Content - Hero Image Slideshow */}
             <div className="flex justify-center lg:justify-end order-first lg:order-last">
-              <img 
-                src="/lovable-uploads/d5371364-cf23-4fa1-9ce8-467e8b3fda66.png" 
-                alt="Woman holding Revolut card" 
-                className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
-              />
+              <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+                <img 
+                  src={heroImages[currentImageIndex].src}
+                  alt={heroImages[currentImageIndex].alt}
+                  className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
+                  style={{ aspectRatio: '3/4' }}
+                />
+              </div>
             </div>
           </div>
 
