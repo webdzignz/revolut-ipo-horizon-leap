@@ -683,7 +683,7 @@ const Index: React.FC = () => {
                   REVOLUT?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Founded in 2015, Revolut is a London-based fintech offering mobile-first banking. 50M+ users across 38 countries with $2.2B revenue in 2023.
+                  Revolut is a UK FinTech app launched in 2015. It lets you send money, exchange currencies, and trade crypto — all in one place.
                 </p>
                 <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
                   Learn More
