@@ -599,7 +599,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">
                   Revolut is targeting a 2025 IPO launch with preparation already underway. The company has secured necessary banking licenses and achieved profitability.
                 </p>
-                <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                <button 
+                  className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   Learn Timeline
                 </button>
               </div>
@@ -616,7 +619,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Currently valued at $45 billion with 45+ million users across 38 countries. Revenue grew to over $4.0B in 2024 with a $1.4B pre-tax profit.
                 </p>
-                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                <button 
+                  className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   View Growth
                 </button>
               </div>
@@ -633,7 +639,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Join institutional investors like Tiger Global, Coatue, and D1 Capital. Multiple revenue streams and global expansion plans make it attractive.
                 </p>
-                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                <button 
+                  className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   Join Strategy
                 </button>
               </div>
@@ -650,7 +659,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">
                   We built an app to make all things finance easy. And our IPO preparation is no different — every step is calculated, and going public couldn't be simpler.
                 </p>
-                <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                <button 
+                  className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   Get Started
                 </button>
               </div>
@@ -669,7 +681,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-300 leading-relaxed">
                   As of February 2025, Revolut is actively preparing for a potential listing this year, following a recent valuation of $45 billion. Full UK banking license obtained July 2024.
                 </p>
-                <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                <button 
+                  className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   Learn Timeline
                 </button>
               </div>
@@ -686,7 +701,10 @@ const Index: React.FC = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Revolut is a UK FinTech app launched in 2015. It lets you send money, exchange currencies, and trade crypto — all in one place.
                 </p>
-                <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                <button 
+                  className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   Learn More
                 </button>
               </div>
