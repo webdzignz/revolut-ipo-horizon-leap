@@ -700,7 +700,16 @@ const Index: React.FC = () => {
       <footer className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-start">
-            {/* Left side - Navigation Links */}
+            {/* Top Left corner - Revolut Logo */}
+            <div className="flex items-start">
+              <img 
+                src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                alt="Revolut Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
+            
+            {/* Right side - Navigation Links */}
             <div className="flex gap-12 pt-4">
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
@@ -720,15 +729,6 @@ const Index: React.FC = () => {
               >
                 Contact Us
               </button>
-            </div>
-            
-            {/* Top Right corner - Revolut Logo */}
-            <div className="flex items-start">
-              <img 
-                src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                alt="Revolut Logo" 
-                className="h-16 w-auto"
-              />
             </div>
           </div>
         </div>
