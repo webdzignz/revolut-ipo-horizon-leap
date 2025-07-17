@@ -795,8 +795,8 @@ const Index: React.FC = () => {
       <div id="terms-conditions" className="bg-white w-full">
         <div className="py-3 px-6 max-w-7xl mx-auto">
           <div className="text-[7px] text-black leading-tight space-y-1">
-            <h2 className="text-[10px] font-bold mb-1">Terms and Conditions</h2>
-            <p className="text-[7px] mb-1">By using this website and submitting your personal details, you agree to the following terms:</p>
+            <h2 className="text-[10px] font-bold mb-1 text-center">Terms and Conditions</h2>
+            <p className="text-[7px] mb-1 text-center">By using this website and submitting your personal details, you agree to the following terms:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
               <div>
                 <h3 className="font-semibold mb-0 text-[8px]">Introduction Services Only</h3>
