@@ -699,57 +699,36 @@ const Index: React.FC = () => {
       {/* Footer */}
       <footer className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <img 
-                  src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                  alt="Revolut Logo" 
-                  className="h-8 w-auto"
-                />
-              </div>
-              <p className="text-gray-400">
-                The world&apos;s fastest-growing digital bank, preparing for a landmark IPO in 2025.
-              </p>
+          <div className="flex justify-between items-start">
+            {/* Left side - Navigation Links */}
+            <div className="flex gap-12">
+              <button 
+                className="text-gray-400 hover:text-white transition-colors text-lg"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Talk to an Expert
+              </button>
+              <button 
+                className="text-gray-400 hover:text-white transition-colors text-lg"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Request More Info
+              </button>
+              <button 
+                className="text-gray-400 hover:text-white transition-colors text-lg"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Contact Us
+              </button>
             </div>
             
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Investors</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Personal</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Business</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Revolut &lt;18</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Crypto</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">IPO Information</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">IPO Timeline</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Investor Relations</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Financial Reports</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© 2024 Revolut. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+            {/* Right side - Revolut Logo */}
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                alt="Revolut Logo" 
+                className="h-16 w-auto"
+              />
             </div>
           </div>
         </div>
