@@ -47,9 +47,9 @@ const Index: React.FC = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/f75b334c-2922-4196-9eb1-fd6f26b9c95e.png" 
+              src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
               alt="Revolut Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
             <span className="text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
           </div>
