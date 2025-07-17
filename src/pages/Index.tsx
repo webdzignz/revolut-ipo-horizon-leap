@@ -193,7 +193,7 @@ const Index: React.FC = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 
-                <div className="flex justify-start -mt-12">
+                <div className="flex justify-start" style={{ marginTop: '11.5cm' }}>
                   <img 
                     src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
                     alt="Revolution" 
