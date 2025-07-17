@@ -701,7 +701,7 @@ const Index: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-start">
             {/* Left side - Navigation Links */}
-            <div className="flex gap-12">
+            <div className="flex gap-12 pt-4">
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
                 onClick={() => scrollToSection('form-section')}
@@ -722,8 +722,8 @@ const Index: React.FC = () => {
               </button>
             </div>
             
-            {/* Right side - Revolut Logo */}
-            <div className="flex items-center">
+            {/* Top Right corner - Revolut Logo */}
+            <div className="flex items-start">
               <img 
                 src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
                 alt="Revolut Logo" 
