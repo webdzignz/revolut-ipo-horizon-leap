@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, Building2, CreditCard, BarChart3, DollarSign, Calendar, MapPin, Target } from 'lucide-react';
+import { TrendingUp, Users, Globe, Building2, CreditCard, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +12,7 @@ const Index: React.FC = () => {
   });
 
   const [scrollY, setScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -31,6 +32,8 @@ const Index: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,33 +56,87 @@ const Index: React.FC = () => {
       <div className="h-[0.5cm] bg-black"></div>
       
       {/* Header */}
-      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-6 py-1 border-b border-gray-200">
+      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-4 sm:px-6 py-2 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3" style={{ marginLeft: '0.1cm' }}>
+          <div className="flex items-center gap-2 sm:gap-3">
             <img 
               src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
               alt="Revolut Logo" 
-              className="h-20 w-auto"
+              className="h-12 sm:h-16 md:h-20 w-auto"
             />
-            <span className="text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
           </div>
-          <div className="flex items-center gap-8">
-            <nav className="hidden md:flex items-center gap-8 text-gray-700">
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Request Info</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
-              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Contact Us</span>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8 text-gray-700">
+              <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Request Info</span>
+              <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
+              <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
+              <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Contact Us</span>
             </nav>
-            <div className="flex items-center gap-4">
-              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors" onClick={() => scrollToSection('form-section')}>Sign up</button>
-            </div>
+            <button 
+              className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px]" 
+              onClick={() => scrollToSection('form-section')}
+            >
+              Sign up
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center gap-4">
+            <button 
+              className="bg-black text-white px-4 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-sm" 
+              onClick={() => scrollToSection('form-section')}
+            >
+              Sign up
+            </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40">
+            <nav className="px-4 py-4 space-y-4">
+              <button 
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Request Info
+              </button>
+              <button 
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Talk to Expert
+              </button>
+              <button 
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                onClick={() => scrollToSection('fundamental-data')}
+              >
+                Fundamental Data
+              </button>
+              <button 
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                onClick={() => scrollToSection('form-section')}
+              >
+                Contact Us
+              </button>
+            </nav>
+          </div>
+        )}
       </header>
 
       
       {/* Scrolling Banner */}
-      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 70px)` }}>
+      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 60px)` }}>
         <div className="relative">
           <div className="flex animate-scroll gap-8 whitespace-nowrap">
             {/* First set */}
@@ -188,48 +245,48 @@ const Index: React.FC = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-4 pb-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative overflow-hidden bg-white pt-4 pb-12 sm:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Top Content - Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-4 sm:space-y-6">
                 
-                <div className="flex justify-start" style={{ marginTop: '1in' }}>
+                <div className="flex justify-start" style={{ marginTop: '0.5in' }}>
                   <img 
                     src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
                     alt="Revolution" 
-                    className="h-20 md:h-24 lg:h-32 w-auto mb-8"
+                    className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 sm:mb-8"
                   />
                 </div>
                 
-                <div className="text-xl text-black font-medium mb-8 max-w-lg">
+                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8 max-w-lg">
                   IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-8 max-w-lg">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8 max-w-lg">
                   Revolut IPO Banking on the Future
                   <br />
                   Buy Now....
                 </h1>
               </div>
               
-              <p className="text-lg text-gray-700 leading-relaxed max-w-lg mb-8 italic font-bold">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg mb-6 sm:mb-8 italic font-bold">
                 "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
               </p>
 
-              <button className="bg-black text-white px-12 py-6 rounded-lg font-medium text-xl hover:bg-gray-800 transition-colors">
+              <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
                 More Info
               </button>
             </div>
 
             {/* Right Content - Hero Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
               <img 
                 src="/lovable-uploads/d5371364-cf23-4fa1-9ce8-467e8b3fda66.png" 
                 alt="Woman holding Revolut card" 
-                className="w-full max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
+                className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -238,24 +295,24 @@ const Index: React.FC = () => {
       </section>
 
       {/* Main Heading */}
-      <section id="form-section" className="max-w-7xl mx-auto px-6">
-        <div className="mb-12 text-center mt-6">
-          <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
+      <section id="form-section" className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mb-8 sm:mb-12 text-center mt-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
         </div>
 
         {/* Bottom Content - Steps and Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8 sm:mt-16">
           {/* Left Content - Registration Steps */}
           <div className="space-y-8 flex flex-col">
             
             {/* Step 1 */}
-            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">1</div>
-                <h3 className="text-2xl font-bold text-black">Complete registration form</h3>
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">1</div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Complete registration form</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+              <ul className="space-y-1 text-gray-700 text-xs sm:text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
                 <li className="pl-2 -indent-2">- Use "additional notes" for alternative contacts or specific requirements</li>
                 <li className="pl-2 -indent-2">- Book a call with a regulated expert (+44 0204 number)</li>
@@ -263,12 +320,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">2</div>
-                <h3 className="text-2xl font-bold text-black">Submit your details</h3>
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">2</div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Submit your details</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+              <ul className="space-y-1 text-gray-700 text-xs sm:text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
                 <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
                 <li className="pl-2 -indent-2">- All calls come from +44 0204 numbers</li>
@@ -277,12 +334,12 @@ const Index: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-2xl p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">3</div>
-                <h3 className="text-2xl font-bold text-black">Get Ready for Your Call</h3>
+                <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">3</div>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Get Ready for Your Call</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm font-bold list-none ml-[52px]">
+              <ul className="space-y-1 text-gray-700 text-xs sm:text-sm font-bold list-none ml-[52px]">
                 <li>- Expect a call within 48 hours of submitting</li>
                 <li>- Do light research on Revolut's IPO beforehand</li>
                 <li>- Prepare questions for the expert</li>
