@@ -758,7 +758,7 @@ const Index: React.FC = () => {
       <div className="bg-black w-full">
         <div className="py-6 px-6 max-w-4xl mx-auto">
           <div className="flex justify-between items-center">
-            <p className="text-white text-sm">© 2024 Revolut. All rights reserved.</p>
+            <p className="text-white text-sm">© 2025 Revolut. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="text-white hover:text-gray-300 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
