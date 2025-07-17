@@ -794,7 +794,7 @@ const Index: React.FC = () => {
       {/* Terms and Conditions section */}
       <div id="terms-conditions" className="bg-white w-full">
         <div className="py-8 px-6 max-w-4xl mx-auto">
-          <div className="text-sm text-black leading-relaxed space-y-4">
+          <div className="text-[10px] text-black leading-tight space-y-3">
             <h2 className="text-xl font-bold mb-4">Terms and Conditions</h2>
             
             <p>
