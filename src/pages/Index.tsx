@@ -79,7 +79,7 @@ const Index: React.FC = () => {
 
       
       {/* Scrolling Banner */}
-      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 110px)` }}>
+      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 90px)` }}>
         <div className="relative">
           <div className="flex animate-scroll gap-8 whitespace-nowrap">
             {/* First set */}
@@ -648,7 +648,7 @@ const Index: React.FC = () => {
       
       {/* Full-width disclaimer section */}
       <div className="bg-white w-full">
-        <div className="py-6 px-6">
+        <div className="py-6 px-6 max-w-4xl mx-auto">
           <div className="text-[10px] text-black leading-tight space-y-2">
             <p>© 2025 Revolut Bank UAB</p>
             
