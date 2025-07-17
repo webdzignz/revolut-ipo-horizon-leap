@@ -51,7 +51,7 @@ const Index: React.FC = () => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % heroImages.length
       );
-    }, 4000); // Change image every 4 seconds
+    }, 6000); // Change image every 6 seconds
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
