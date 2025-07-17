@@ -352,9 +352,11 @@ const Index: React.FC = () => {
                 </h1>
               </div>
               
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg mb-6 sm:mb-8 italic font-bold">
-                "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
-              </p>
+              <div className="max-w-lg mb-6 sm:mb-8">
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
+                  "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
+                </p>
+              </div>
 
               <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
                 More Info
