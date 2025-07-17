@@ -185,7 +185,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-16 pb-24">
+      <section className="relative overflow-hidden bg-white pt-4 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           {/* Top Content - Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
@@ -193,7 +193,7 @@ const Index: React.FC = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 
-                <div className="flex justify-start" style={{ marginTop: '11.5cm' }}>
+                <div className="flex justify-start" style={{ marginTop: '1in' }}>
                   <img 
                     src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
                     alt="Revolution" 
