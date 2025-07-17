@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, Building2, CreditCard, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
+import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,6 @@ const Index: React.FC = () => {
     appointment: ''
   });
 
-  const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -38,12 +37,6 @@ const Index: React.FC = () => {
       alt: "Woman showing Revolut app"
     }
   ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Hero image rotation effect
   useEffect(() => {
@@ -74,7 +67,6 @@ const Index: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Investment Form Submitted:', formData);
     // Reset form after submission
     setFormData({
       name: '',
