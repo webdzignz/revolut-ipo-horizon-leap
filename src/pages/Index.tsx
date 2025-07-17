@@ -793,7 +793,7 @@ const Index: React.FC = () => {
       
       {/* Terms and Conditions section */}
       <div id="terms-conditions" className="bg-white w-full">
-        <div className="py-3 px-6 max-w-4xl mx-auto">
+        <div className="py-3 px-6 max-w-7xl mx-auto">
           <div className="text-[7px] text-black leading-tight space-y-1">
             <h2 className="text-[10px] font-bold mb-1">Terms and Conditions</h2>
             <p className="text-[7px] mb-1">By using this website and submitting your personal details, you agree to the following terms:</p>
