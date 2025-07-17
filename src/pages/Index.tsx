@@ -205,10 +205,6 @@ const Index: React.FC = () => {
                 </h1>
               </div>
               
-              <p className="text-xl font-bold text-gray-600 leading-relaxed max-w-lg mb-8">
-                One of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
-              </p>
-
               <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mb-8 italic">
                 "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
               </p>
