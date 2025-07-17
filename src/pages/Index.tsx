@@ -330,7 +330,7 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             {/* Left Content */}
             <div className="space-y-6 sm:space-y-8">
-              <div className="space-y-4 sm:space-y-6">
+              <div className="w-full max-w-lg space-y-4 sm:space-y-6">
                 
                 
                 <div className="flex justify-start" style={{ marginTop: '0.5in' }}>
@@ -341,11 +341,11 @@ const Index: React.FC = () => {
                   />
                 </div>
                 
-                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8 max-w-lg">
+                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8">
                   IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8 w-full max-w-lg">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
                   Revolut IPO Banking on the Future
                   <br />
                   Buy Now....
@@ -358,9 +358,11 @@ const Index: React.FC = () => {
                 </p>
               </div>
 
-              <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
-                More Info
-              </button>
+              <div className="w-full max-w-lg">
+                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
+                  More Info
+                </button>
+              </div>
             </div>
 
             {/* Right Content - Hero Image Slideshow */}
