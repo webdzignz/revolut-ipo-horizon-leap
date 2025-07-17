@@ -209,6 +209,10 @@ const Index: React.FC = () => {
                 Get early access to Revolut's IPO — one of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
               </p>
 
+              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mb-8 italic">
+                "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
+              </p>
+
               <button className="bg-black text-white px-12 py-6 rounded-lg font-medium text-xl hover:bg-gray-800 transition-colors">
                 More Info
               </button>
