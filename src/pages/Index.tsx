@@ -55,7 +55,7 @@ const Index: React.FC = () => {
       {/* Header */}
       <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3" style={{ marginLeft: '0.1cm' }}>
             <img 
               src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
               alt="Revolut Logo" 
