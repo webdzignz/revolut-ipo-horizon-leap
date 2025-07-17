@@ -366,7 +366,7 @@ const Index: React.FC = () => {
               <ul className="space-y-1 text-gray-700 text-xs sm:text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
                 <li className="pl-2 -indent-2">- Use "additional notes" for alternative contacts or specific requirements</li>
-                <li className="pl-2 -indent-2">- +44 20 NUMBER WILL CALL YOU</li>
+                <li className="pl-2 -indent-2">- <strong>+44 20</strong> number will call you</li>
               </ul>
             </div>
 
@@ -379,7 +379,7 @@ const Index: React.FC = () => {
               <ul className="space-y-1 text-gray-700 text-xs sm:text-sm font-bold list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
                 <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
-                <li className="pl-2 -indent-2">- ALL CALLS COME FROM A +44 20 NUMBER</li>
+                <li className="pl-2 -indent-2">- All calls come from a <strong>+44 20</strong> number</li>
                 <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
               </ul>
             </div>
