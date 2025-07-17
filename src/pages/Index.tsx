@@ -613,7 +613,7 @@ const Index: React.FC = () => {
                   YOU INVEST
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Revenue grew to over $4.0B in 2024 with a $1.4B pre-tax profit.
+                  Currently valued at $45 billion with 45+ million users across 38 countries. Revenue grew to over $4.0B in 2024 with a $1.4B pre-tax profit.
                 </p>
                 <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
                   View Growth
