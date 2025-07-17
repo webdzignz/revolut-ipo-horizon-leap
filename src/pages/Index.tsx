@@ -49,8 +49,11 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Black Separator */}
+      <div className="h-[1cm] bg-black"></div>
+      
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
+      <header className="fixed top-[1cm] left-0 right-0 z-50 bg-white px-6 py-4 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
@@ -76,7 +79,7 @@ const Index: React.FC = () => {
 
       
       {/* Scrolling Banner */}
-      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: '110px' }}>
+      <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(1cm + 110px)` }}>
         <div className="relative">
           <div className="flex animate-scroll gap-8 whitespace-nowrap">
             {/* First set */}
