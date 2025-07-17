@@ -26,6 +26,13 @@ const Index: React.FC = () => {
     });
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Investment Form Submitted:', formData);
@@ -55,13 +62,13 @@ const Index: React.FC = () => {
           </div>
           <div className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-8 text-gray-700">
-              <span className="hover:text-black cursor-pointer">Request Info</span>
-              <span className="hover:text-black cursor-pointer">Talk to Expert</span>
-              <span className="hover:text-black cursor-pointer">Fundamental Data</span>
-              <span className="hover:text-black cursor-pointer">Contact Us</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Request Info</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
+              <span className="hover:text-black cursor-pointer" onClick={() => scrollToSection('form-section')}>Contact Us</span>
             </nav>
             <div className="flex items-center gap-4">
-              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">Sign up</button>
+              <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors" onClick={() => scrollToSection('form-section')}>Sign up</button>
             </div>
           </div>
         </div>
@@ -228,7 +235,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Main Heading */}
-      <section className="max-w-7xl mx-auto px-6">
+      <section id="form-section" className="max-w-7xl mx-auto px-6">
         <div className="mb-12 text-center mt-6">
           <h2 className="text-5xl md:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
           <h3 className="text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
@@ -453,7 +460,7 @@ const Index: React.FC = () => {
 
 
       {/* IPO Highlights Section */}
-      <section className="py-20">
+      <section id="fundamental-data" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
