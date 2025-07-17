@@ -304,13 +304,6 @@ const Index: React.FC = () => {
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4 sm:space-y-6">
                 
-                <div className="flex justify-start" style={{ marginTop: '0.5in' }}>
-                  <img 
-                    src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
-                    alt="Revolution" 
-                    className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 sm:mb-8"
-                  />
-                </div>
                 
                 <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8 max-w-lg">
                   IPO Announcement • Expected 2025
