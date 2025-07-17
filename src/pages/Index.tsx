@@ -201,18 +201,18 @@ const Index: React.FC = () => {
                   />
                 </div>
                 
-                <div className="text-xl text-black font-medium mb-8">
+                <div className="text-xl text-black font-medium mb-8 max-w-lg">
                   IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-8">
-                  Revolut IPO: Banking on the Future
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-8 max-w-lg">
+                  Revolut IPO Banking on the Future
                   <br />
                   Buy Now....
                 </h1>
               </div>
               
-              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mb-8 italic font-bold">
+              <p className="text-lg text-gray-700 leading-relaxed max-w-lg mb-8 italic font-bold">
                 "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
               </p>
 
