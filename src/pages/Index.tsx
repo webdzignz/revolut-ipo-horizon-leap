@@ -307,8 +307,8 @@ const Index: React.FC = () => {
                 
                 <div className="flex justify-start" style={{ marginTop: '0.5in' }}>
                   <img 
-                    src="/lovable-uploads/28e3756b-4f60-4ca5-9919-14544e6d1f45.png" 
-                    alt="Revolut-ion" 
+                    src="/lovable-uploads/bc21313b-5651-4a1c-87ca-0c910f3c7794.png" 
+                    alt="Revolut" 
                     className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 sm:mb-8"
                   />
                 </div>
