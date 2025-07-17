@@ -55,12 +55,11 @@ const Index: React.FC = () => {
           </div>
           <div className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-8 text-gray-700">
-              <span className="hover:text-black cursor-pointer">Introduction</span>
-              <span className="hover:text-black cursor-pointer">Request Info</span>
+              <span className="hover:text-black cursor-pointer">Request Info/Talk to An Expert</span>
+              <span className="hover:text-black cursor-pointer">Fundamental Data</span>
               <span className="hover:text-black cursor-pointer">Contact Us</span>
             </nav>
             <div className="flex items-center gap-4">
-              <button className="text-gray-700 hover:text-black transition-colors">Log in</button>
               <button className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">Sign up</button>
             </div>
           </div>
