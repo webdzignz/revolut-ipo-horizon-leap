@@ -55,7 +55,8 @@ const Index: React.FC = () => {
           </div>
           <div className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-8 text-gray-700">
-              <span className="hover:text-black cursor-pointer">Request Info/Talk to An Expert</span>
+              <span className="hover:text-black cursor-pointer">Request Info</span>
+              <span className="hover:text-black cursor-pointer">Talk to Expert</span>
               <span className="hover:text-black cursor-pointer">Fundamental Data</span>
               <span className="hover:text-black cursor-pointer">Contact Us</span>
             </nav>
