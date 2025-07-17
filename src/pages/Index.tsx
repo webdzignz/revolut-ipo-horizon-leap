@@ -206,7 +206,7 @@ const Index: React.FC = () => {
               </div>
               
               <p className="text-xl font-bold text-gray-600 leading-relaxed max-w-lg mb-8">
-                Revolut's IPO — one of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
+                One of the fastest-growing digital banks in the world. Invest early. Think big. Win big.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mb-8 italic">
