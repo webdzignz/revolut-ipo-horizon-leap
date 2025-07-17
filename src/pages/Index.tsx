@@ -830,7 +830,7 @@ const Index: React.FC = () => {
 
               <div className="md:col-span-2">
                 <h3 className="font-semibold mb-0 text-[8px]">Privacy</h3>
-                <p className="text-[7px]">Your data will be handled in accordance with our Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction.</p>
+                <p className="text-[7px]">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction.</p>
               </div>
             </div>
           </div>
