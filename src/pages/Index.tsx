@@ -780,27 +780,77 @@ const Index: React.FC = () => {
               >
                 Contact Us
               </button>
+              <button 
+                className="text-gray-400 hover:text-white transition-colors text-lg"
+                onClick={() => scrollToSection('terms-conditions')}
+              >
+                Terms & Conditions
+              </button>
             </div>
           </div>
         </div>
       </footer>
       
-      {/* Full-width disclaimer section */}
-      <div className="bg-white w-full">
-        <div className="py-6 px-6 max-w-4xl mx-auto">
-          <div className="text-[10px] text-black leading-tight space-y-2">
-            <p>
-              <strong>Disclaimer:</strong><br/>
-              The content provided on this website is for informational and educational purposes only and does not constitute financial advice, investment recommendations, or an offer to buy or sell any securities. We are not a licensed financial advisor, broker-dealer, or investment firm. Our role is to introduce users to qualified third-party financial professionals and institutions who are authorized to provide regulated investment services.
-            </p>
+      {/* Terms and Conditions section */}
+      <div id="terms-conditions" className="bg-white w-full">
+        <div className="py-8 px-6 max-w-4xl mx-auto">
+          <div className="text-sm text-black leading-relaxed space-y-4">
+            <h2 className="text-xl font-bold mb-4">Terms and Conditions</h2>
             
             <p>
-              While we strive to ensure that all information is accurate and up to date, we do not guarantee the completeness, reliability, or suitability of any content or third-party service mentioned. Any investment carries risk, including the potential loss of capital. You are solely responsible for conducting your own due diligence and should consult with a licensed financial advisor or registered investment professional before making any financial decisions.
+              By using this website and submitting your personal details, you agree to the following terms:
             </p>
             
-            <p>
-              By using this site, you acknowledge that we do not provide personalized financial advice and that any decisions made based on the information or introductions provided are made at your own risk.
-            </p>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold mb-2">Introduction Services Only</h3>
+                <p>
+                  This website does not provide financial advice, trading services, or sell securities. Our role is limited to introducing you to a regulated and authorized third-party broker who may assist you in exploring investment opportunities, including potential access to Revolut's IPO when available.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">No Guarantee of Allocation</h3>
+                <p>
+                  Submitting your information does not guarantee allocation or access to Revolut IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their terms and regulatory requirements.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Not Affiliated with Revolut</h3>
+                <p>
+                  This site is not owned, operated, or endorsed by Revolut Ltd. Any mention of Revolut is for informational purposes only. All trademarks and brand names belong to their respective owners.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Regulated Broker Partners</h3>
+                <p>
+                  All brokers we may introduce you to are regulated by appropriate financial authorities (e.g., FCA, SEC, etc.) in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Accuracy of Information</h3>
+                <p>
+                  You confirm that the information you provide is accurate and complete. By submitting your details, you consent to being contacted by a representative of the regulated broker for investment discussions.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">No Liability</h3>
+                <p>
+                  We are not liable for any financial loss, missed opportunities, or other outcomes resulting from introductions made via this site. All investment decisions are made at your own risk and discretion.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-2">Privacy</h3>
+                <p>
+                  Your data will be handled in accordance with our Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
