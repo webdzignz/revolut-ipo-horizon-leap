@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Calendar as CalendarComponent } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -608,22 +609,21 @@ const Index: React.FC = () => {
                   {appointmentDate && (
                     <div className="space-y-2">
                       <label className="block text-xs font-medium text-gray-300">Select Time</label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'].map((time) => (
-                          <button
-                            key={time}
-                            type="button"
-                            onClick={() => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${time}`})}
-                            className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                              formData.appointment === `${format(appointmentDate, "MMM d")} at ${time}` 
-                                ? 'bg-white text-black' 
-                                : 'bg-gray-700 text-white hover:bg-gray-600'
-                            }`}
-                          >
-                            {time}
-                          </button>
-                        ))}
-                      </div>
+                      <Select 
+                        value={formData.appointment.includes('at ') ? formData.appointment.split('at ')[1] : ''} 
+                        onValueChange={(time) => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${time}`})}
+                      >
+                        <SelectTrigger className="w-full border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm">
+                          <SelectValue placeholder="Select time" />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
+                          {['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'].map((time) => (
+                            <SelectItem key={time} value={time} className="hover:bg-gray-100 cursor-pointer">
+                              {time}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                   )}
                 </div>
