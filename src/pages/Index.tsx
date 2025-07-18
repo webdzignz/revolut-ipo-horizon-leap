@@ -417,8 +417,7 @@ const Index: React.FC = () => {
               </div>
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
-                <li className="pl-2 -indent-2">- You will receive a PDF with key info</li>
-                <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
+                <li className="pl-2 -indent-2">- You will receive a PDF with key info and a CALL from a representative within 48 hrs</li>
                 <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
               </ul>
             </div>
