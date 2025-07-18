@@ -611,6 +611,19 @@ const Index: React.FC = () => {
       {/* IPO Highlights Section */}
       <section id="fundamental-data" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          {/* CTA Buttons */}
+          <div className="flex justify-center gap-4 mb-12">
+            <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]">
+              More Info
+            </button>
+            <button 
+              className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px]"
+              onClick={() => scrollToSection('form-section')}
+            >
+              Book A Call
+            </button>
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                FUNDAMENTAL DATA
