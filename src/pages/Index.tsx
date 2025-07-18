@@ -281,9 +281,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">IW</span>
+                <span className="text-white font-bold text-sm">IT</span>
               </div>
-              <span className="text-xl font-bold text-black">IPOWIKI</span>
+              <span className="text-xl font-bold text-black">IPO Tracker</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-600 hover:text-black transition-colors">Home</a>
@@ -599,9 +599,9 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-black font-bold text-sm">IW</span>
+                  <span className="text-black font-bold text-sm">IT</span>
                 </div>
-                <span className="text-xl font-bold">IPOWIKI</span>
+                <span className="text-xl font-bold">IPO Tracker</span>
               </div>
               <p className="text-gray-400">
                 Your comprehensive source for IPO intelligence and market insights.
@@ -636,7 +636,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 IPOWIKI. All rights reserved.</p>
+            <p>&copy; 2024 IPO Tracker. All rights reserved.</p>
           </div>
         </div>
       </footer>
