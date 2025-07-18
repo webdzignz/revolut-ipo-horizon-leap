@@ -567,13 +567,13 @@ const Index: React.FC = () => {
                 {/* Appointment Field */}
                 <div className="space-y-3">
                   <label className="block text-xs font-medium text-white uppercase tracking-wide">
-                    Book Expert Call (Optional)
+                    Quick Call Booking (Optional)
                   </label>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <button
                       type="button"
                       onClick={() => setFormData({...formData, appointment: 'Tomorrow 10am'})}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         formData.appointment === 'Tomorrow 10am' 
                           ? 'bg-white text-black' 
                           : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -584,7 +584,7 @@ const Index: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setFormData({...formData, appointment: 'Tomorrow 2pm'})}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         formData.appointment === 'Tomorrow 2pm' 
                           ? 'bg-white text-black' 
                           : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -594,27 +594,28 @@ const Index: React.FC = () => {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setFormData({...formData, appointment: 'This Week'})}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'This Week' 
+                      onClick={() => setFormData({...formData, appointment: 'This Week 10am'})}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        formData.appointment === 'This Week 10am' 
                           ? 'bg-white text-black' 
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      This Week
+                      This Week 10am
                     </button>
                     <button
                       type="button"
-                      onClick={() => setFormData({...formData, appointment: 'Next Week'})}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'Next Week' 
+                      onClick={() => setFormData({...formData, appointment: 'This Week 2pm'})}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        formData.appointment === 'This Week 2pm' 
                           ? 'bg-white text-black' 
                           : 'bg-gray-700 text-white hover:bg-gray-600'
                       }`}
                     >
-                      Next Week
+                      This Week 2pm
                     </button>
                   </div>
+                  <p className="text-xs text-gray-400">Just click one - we'll confirm the exact time with you</p>
                 </div>
 
                 {/* Submit Button */}
