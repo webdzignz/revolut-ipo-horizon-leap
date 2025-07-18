@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,7 @@ const Index: React.FC = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
 
   // Hero images array
   const heroImages = [
@@ -67,6 +70,8 @@ const Index: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Show thank you modal
+    setShowThankYouModal(true);
     // Reset form after submission
     setFormData({
       name: '',
@@ -78,8 +83,51 @@ const Index: React.FC = () => {
     });
   };
 
+  const handleDownloadReport = () => {
+    const link = document.createElement('a');
+    link.href = '/Revolut_2024_Annual_Report_Summary.pdf';
+    link.download = 'Revolut_2024_Annual_Report_Summary.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Thank You Modal */}
+      <Dialog open={showThankYouModal} onOpenChange={setShowThankYouModal}>
+        <DialogContent className="max-w-2xl bg-white border-2 border-black rounded-2xl p-8">
+          <DialogHeader className="text-center space-y-6">
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/lovable-uploads/5df7549f-609d-45a7-af3a-c741b8b5e94b.png" 
+                alt="R Logo" 
+                className="h-16 w-auto"
+              />
+            </div>
+            <DialogTitle className="text-2xl md:text-3xl lg:text-4xl font-bold text-black uppercase tracking-tight leading-tight">
+              Thank You! You're All Set, Check Your Inbox and Expect a Follow-Up Call From a +44 20 Number
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+            <Button
+              onClick={handleDownloadReport}
+              className="bg-black text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none"
+            >
+              Download Annual Report
+            </Button>
+            <Button
+              onClick={() => setShowThankYouModal(false)}
+              variant="outline"
+              className="bg-white text-black border-2 border-black px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-50 transition-colors min-h-[48px] flex-1 sm:flex-none"
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Black Separator */}
       <div className="h-[0.5cm] bg-black"></div>
       
