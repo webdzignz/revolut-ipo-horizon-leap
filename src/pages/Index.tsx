@@ -356,9 +356,15 @@ const Index: React.FC = () => {
                 </p>
               </div>
 
-              <div className="w-full max-w-lg">
-                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
+              <div className="w-full max-w-lg flex gap-4">
+                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none">
                   More Info
+                </button>
+                <button 
+                  className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px] flex-1 sm:flex-none"
+                  onClick={() => scrollToSection('form-section')}
+                >
+                  Book A Call
                 </button>
               </div>
             </div>
