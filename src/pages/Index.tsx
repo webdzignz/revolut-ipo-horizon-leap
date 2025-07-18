@@ -537,16 +537,16 @@ const Index: React.FC = () => {
                     />
                   </div>
 
-                  {/* Appointment Field */}
+            <div className="bg-white border-2 border-black rounded-lg p-8 max-w-md w-full mx-4 relative">
                   <div className="space-y-1">
                     <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Book Appointment with Expert
-                    </label>
+                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">R</span>
                     <input
-                      type="datetime-local"
+                  <h2 className="text-black text-xl font-bold mb-2">
                       id="appointment"
                       name="appointment"
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                  <p className="text-black text-base">
                     />
                     <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
                   </div>
@@ -554,7 +554,7 @@ const Index: React.FC = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
+                    className="border-2 border-black text-black px-6 py-3 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors"
                   >
                     Register Interest
                   </button>
