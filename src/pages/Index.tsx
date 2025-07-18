@@ -363,7 +363,10 @@ const Index: React.FC = () => {
               </div>
 
               <div className="w-full max-w-lg flex gap-4">
-                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none">
+                <button 
+                  className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   More Info
                 </button>
                 <button 
@@ -637,7 +640,10 @@ const Index: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           {/* CTA Buttons */}
           <div className="flex justify-center gap-4 mb-12">
-            <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]">
+            <button 
+              className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]"
+              onClick={() => scrollToSection('form-section')}
+            >
               More Info
             </button>
             <button 
@@ -792,7 +798,10 @@ const Index: React.FC = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center gap-4">
-            <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]">
+            <button 
+              className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]"
+              onClick={() => scrollToSection('form-section')}
+            >
               More Info
             </button>
             <button 
