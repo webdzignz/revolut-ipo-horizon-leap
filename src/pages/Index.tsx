@@ -397,7 +397,7 @@ const Index: React.FC = () => {
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">1</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Complete registration form</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
+              <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
                 <li className="pl-2 -indent-2">- Use "additional notes" for alternative contacts or specific requirements</li>
                 <li className="pl-2 -indent-2">- <strong>+44 20</strong> number will call you</li>
@@ -410,7 +410,7 @@ const Index: React.FC = () => {
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">2</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Submit your details</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
+              <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
                 <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
                 <li className="pl-2 -indent-2">- All calls come from a <strong>+44 20</strong> number</li>
@@ -424,7 +424,7 @@ const Index: React.FC = () => {
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">3</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Get Ready for Your Call</h3>
               </div>
-              <ul className="space-y-1 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
+              <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li>- Expect a call within 48 hours of submitting</li>
                 <li>- Do light research on Revolut's IPO beforehand</li>
                 <li>- Prepare questions for the expert</li>
