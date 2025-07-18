@@ -411,10 +411,7 @@ const Index: React.FC = () => {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Submit your details</h3>
               </div>
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
-                <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
-                <li className="pl-2 -indent-2">- You will recieve a PDF with key info once you submit</li>
-                <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
-                <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
+                <li className="pl-2 -indent-2">- You will receive a PDF with key info</li>
               </ul>
             </div>
 
