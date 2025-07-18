@@ -575,10 +575,10 @@ const Index: React.FC = () => {
           <div className="flex justify-center lg:justify-end order-first lg:order-last">
             <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
               <img 
-                src={heroImages[currentImageIndex].src}
-                alt={heroImages[currentImageIndex].alt}
+                src="/lovable-uploads/f3503a5f-fc5c-4c19-ace0-b4b7b1071e3b.png"
+                alt="Revolut R Logo"
                 className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
-                style={{ aspectRatio: '2/3' }}
+                style={{ aspectRatio: '1/1' }}
               />
             </div>
           </div>
