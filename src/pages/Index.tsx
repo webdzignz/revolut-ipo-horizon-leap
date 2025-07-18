@@ -357,7 +357,10 @@ const Index: React.FC = () => {
               </div>
 
               <div className="w-full max-w-lg flex gap-4">
-                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none">
+                <button 
+                  className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none"
+                  onClick={() => scrollToSection('form-section')}
+                >
                   More Info
                 </button>
                 <button 
