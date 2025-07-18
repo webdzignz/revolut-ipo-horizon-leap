@@ -389,7 +389,7 @@ const Index: React.FC = () => {
         {/* Bottom Content - Steps and Form */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8 sm:mt-16">
           {/* Left Content - Registration Steps */}
-          <div className="space-y-8 flex flex-col">
+          <div className="space-y-4 flex flex-col">
             
             {/* Step 1 */}
             <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
