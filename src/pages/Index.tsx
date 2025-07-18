@@ -608,7 +608,7 @@ const Index: React.FC = () => {
                     <div className="space-y-2">
                       <label className="block text-xs font-medium text-gray-300">Select Time</label>
                       <div className="grid grid-cols-3 gap-2">
-                        {['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'].map((time) => (
+                        {['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'].map((time) => (
                           <button
                             key={time}
                             type="button"
