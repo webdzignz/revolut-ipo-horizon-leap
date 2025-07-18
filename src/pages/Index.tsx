@@ -348,8 +348,8 @@ const Index: React.FC = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
                   Revolut IPO 2025<br />
                   Banking On The Future<br />
-                  Invest In The Next<br />
-                  Financial Revolution Today
+                  Invest In The Next Financial<br />
+                  Revolution Today
                 </h1>
                 
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
