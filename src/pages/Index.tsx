@@ -369,15 +369,147 @@ const Index: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Content - Hero Image Slideshow */}
-            <div className="flex justify-center lg:justify-end order-first lg:order-last">
-              <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
-                <img 
-                  src={heroImages[currentImageIndex].src}
-                  alt={heroImages[currentImageIndex].alt}
-                  className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
-                  style={{ aspectRatio: '3/4' }}
-                />
+            {/* Right Content - Investment Form */}
+            <div className="w-full">
+              <div>
+                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
+                  {/* Logo at top left */}
+                  <div className="mb-6">
+                    <img 
+                      src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                      alt="Revolut Logo" 
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
+                      REGISTER YOUR INVESTMENT INTEREST
+                    </h2>
+                    <p className="text-gray-300 text-sm">
+                      Get priority access to IPO updates and investment opportunities
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Name and Numbers on same row */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Contact Number/s
+                      </label>
+                      <input
+                        type="text"
+                        id="numbers"
+                        name="numbers"
+                        value={formData.numbers}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                        placeholder="Phone number(s)"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Investment Amount and Timeframe on same row */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Investment Amount
+                      </label>
+                      <select
+                        id="investmentAmount"
+                        name="investmentAmount"
+                        value={formData.investmentAmount}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      >
+                        <option value="">Select amount</option>
+                        <option value="10000-50000">£10K - £50K</option>
+                        <option value="50000-100000">£50K - £100K</option>
+                        <option value="100000-250000">£100K - £250K</option>
+                        <option value="250000-500000">£250K - £500K</option>
+                        <option value="500000+">£500K+</option>
+                      </select>
+                    </div>
+
+                    <div className="space-y-1">
+                      <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
+                        Timeframe
+                      </label>
+                      <select
+                        id="timeframe"
+                        name="timeframe"
+                        value={formData.timeframe}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      >
+                        <option value="">Select timeframe</option>
+                        <option value="immediate">Immediate</option>
+                        <option value="3-months">3 months</option>
+                        <option value="6-months">6 months</option>
+                        <option value="1-year">1+ years</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Notes Field */}
+                  <div className="space-y-1">
+                    <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Additional Notes
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleInputChange}
+                      rows={3}
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
+                      placeholder="Any specific questions or requirements..."
+                    />
+                  </div>
+
+                  {/* Appointment Field */}
+                  <div className="space-y-1">
+                    <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Book Appointment with Expert
+                    </label>
+                    <input
+                      type="datetime-local"
+                      id="appointment"
+                      name="appointment"
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    />
+                    <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
+                  >
+                    Register Interest
+                  </button>
+                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -437,147 +569,15 @@ const Index: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Content - Investment Form */}
-          <div className="w-full">
-            <div>
-              <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
-                {/* Logo at top left */}
-                <div className="mb-6">
-                  <img 
-                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                    alt="Revolut Logo" 
-                    className="h-12 w-auto"
-                  />
-                </div>
-                
-                <div className="mb-6">
-                  <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
-                    REGISTER YOUR INVESTMENT INTEREST
-                  </h2>
-                  <p className="text-gray-300 text-sm">
-                    Get priority access to IPO updates and investment opportunities
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Name and Numbers on same row */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Contact Number/s
-                    </label>
-                    <input
-                      type="text"
-                      id="numbers"
-                      name="numbers"
-                      value={formData.numbers}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      placeholder="Phone number(s)"
-                    />
-                  </div>
-                </div>
-
-                {/* Investment Amount and Timeframe on same row */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Investment Amount
-                    </label>
-                    <select
-                      id="investmentAmount"
-                      name="investmentAmount"
-                      value={formData.investmentAmount}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                    >
-                      <option value="">Select amount</option>
-                      <option value="10000-50000">£10K - £50K</option>
-                      <option value="50000-100000">£50K - £100K</option>
-                      <option value="100000-250000">£100K - £250K</option>
-                      <option value="250000-500000">£250K - £500K</option>
-                      <option value="500000+">£500K+</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-1">
-                    <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Timeframe
-                    </label>
-                    <select
-                      id="timeframe"
-                      name="timeframe"
-                      value={formData.timeframe}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                    >
-                      <option value="">Select timeframe</option>
-                      <option value="immediate">Immediate</option>
-                      <option value="3-months">3 months</option>
-                      <option value="6-months">6 months</option>
-                      <option value="1-year">1+ years</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Notes Field */}
-                <div className="space-y-1">
-                  <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
-                    Additional Notes
-                  </label>
-                  <textarea
-                    id="notes"
-                    name="notes"
-                    value={formData.notes}
-                    onChange={handleInputChange}
-                    rows={3}
-                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
-                    placeholder="Any specific questions or requirements..."
-                  />
-                </div>
-
-                {/* Appointment Field */}
-                <div className="space-y-1">
-                  <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
-                    Book Appointment with Expert
-                  </label>
-                  <input
-                    type="datetime-local"
-                    id="appointment"
-                    name="appointment"
-                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                  />
-                  <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
-                >
-                  Register Interest
-                </button>
-              </form>
-              </div>
+          {/* Right Content - Hero Image Slideshow */}
+          <div className="flex justify-center lg:justify-end order-first lg:order-last">
+            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+              <img 
+                src={heroImages[currentImageIndex].src}
+                alt={heroImages[currentImageIndex].alt}
+                className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
+                style={{ aspectRatio: '3/4' }}
+              />
             </div>
           </div>
         </div>
