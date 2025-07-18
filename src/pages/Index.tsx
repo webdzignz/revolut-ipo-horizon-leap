@@ -594,7 +594,8 @@ const Index: React.FC = () => {
                             const today = new Date();
                             const oneWeekFromNow = new Date();
                             oneWeekFromNow.setDate(today.getDate() + 7);
-                            return date < today || date > oneWeekFromNow;
+                            const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+                            return date < today || date > oneWeekFromNow || isWeekend;
                           }}
                           initialFocus
                           className="p-3 pointer-events-auto"
