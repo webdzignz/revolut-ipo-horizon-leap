@@ -520,7 +520,7 @@ const Index: React.FC = () => {
       </section>
 
       {/* Main Heading */}
-      <section id="form-section" className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section id="form-section" className="max-w-7xl mx-auto px-4 sm:px-6 -mt-4">
         <div className="mb-8 sm:mb-12 text-center mt-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
