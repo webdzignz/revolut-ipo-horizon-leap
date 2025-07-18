@@ -349,7 +349,7 @@ const Index: React.FC = () => {
                   Banking On The Future<br />
                   Invest In The Next<br />
                   Financial Revolution<br />
-                  Today Reserve Now
+                  Today. Reserve Now...
                 </h1>
                 
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
