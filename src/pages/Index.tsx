@@ -387,7 +387,7 @@ const Index: React.FC = () => {
                   Revolut IPO 2025
                 </div>
                 
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
                   Invest In The<br />
                   Next Financial<br />
                   Revolution Today<br />
