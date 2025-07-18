@@ -529,10 +529,10 @@ const Index: React.FC = () => {
         {/* Bottom Content - Steps and Form */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-8 sm:mt-16">
           {/* Left Content - Registration Steps */}
-          <div className="space-y-4 flex flex-col h-full">
+          <div className="space-y-6 flex flex-col h-full">
             
             {/* Step 1 */}
-            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">1</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Complete registration form</h3>
@@ -544,7 +544,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">2</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Submit your details</h3>
@@ -557,7 +557,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
+            <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 border-l-4 border-black">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold min-w-[40px]">3</div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Get Ready for Your Call</h3>
@@ -573,12 +573,12 @@ const Index: React.FC = () => {
 
           {/* Right Content - Hero Image Slideshow */}
           <div className="flex justify-center lg:justify-end order-first lg:order-last h-full items-end">
-            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-sm xl:max-w-md">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
               <img 
                 src={heroImages[currentImageIndex].src}
                 alt={heroImages[currentImageIndex].alt}
                 className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
-                style={{ aspectRatio: '3/4' }}
+                style={{ aspectRatio: '2/3' }}
               />
             </div>
           </div>
