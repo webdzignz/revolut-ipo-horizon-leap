@@ -532,18 +532,25 @@ const Index: React.FC = () => {
                     />
                   </div>
 
-                  {/* Appointment Field */}
+                  {/* Call Preference Field */}
                   <div className="space-y-1">
                     <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Book Appointment with Expert
+                      Preferred Call Time
                     </label>
-                    <input
-                      type="datetime-local"
+                    <select
                       id="appointment"
                       name="appointment"
+                      value={formData.appointment}
+                      onChange={handleInputChange}
                       className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                    />
-                    <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                    >
+                      <option value="">Select preferred time</option>
+                      <option value="morning">Morning (9AM - 12PM)</option>
+                      <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                      <option value="evening">Evening (5PM - 8PM)</option>
+                      <option value="anytime">Anytime</option>
+                    </select>
+                    <p className="text-xs text-gray-400">We'll call you within 48 hours during your preferred time</p>
                   </div>
 
                   {/* Submit Button */}
