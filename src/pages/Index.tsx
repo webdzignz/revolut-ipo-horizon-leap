@@ -378,7 +378,7 @@ const Index: React.FC = () => {
                 <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
                   <div className="mb-6">
                     <img 
-                      src="/lovable-uploads/f995360e-8a69-4667-abe2-20200bce972c.png" 
+                      src="/lovable-uploads/5df7549f-609d-45a7-af3a-c741b8b5e94b.png" 
                       alt="R Logo" 
                       className="h-12 w-auto"
                     />
