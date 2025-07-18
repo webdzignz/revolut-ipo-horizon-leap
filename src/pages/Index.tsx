@@ -764,6 +764,23 @@ const Index: React.FC = () => {
         </div>
       </section>
 
+      {/* CTA Buttons Above Footer */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-center gap-4">
+            <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]">
+              More Info
+            </button>
+            <button 
+              className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px]"
+              onClick={() => scrollToSection('form-section')}
+            >
+              Book A Call
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
