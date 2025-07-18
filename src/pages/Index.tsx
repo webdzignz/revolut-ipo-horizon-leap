@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
+import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar as CalendarIcon, MapPin, Target, Menu, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +16,9 @@ const Index: React.FC = () => {
     notes: '',
     appointment: ''
   });
+
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
+  const [selectedTime, setSelectedTime] = useState('');
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -532,25 +539,72 @@ const Index: React.FC = () => {
                     />
                   </div>
 
-                  {/* Call Preference Field */}
-                  <div className="space-y-1">
-                    <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Preferred Call Time
+                  {/* Book Appointment Field */}
+                  <div className="space-y-2">
+                    <label className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Book Appointment with Expert
                     </label>
-                    <select
-                      id="appointment"
-                      name="appointment"
-                      value={formData.appointment}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                    >
-                      <option value="">Select preferred time</option>
-                      <option value="morning">Morning (9AM - 12PM)</option>
-                      <option value="afternoon">Afternoon (12PM - 5PM)</option>
-                      <option value="evening">Evening (5PM - 8PM)</option>
-                      <option value="anytime">Anytime</option>
-                    </select>
-                    <p className="text-xs text-gray-400">We'll call you within 48 hours during your preferred time</p>
+                    
+                    {/* Date Selection */}
+                    <div className="space-y-1">
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className={cn(
+                              "w-full justify-start text-left font-normal px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm h-auto",
+                              !selectedDate && "text-gray-500"
+                            )}
+                          >
+                            <CalendarIcon className="mr-2 h-4 w-4" />
+                            {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0" align="start">
+                          <Calendar
+                            mode="single"
+                            selected={selectedDate}
+                            onSelect={setSelectedDate}
+                            disabled={(date) => {
+                              const today = new Date();
+                              const oneWeekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+                              return date < today || date > oneWeekFromNow;
+                            }}
+                            initialFocus
+                            className="pointer-events-auto"
+                          />
+                        </PopoverContent>
+                      </Popover>
+                    </div>
+
+                    {/* Time Selection */}
+                    {selectedDate && (
+                      <div className="space-y-1">
+                        <select
+                          value={selectedTime}
+                          onChange={(e) => setSelectedTime(e.target.value)}
+                          className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                        >
+                          <option value="">Select time</option>
+                          <option value="09:00">09:00 AM</option>
+                          <option value="10:00">10:00 AM</option>
+                          <option value="11:00">11:00 AM</option>
+                          <option value="12:00">12:00 PM</option>
+                          <option value="13:00">01:00 PM</option>
+                          <option value="14:00">02:00 PM</option>
+                          <option value="15:00">03:00 PM</option>
+                          <option value="16:00">04:00 PM</option>
+                          <option value="17:00">05:00 PM</option>
+                        </select>
+                      </div>
+                    )}
+                    
+                    <p className="text-xs text-gray-400">
+                      {selectedDate && selectedTime 
+                        ? `Appointment scheduled for ${format(selectedDate, "PPP")} at ${selectedTime}`
+                        : "Select a date within the next week for your expert call"
+                      }
+                    </p>
                   </div>
 
                   {/* Submit Button */}
