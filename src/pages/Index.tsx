@@ -567,55 +567,64 @@ const Index: React.FC = () => {
                 {/* Appointment Field */}
                 <div className="space-y-3">
                   <label className="block text-xs font-medium text-white uppercase tracking-wide">
-                    Quick Call Booking (Optional)
+                    Book Expert Call (Optional)
                   </label>
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setFormData({...formData, appointment: 'Tomorrow 10am'})}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'Tomorrow 10am' 
-                          ? 'bg-white text-black' 
-                          : 'bg-gray-700 text-white hover:bg-gray-600'
-                      }`}
-                    >
-                      Tomorrow 10am
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setFormData({...formData, appointment: 'Tomorrow 2pm'})}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'Tomorrow 2pm' 
-                          ? 'bg-white text-black' 
-                          : 'bg-gray-700 text-white hover:bg-gray-600'
-                      }`}
-                    >
-                      Tomorrow 2pm
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setFormData({...formData, appointment: 'This Week 10am'})}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'This Week 10am' 
-                          ? 'bg-white text-black' 
-                          : 'bg-gray-700 text-white hover:bg-gray-600'
-                      }`}
-                    >
-                      This Week 10am
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setFormData({...formData, appointment: 'This Week 2pm'})}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        formData.appointment === 'This Week 2pm' 
-                          ? 'bg-white text-black' 
-                          : 'bg-gray-700 text-white hover:bg-gray-600'
-                      }`}
-                    >
-                      This Week 2pm
-                    </button>
+                  
+                  {/* Date Selection */}
+                  <div className="space-y-2">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal border-2 border-gray-600 bg-white text-black rounded-lg hover:bg-gray-50 focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm",
+                            !appointmentDate && "text-gray-500"
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {appointmentDate ? format(appointmentDate, "PPP") : <span>Select date</span>}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <CalendarComponent
+                          mode="single"
+                          selected={appointmentDate}
+                          onSelect={setAppointmentDate}
+                          disabled={(date) => {
+                            const today = new Date();
+                            const oneWeekFromNow = new Date();
+                            oneWeekFromNow.setDate(today.getDate() + 7);
+                            return date < today || date > oneWeekFromNow;
+                          }}
+                          initialFocus
+                          className="p-3 pointer-events-auto"
+                        />
+                      </PopoverContent>
+                    </Popover>
                   </div>
-                  <p className="text-xs text-gray-400">Just click one - we'll confirm the exact time with you</p>
+
+                  {/* Time Selection - Only show if date is selected */}
+                  {appointmentDate && (
+                    <div className="space-y-2">
+                      <label className="block text-xs font-medium text-gray-300">Select Time</label>
+                      <div className="grid grid-cols-3 gap-2">
+                        {['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'].map((time) => (
+                          <button
+                            key={time}
+                            type="button"
+                            onClick={() => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${time}`})}
+                            className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                              formData.appointment === `${format(appointmentDate, "MMM d")} at ${time}` 
+                                ? 'bg-white text-black' 
+                                : 'bg-gray-700 text-white hover:bg-gray-600'
+                            }`}
+                          >
+                            {time}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Submit Button */}
