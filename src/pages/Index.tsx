@@ -375,7 +375,7 @@ const Index: React.FC = () => {
             {/* Right Content - Investment Form */}
             <div className="w-full h-full flex flex-col mt-16" id="form-section">
               <div>
-                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-7xl">{/* Increased to max-w-7xl for maximum width */}
+                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full">{/* Removed max-width for full width */}
                   <div className="mb-6">
                     <img 
                       src="/lovable-uploads/5df7549f-609d-45a7-af3a-c741b8b5e94b.png" 
