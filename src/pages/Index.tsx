@@ -571,7 +571,7 @@ const Index: React.FC = () => {
 
           {/* Right Content - Hero Image Slideshow */}
           <div className="flex justify-center lg:justify-end order-first lg:order-last">
-            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
               <img 
                 src={heroImages[currentImageIndex].src}
                 alt={heroImages[currentImageIndex].alt}
