@@ -792,46 +792,46 @@ const Index: React.FC = () => {
       
       {/* Terms and Conditions section */}
       <div id="terms-conditions" className="bg-white w-full">
-        <div className="py-3 px-6 max-w-7xl mx-auto">
-          <div className="text-[7px] text-black leading-tight space-y-1">
-            <div className="flex items-center gap-2 mb-1 justify-start">
-              <h2 className="text-[10px] font-bold">Terms and Conditions</h2>
-              <p className="text-[7px]">By using this website and submitting your personal details, you agree to the following terms:</p>
+        <div className="py-4 px-4 md:px-6 max-w-7xl mx-auto">
+          <div className="text-[9px] md:text-[7px] text-black leading-relaxed space-y-3 md:space-y-1">
+            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2 md:mb-1 justify-start">
+              <h2 className="text-[12px] md:text-[10px] font-bold">Terms and Conditions</h2>
+              <p className="text-[9px] md:text-[7px]">By using this website and submitting your personal details, you agree to the following terms:</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">Introduction Services Only</h3>
-                <p className="text-[7px]">This website does not provide financial advice, trading services, or sell securities directly. Our role is limited to introducing you to regulated and authorized third-party brokers who may assist you.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-y-1">
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Introduction Services Only</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">This website does not provide financial advice, trading services, or sell securities directly. Our role is limited to introducing you to regulated and authorized third-party brokers who may assist you.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">No Guarantee of Allocation</h3>
-                <p className="text-[7px]">Submitting your information does not guarantee allocation or access to IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their requirements.</p>
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Guarantee of Allocation</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">Submitting your information does not guarantee allocation or access to IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their requirements.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">Not Affiliated with Revolut</h3>
-                <p className="text-[7px]">This site is not owned, operated, or endorsed by Revolut Ltd. Any mention of Revolut is for informational purposes only. All trademarks and brand names belong to their respective owners.</p>
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Not Affiliated with Revolut</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">This site is not owned, operated, or endorsed by Revolut Ltd. Any mention of Revolut is for informational purposes only. All trademarks and brand names belong to their respective owners.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">Regulated Broker Partners</h3>
-                <p className="text-[7px]">All brokers we may introduce you to are regulated by appropriate financial authorities in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.</p>
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Regulated Broker Partners</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">All brokers we may introduce you to are regulated by appropriate financial authorities in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">Accuracy of Information</h3>
-                <p className="text-[7px]">You confirm that the information you provide is accurate and complete. By submitting your details, you consent to being contacted by a representative of the regulated broker for investment discussions.</p>
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Accuracy of Information</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">You confirm that the information you provide is accurate and complete. By submitting your details, you consent to being contacted by a representative of the regulated broker for investment discussions.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-0 text-[8px]">No Liability</h3>
-                <p className="text-[7px]">We are not liable for any financial loss, missed opportunities, or other outcomes resulting from introductions made via this site. All investment decisions are made at your own risk and discretion.</p>
+              <div className="touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Liability</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">We are not liable for any financial loss, missed opportunities, or other outcomes resulting from introductions made via this site. All investment decisions are made at your own risk and discretion.</p>
               </div>
 
-              <div className="md:col-span-2">
-                <h3 className="font-semibold mb-0 text-[8px]">Privacy</h3>
-                <p className="text-[7px]">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction. Your data is protected according to applicable privacy laws.</p>
+              <div className="md:col-span-2 touch-manipulation">
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Privacy</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction. Your data is protected according to applicable privacy laws.</p>
               </div>
             </div>
           </div>
