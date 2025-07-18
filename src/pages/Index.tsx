@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,7 @@ const Index: React.FC = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Hero images array
   const heroImages = [
@@ -67,6 +70,10 @@ const Index: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Show success modal
+    setShowSuccessModal(true);
+    
     // Reset form after submission
     setFormData({
       name: '',
@@ -163,6 +170,41 @@ const Index: React.FC = () => {
       </header>
 
       
+      {/* Success Modal */}
+      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-xl font-bold text-green-600">
+              Registration Successful!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="text-center space-y-4 py-4">
+            <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Thank you for your interest!
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Your registration has been submitted successfully. You will receive a PDF with key information and a call from our representative within 48 hours.
+              </p>
+              <p className="text-gray-600 text-sm mt-2">
+                <strong>Expect a call from a +44 20 number</strong>
+              </p>
+            </div>
+            <Button 
+              onClick={() => setShowSuccessModal(false)}
+              className="w-full bg-black text-white hover:bg-gray-800"
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Scrolling Banner */}
       <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 80px)` }}>
         <div className="relative">
