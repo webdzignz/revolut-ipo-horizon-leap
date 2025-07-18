@@ -98,27 +98,27 @@ const Index: React.FC = () => {
       <div className="h-[0.5cm] bg-black"></div>
       
       {/* Header */}
-      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-4 sm:px-6 py-2 border-b border-gray-200">
+      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-4 sm:px-6 py-3 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 sm:gap-3" style={{ marginLeft: '0.5in' }}>
+          <div className="flex items-center gap-2 sm:gap-3">
             <img 
               src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
               alt="Revolut Logo" 
-              className="h-12 sm:h-16 md:h-20 w-auto"
+              className="h-8 sm:h-12 md:h-16 w-auto"
             />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
+            <span className="text-sm sm:text-lg md:text-xl font-bold text-black uppercase tracking-tight">IPO</span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <nav className="flex items-center gap-8 text-gray-700">
+          <div className="hidden lg:flex items-center gap-6">
+            <nav className="flex items-center gap-6 text-gray-700 text-sm">
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Request Info</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Contact Us</span>
             </nav>
             <button 
-              className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px]" 
+              className="bg-black text-white px-4 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-sm" 
               onClick={() => scrollToSection('form-section')}
             >
               Sign up
@@ -126,9 +126,9 @@ const Index: React.FC = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-2">
             <button 
-              className="bg-black text-white px-4 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-sm" 
+              className="bg-black text-white px-3 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-xs" 
               onClick={() => scrollToSection('form-section')}
             >
               Sign up
@@ -138,35 +138,35 @@ const Index: React.FC = () => {
               className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40">
-            <nav className="px-4 py-4 space-y-4">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40">
+            <nav className="px-4 py-2 space-y-1">
               <button 
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
                 onClick={() => scrollToSection('form-section')}
               >
                 Request Info
               </button>
               <button 
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
                 onClick={() => scrollToSection('form-section')}
               >
                 Talk to Expert
               </button>
               <button 
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
                 onClick={() => scrollToSection('fundamental-data')}
               >
                 Fundamental Data
               </button>
               <button 
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
                 onClick={() => scrollToSection('form-section')}
               >
                 Contact Us
@@ -414,31 +414,31 @@ const Index: React.FC = () => {
                   />
                 </div>
                 
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase tracking-tight mb-6 sm:mb-8">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black uppercase tracking-tight mb-4 sm:mb-6">
                   Revolut IPO 2025
                 </div>
                 
-                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
+                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight text-black uppercase tracking-tight mb-3 sm:mb-6">
                   Get Ready To<br />
                   Invest In The Next<br />
                   Financial Revolution<br />
                   Today Talk To Expert
                 </h1>
                 
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed italic font-bold">
                   "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
                 </p>
               </div>
 
-              <div className="w-full max-w-lg flex gap-4">
+              <div className="w-full max-w-lg flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button 
-                  className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] flex-1 sm:flex-none"
+                  className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:flex-1"
                   onClick={() => scrollToSection('form-section')}
                 >
                   More Info
                 </button>
                 <button 
-                  className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px] flex-1 sm:flex-none"
+                  className="bg-white text-black border-2 border-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-50 transition-colors min-h-[48px] w-full sm:flex-1"
                   onClick={() => scrollToSection('form-section')}
                 >
                   Book A Call
@@ -447,29 +447,29 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Investment Form */}
-            <div className="w-full h-full flex flex-col mt-16" id="form-section">
+            <div className="w-full h-full flex flex-col mt-8 lg:mt-16" id="form-section">
               <div>
-                <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full">{/* Removed max-width for full width */}
-                  <div className="mb-6">
+                <div className="bg-black p-4 sm:p-6 pb-16 sm:pb-24 rounded-2xl shadow-lg border border-gray-800 w-full">
+                  <div className="mb-4 sm:mb-6">
                     <img 
                       src="/lovable-uploads/5df7549f-609d-45a7-af3a-c741b8b5e94b.png" 
                       alt="R Logo" 
-                      className="h-12 w-auto"
+                      className="h-8 sm:h-12 w-auto"
                     />
                   </div>
                   
-                  <div className="mb-6">
-                    <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
+                  <div className="mb-4 sm:mb-6">
+                    <h2 className="text-lg sm:text-xl font-bold text-white uppercase tracking-tight mb-1">
                       REGISTER YOUR INVESTMENT INTEREST
                     </h2>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-300 text-xs sm:text-sm">
                       Get priority access to IPO updates and investment opportunities
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name and Numbers on same row */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                  {/* Name and Numbers - Stack on mobile, side by side on desktop */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-1">
                       <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
                         Full Name
@@ -503,8 +503,8 @@ const Index: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Investment Amount and Timeframe on same row */}
-                  <div className="grid grid-cols-2 gap-4">
+                  {/* Investment Amount and Timeframe - Stack on mobile, side by side on desktop */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-1">
                       <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
                         Investment Amount
@@ -740,15 +740,15 @@ const Index: React.FC = () => {
       {/* CTA Section before Fundamental Data */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-lg mx-auto">
             <button 
-              className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]"
+              className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:flex-1"
               onClick={() => scrollToSection('form-section')}
             >
               More Info
             </button>
             <button 
-              className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px]"
+              className="bg-white text-black border-2 border-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-50 transition-colors min-h-[48px] w-full sm:flex-1"
               onClick={() => scrollToSection('form-section')}
             >
               Book A Call
