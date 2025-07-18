@@ -388,8 +388,8 @@ const Index: React.FC = () => {
                 </div>
                 
                 <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
-                  Invest In The<br />
-                  Next Financial<br />
+                  Get Ready To Invest<br />
+                  In The Next Financial<br />
                   Revolution Today<br />
                   Talk To An Expert
                 </h1>
