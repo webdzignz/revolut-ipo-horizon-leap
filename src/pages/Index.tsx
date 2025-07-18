@@ -801,12 +801,12 @@ const Index: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
               <div>
                 <h3 className="font-semibold mb-0 text-[8px]">Introduction Services Only</h3>
-                <p className="text-[7px]">This website does not provide financial advice, trading services, or sell securities. Our role is limited to introducing you to a regulated and authorized third-party broker who may assist you in exploring investment opportunities, including potential access to Revolut's IPO when available.</p>
+                <p className="text-[7px]">This website does not provide financial advice, trading services, or sell securities directly. Our role is limited to introducing you to regulated and authorized third-party brokers who may assist you.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0 text-[8px]">No Guarantee of Allocation</h3>
-                <p className="text-[7px]">Submitting your information does not guarantee allocation or access to Revolut IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their terms and regulatory requirements.</p>
+                <p className="text-[7px]">Submitting your information does not guarantee allocation or access to IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their requirements.</p>
               </div>
 
               <div>
@@ -816,7 +816,7 @@ const Index: React.FC = () => {
 
               <div>
                 <h3 className="font-semibold mb-0 text-[8px]">Regulated Broker Partners</h3>
-                <p className="text-[7px]">All brokers we may introduce you to are regulated by appropriate financial authorities (e.g., FCA, SEC, etc.) in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.</p>
+                <p className="text-[7px]">All brokers we may introduce you to are regulated by appropriate financial authorities in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.</p>
               </div>
 
               <div>
@@ -831,7 +831,7 @@ const Index: React.FC = () => {
 
               <div className="md:col-span-2">
                 <h3 className="font-semibold mb-0 text-[8px]">Privacy</h3>
-                <p className="text-[7px]">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction.</p>
+                <p className="text-[7px]">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction. Your data is protected according to applicable privacy laws.</p>
               </div>
             </div>
           </div>
