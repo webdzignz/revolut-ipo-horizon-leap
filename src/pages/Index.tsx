@@ -607,22 +607,23 @@ const Index: React.FC = () => {
                   {appointmentDate && (
                     <div className="space-y-2">
                       <label className="block text-xs font-medium text-gray-300">Select Time</label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'].map((time) => (
-                          <button
-                            key={time}
-                            type="button"
-                            onClick={() => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${time}`})}
-                            className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                              formData.appointment === `${format(appointmentDate, "MMM d")} at ${time}` 
-                                ? 'bg-white text-black' 
-                                : 'bg-gray-700 text-white hover:bg-gray-600'
-                            }`}
-                          >
-                            {time}
-                          </button>
-                        ))}
-                      </div>
+                      <select
+                        value={formData.appointment?.includes('at') ? formData.appointment.split('at ')[1] : ''}
+                        onChange={(e) => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${e.target.value}`})}
+                        className="w-full px-3 py-3 bg-white text-black border-2 border-gray-600 rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 text-sm"
+                      >
+                        <option value="">Select time</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                        <option value="6:00 PM">6:00 PM</option>
+                      </select>
                     </div>
                   )}
                 </div>
