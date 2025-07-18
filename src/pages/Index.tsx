@@ -347,9 +347,9 @@ const Index: React.FC = () => {
                 
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8 text-center">
                   Banking On The Future<br />
-                  Invest In The Next Financial<br />
-                  Revolution Today Reserve<br />
-                  Now For Early Access
+                  Invest In The Next<br />
+                  Financial Revolution<br />
+                  Today Reserve Now
                 </h1>
                 
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
