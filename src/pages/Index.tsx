@@ -573,12 +573,12 @@ const Index: React.FC = () => {
 
           {/* Right Content - Hero Image Slideshow */}
           <div className="flex justify-center lg:justify-end order-first lg:order-last h-full items-end">
-            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-sm xl:max-w-md">
               <img 
                 src={heroImages[currentImageIndex].src}
                 alt={heroImages[currentImageIndex].alt}
                 className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
-                style={{ aspectRatio: '2/3' }}
+                style={{ aspectRatio: '3/4' }}
               />
             </div>
           </div>
