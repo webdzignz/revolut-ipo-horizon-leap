@@ -425,10 +425,10 @@ const Index: React.FC = () => {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black">Get Ready for Your Call</h3>
               </div>
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
-                <li>- Expect a call within 48 hours of submitting</li>
-                <li>- Prepare questions for the expert</li>
+                <li className="pl-2 -indent-2">- Expect a call within 48 hours of submitting</li>
+                <li className="pl-2 -indent-2">- Prepare questions for the expert</li>
+                <li className="pl-2 -indent-2">- Expert will provide overview and tailored strategy</li>
               </ul>
-              <p className="text-gray-700 text-sm sm:text-base ml-[52px]">Expert will provide overview and tailored strategy</p>
             </div>
           </div>
 
