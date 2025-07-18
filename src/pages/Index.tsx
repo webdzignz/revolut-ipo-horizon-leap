@@ -373,11 +373,10 @@ const Index: React.FC = () => {
             <div className="w-full">
               <div>
                 <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
-                  {/* Logo at top left */}
                   <div className="mb-6">
                     <img 
-                      src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
-                      alt="Revolut Logo" 
+                      src="/lovable-uploads/e6871ec1-c50c-46ef-9e6c-7d5fb3d06f18.png" 
+                      alt="R Logo" 
                       className="h-12 w-auto"
                     />
                   </div>
