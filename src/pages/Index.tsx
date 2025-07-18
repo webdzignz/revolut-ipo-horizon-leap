@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar as CalendarIcon, MapPin, Target, Menu, X, CheckCircle, Download } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { format } from 'date-fns';
-import { cn } from '@/lib/utils';
+import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -17,12 +11,8 @@ const Index: React.FC = () => {
     appointment: ''
   });
 
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
-  const [selectedTime, setSelectedTime] = useState('');
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Hero images array
   const heroImages = [
@@ -77,10 +67,6 @@ const Index: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Show success modal
-    setShowSuccessModal(true);
-    
     // Reset form after submission
     setFormData({
       name: '',
@@ -98,27 +84,27 @@ const Index: React.FC = () => {
       <div className="h-[0.5cm] bg-black"></div>
       
       {/* Header */}
-      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-4 sm:px-6 py-3 border-b border-gray-200">
+      <header className="fixed top-[0.5cm] left-0 right-0 z-50 bg-white px-4 sm:px-6 py-2 border-b border-gray-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3" style={{ marginLeft: '0.5in' }}>
             <img 
               src="/lovable-uploads/bc684528-0d11-4499-bd86-1184fd24a40d.png" 
               alt="Revolut Logo" 
-              className="h-8 sm:h-12 md:h-16 w-auto"
+              className="h-12 sm:h-16 md:h-20 w-auto"
             />
-            <span className="text-sm sm:text-lg md:text-xl font-bold text-black uppercase tracking-tight">IPO</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-black uppercase tracking-tight">IPO</span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
-            <nav className="flex items-center gap-6 text-gray-700 text-sm">
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8 text-gray-700">
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Request Info</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Talk to Expert</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('fundamental-data')}>Fundamental Data</span>
               <span className="hover:text-black cursor-pointer transition-colors" onClick={() => scrollToSection('form-section')}>Contact Us</span>
             </nav>
             <button 
-              className="bg-black text-white px-4 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-sm" 
+              className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px]" 
               onClick={() => scrollToSection('form-section')}
             >
               Sign up
@@ -126,9 +112,9 @@ const Index: React.FC = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-4">
             <button 
-              className="bg-black text-white px-3 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-xs" 
+              className="bg-black text-white px-4 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors min-h-[44px] text-sm" 
               onClick={() => scrollToSection('form-section')}
             >
               Sign up
@@ -138,35 +124,35 @@ const Index: React.FC = () => {
               className="p-2 rounded-lg hover:bg-gray-100 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40">
-            <nav className="px-4 py-2 space-y-1">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40">
+            <nav className="px-4 py-4 space-y-4">
               <button 
-                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => scrollToSection('form-section')}
               >
                 Request Info
               </button>
               <button 
-                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => scrollToSection('form-section')}
               >
                 Talk to Expert
               </button>
               <button 
-                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => scrollToSection('fundamental-data')}
               >
                 Fundamental Data
               </button>
               <button 
-                className="block w-full text-left py-4 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => scrollToSection('form-section')}
               >
                 Contact Us
@@ -177,65 +163,6 @@ const Index: React.FC = () => {
       </header>
 
       
-      {/* Success Modal */}
-      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
-        <DialogContent className="sm:max-w-lg bg-black border-gray-800 text-white">
-          <DialogHeader className="text-center space-y-4">
-            {/* Logo replacing the tick */}
-            <div className="flex justify-center mb-6">
-              <div className="text-white text-5xl font-bold">
-                REVOLUT
-              </div>
-            </div>
-            
-            <DialogTitle className="text-4xl font-bold text-white text-center">
-              Interest Registered Successfully!
-            </DialogTitle>
-          </DialogHeader>
-          
-          <div className="space-y-4 text-center">
-            <p className="text-white text-xl">
-              Thank you for your interest in the Revolut IPO. We've received your registration.
-            </p>
-            
-            <div className="bg-gray-900 p-6 rounded-lg space-y-4">
-              <h4 className="font-semibold text-white text-xl">What happens next:</h4>
-              <ul className="text-lg text-white space-y-3 text-left">
-                <li>• Download the information pack below</li>
-                <li>• Our team will call you within 48 hours from +44 20 number</li>
-                <li>• We'll discuss your investment preferences and next steps</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-3">
-              <Button
-                onClick={() => {
-                  // Create a dummy PDF download
-                  const link = document.createElement('a');
-                  link.href = '#';
-                  link.download = 'revolut-ipo-info-pack.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-                className="w-full bg-white text-black hover:bg-gray-100 font-semibold py-4 text-lg"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Information Pack
-              </Button>
-              
-              <Button 
-                onClick={() => setShowSuccessModal(false)}
-                variant="outline"
-                className="w-full border-gray-600 text-white hover:bg-gray-800 hover:text-white py-4 text-lg"
-              >
-                Close
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
-
       {/* Scrolling Banner */}
       <section className="bg-black py-1 overflow-hidden" style={{ marginTop: `calc(0.5cm + 80px)` }}>
         <div className="relative">
@@ -400,9 +327,9 @@ const Index: React.FC = () => {
       <section className="relative overflow-hidden bg-white pt-4 pb-12 sm:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Top Content - Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             {/* Left Content */}
-            <div className="space-y-6 sm:space-y-8 h-full flex flex-col">
+            <div className="space-y-6 sm:space-y-8">
               <div className="w-full max-w-lg space-y-4 sm:space-y-6">
                 
                 
@@ -410,236 +337,41 @@ const Index: React.FC = () => {
                   <img 
                     src="/lovable-uploads/bc21313b-5651-4a1c-87ca-0c910f3c7794.png" 
                     alt="Revolut" 
-                    className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-2 sm:mb-4"
+                    className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto mb-4 sm:mb-8"
                   />
                 </div>
                 
-                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black uppercase tracking-tight mb-4 sm:mb-6">
-                  Revolut IPO 2025
+                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8">
+                  IPO Announcement • Expected 2025
                 </div>
                 
-                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight text-black uppercase tracking-tight mb-3 sm:mb-6">
-                  Get Ready To<br />
-                  Invest In The Next<br />
-                  Financial Revolution<br />
-                  Today Talk To Expert
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
+                  Revolut IPO Banking on the Future
+                  <br />
+                  Buy Now.....
                 </h1>
                 
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed italic font-bold">
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic font-bold">
                   "Revolut's IPO is on the horizon — and with 45 million users and some of the fastest growth in fintech, it's shaping up to be one of the biggest plays of the year. Markets are warming up, investor appetite is back, but timing's everything. Get in early. Think big. Win big."
                 </p>
               </div>
 
-              <div className="w-full max-w-lg flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button 
-                  className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:flex-1"
-                  onClick={() => scrollToSection('form-section')}
-                >
+              <div className="w-full max-w-lg">
+                <button className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:w-auto">
                   More Info
-                </button>
-                <button 
-                  className="bg-white text-black border-2 border-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-50 transition-colors min-h-[48px] w-full sm:flex-1"
-                  onClick={() => scrollToSection('form-section')}
-                >
-                  Book A Call
                 </button>
               </div>
             </div>
 
-            {/* Right Content - Investment Form */}
-            <div className="w-full h-full flex flex-col mt-8 lg:mt-16" id="form-section">
-              <div>
-                <div className="bg-black p-4 sm:p-6 pb-16 sm:pb-24 rounded-2xl shadow-lg border border-gray-800 w-full">
-                  <div className="mb-4 sm:mb-6">
-                    <img 
-                      src="/lovable-uploads/5df7549f-609d-45a7-af3a-c741b8b5e94b.png" 
-                      alt="R Logo" 
-                      className="h-8 sm:h-12 w-auto"
-                    />
-                  </div>
-                  
-                  <div className="mb-4 sm:mb-6">
-                    <h2 className="text-lg sm:text-xl font-bold text-white uppercase tracking-tight mb-1">
-                      REGISTER YOUR INVESTMENT INTEREST
-                    </h2>
-                    <p className="text-gray-300 text-xs sm:text-sm">
-                      Get priority access to IPO updates and investment opportunities
-                    </p>
-                  </div>
-
-                  <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                  {/* Name and Numbers - Stack on mobile, side by side on desktop */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="space-y-1">
-                      <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-
-                    <div className="space-y-1">
-                      <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Contact Number/s
-                      </label>
-                      <input
-                        type="text"
-                        id="numbers"
-                        name="numbers"
-                        value={formData.numbers}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                        placeholder="Phone number(s)"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Investment Amount and Timeframe - Stack on mobile, side by side on desktop */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="space-y-1">
-                      <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Investment Amount
-                      </label>
-                      <select
-                        id="investmentAmount"
-                        name="investmentAmount"
-                        value={formData.investmentAmount}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      >
-                        <option value="">Select amount</option>
-                        <option value="10000-50000">£10K - £50K</option>
-                        <option value="50000-100000">£50K - £100K</option>
-                        <option value="100000-250000">£100K - £250K</option>
-                        <option value="250000-500000">£250K - £500K</option>
-                        <option value="500000+">£500K+</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-1">
-                      <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
-                        Timeframe
-                      </label>
-                      <select
-                        id="timeframe"
-                        name="timeframe"
-                        value={formData.timeframe}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                      >
-                        <option value="">Select timeframe</option>
-                        <option value="immediate">Immediate</option>
-                        <option value="3-months">3 months</option>
-                        <option value="6-months">6 months</option>
-                        <option value="1-year">1+ years</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Notes Field */}
-                  <div className="space-y-1">
-                    <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Additional Notes
-                    </label>
-                    <textarea
-                      id="notes"
-                      name="notes"
-                      value={formData.notes}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
-                      placeholder="Any specific questions or requirements..."
-                    />
-                  </div>
-
-                  {/* Book Appointment Field */}
-                  <div className="space-y-2">
-                    <label className="block text-xs font-medium text-white uppercase tracking-wide">
-                      Book Appointment with Expert
-                    </label>
-                    
-                    {/* Date Selection */}
-                    <div className="space-y-1">
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className={cn(
-                              "w-full justify-start text-left font-normal px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm h-auto",
-                              !selectedDate && "text-gray-500"
-                            )}
-                          >
-                            <CalendarIcon className="mr-2 h-4 w-4" />
-                            {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={selectedDate}
-                            onSelect={setSelectedDate}
-                            disabled={(date) => {
-                              const today = new Date();
-                              const oneWeekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
-                              return date < today || date > oneWeekFromNow;
-                            }}
-                            initialFocus
-                            className="pointer-events-auto"
-                          />
-                        </PopoverContent>
-                      </Popover>
-                    </div>
-
-                    {/* Time Selection */}
-                    {selectedDate && (
-                      <div className="space-y-1">
-                        <select
-                          value={selectedTime}
-                          onChange={(e) => setSelectedTime(e.target.value)}
-                          className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                        >
-                          <option value="">Select time</option>
-                          <option value="09:00">09:00 AM</option>
-                          <option value="10:00">10:00 AM</option>
-                          <option value="11:00">11:00 AM</option>
-                          <option value="12:00">12:00 PM</option>
-                          <option value="13:00">01:00 PM</option>
-                          <option value="14:00">02:00 PM</option>
-                          <option value="15:00">03:00 PM</option>
-                          <option value="16:00">04:00 PM</option>
-                          <option value="17:00">05:00 PM</option>
-                        </select>
-                      </div>
-                    )}
-                    
-                    <p className="text-xs text-gray-400">
-                      {selectedDate && selectedTime 
-                        ? `Appointment scheduled for ${format(selectedDate, "PPP")} at ${selectedTime}`
-                        : "Select a date within the next week for your expert call"
-                      }
-                    </p>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
-                  >
-                    Register Interest
-                  </button>
-                </form>
-                </div>
+            {/* Right Content - Hero Image Slideshow */}
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
+              <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+                <img 
+                  src={heroImages[currentImageIndex].src}
+                  alt={heroImages[currentImageIndex].alt}
+                  className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
+                  style={{ aspectRatio: '3/4' }}
+                />
               </div>
             </div>
           </div>
@@ -648,16 +380,16 @@ const Index: React.FC = () => {
       </section>
 
       {/* Main Heading */}
-      <section id="form-section" className="max-w-7xl mx-auto px-4 sm:px-6 -mt-4">
+      <section id="form-section" className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-8 sm:mb-12 text-center mt-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black uppercase mb-2">TALK TO AN EXPERT</h2>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">GET MORE INFO ON THE REVOLUT IPO</h3>
         </div>
 
         {/* Bottom Content - Steps and Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-8 sm:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8 sm:mt-16">
           {/* Left Content - Registration Steps */}
-          <div className="space-y-4 flex flex-col h-full">
+          <div className="space-y-4 flex flex-col">
             
             {/* Step 1 */}
             <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
@@ -668,6 +400,7 @@ const Index: React.FC = () => {
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Fill out the form carefully and double-check all information</li>
                 <li className="pl-2 -indent-2">- Use "additional notes" for alternative contacts or specific requirements</li>
+                <li className="pl-2 -indent-2">- <strong>+44 20</strong> number will call you</li>
               </ul>
             </div>
 
@@ -679,7 +412,7 @@ const Index: React.FC = () => {
               </div>
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li className="pl-2 -indent-2">- Submit your details and they'll be securely processed</li>
-                <li className="pl-2 -indent-2">- You will receive a PDF with key info and a CALL from a representative within 48 hrs</li>
+                <li className="pl-2 -indent-2">- You'll receive a call from a licensed representative within 48 hours</li>
                 <li className="pl-2 -indent-2">- Booking a time guarantees a scheduled call at your convenience</li>
               </ul>
             </div>
@@ -694,20 +427,151 @@ const Index: React.FC = () => {
                 <li className="pl-2 -indent-2">- Expect a call within 48 hours of submitting</li>
                 <li className="pl-2 -indent-2">- Prepare questions for the expert</li>
                 <li className="pl-2 -indent-2">- Expert will provide overview and tailored strategy</li>
-                <li className="pl-2 -indent-2">- <strong>+44 20</strong> number will call you</li>
               </ul>
             </div>
           </div>
 
-          {/* Right Content - Hero Image Slideshow */}
-          <div className="flex justify-center lg:justify-end order-first lg:order-last h-full items-end">
-            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
-              <img 
-                src={heroImages[currentImageIndex].src}
-                alt={heroImages[currentImageIndex].alt}
-                className="w-full h-auto rounded-2xl shadow-2xl transition-all duration-500 ease-in-out object-cover"
-                style={{ aspectRatio: '2/3' }}
-              />
+          {/* Right Content - Investment Form */}
+          <div className="w-full">
+            <div>
+              <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
+                {/* Logo at top left */}
+                <div className="mb-6">
+                  <img 
+                    src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                    alt="Revolut Logo" 
+                    className="h-12 w-auto"
+                  />
+                </div>
+                
+                <div className="mb-6">
+                  <h2 className="text-xl font-bold text-white uppercase tracking-tight mb-1">
+                    REGISTER YOUR INVESTMENT INTEREST
+                  </h2>
+                  <p className="text-gray-300 text-sm">
+                    Get priority access to IPO updates and investment opportunities
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Name and Numbers on same row */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label htmlFor="name" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label htmlFor="numbers" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Contact Number/s
+                    </label>
+                    <input
+                      type="text"
+                      id="numbers"
+                      name="numbers"
+                      value={formData.numbers}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                      placeholder="Phone number(s)"
+                    />
+                  </div>
+                </div>
+
+                {/* Investment Amount and Timeframe on same row */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <label htmlFor="investmentAmount" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Investment Amount
+                    </label>
+                    <select
+                      id="investmentAmount"
+                      name="investmentAmount"
+                      value={formData.investmentAmount}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    >
+                      <option value="">Select amount</option>
+                      <option value="10000-50000">£10K - £50K</option>
+                      <option value="50000-100000">£50K - £100K</option>
+                      <option value="100000-250000">£100K - £250K</option>
+                      <option value="250000-500000">£250K - £500K</option>
+                      <option value="500000+">£500K+</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label htmlFor="timeframe" className="block text-xs font-medium text-white uppercase tracking-wide">
+                      Timeframe
+                    </label>
+                    <select
+                      id="timeframe"
+                      name="timeframe"
+                      value={formData.timeframe}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                    >
+                      <option value="">Select timeframe</option>
+                      <option value="immediate">Immediate</option>
+                      <option value="3-months">3 months</option>
+                      <option value="6-months">6 months</option>
+                      <option value="1-year">1+ years</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Notes Field */}
+                <div className="space-y-1">
+                  <label htmlFor="notes" className="block text-xs font-medium text-white uppercase tracking-wide">
+                    Additional Notes
+                  </label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    value={formData.notes}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all resize-none text-sm"
+                    placeholder="Any specific questions or requirements..."
+                  />
+                </div>
+
+                {/* Appointment Field */}
+                <div className="space-y-1">
+                  <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
+                    Book Appointment with Expert
+                  </label>
+                  <input
+                    type="datetime-local"
+                    id="appointment"
+                    name="appointment"
+                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
+                  />
+                  <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-white text-black py-3 px-6 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors uppercase tracking-wide mt-8"
+                >
+                  Register Interest
+                </button>
+              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -737,25 +601,6 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section before Fundamental Data */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 max-w-lg mx-auto">
-            <button 
-              className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-800 transition-colors min-h-[48px] w-full sm:flex-1"
-              onClick={() => scrollToSection('form-section')}
-            >
-              More Info
-            </button>
-            <button 
-              className="bg-white text-black border-2 border-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-base sm:text-lg hover:bg-gray-50 transition-colors min-h-[48px] w-full sm:flex-1"
-              onClick={() => scrollToSection('form-section')}
-            >
-              Book A Call
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* IPO Highlights Section */}
       <section id="fundamental-data" className="py-20">
@@ -900,26 +745,6 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section before Footer */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="flex justify-center gap-4">
-            <button 
-              className="bg-black text-white px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-800 transition-colors min-h-[48px]"
-              onClick={() => scrollToSection('form-section')}
-            >
-              More Info
-            </button>
-            <button 
-              className="bg-white text-black border-2 border-black px-8 sm:px-12 py-4 sm:py-6 rounded-lg font-medium text-lg sm:text-xl hover:bg-gray-50 transition-colors min-h-[48px]"
-              onClick={() => scrollToSection('form-section')}
-            >
-              Book A Call
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -972,40 +797,40 @@ const Index: React.FC = () => {
               <h2 className="text-[12px] md:text-[10px] font-bold">Terms and Conditions</h2>
               <p className="text-[9px] md:text-[7px]">By using this website and submitting your personal details, you agree to the following terms:</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 md:gap-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 md:gap-y-1">
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Introduction Services Only</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">This website provides introduction services only. We do not offer financial advice or sell securities directly to clients.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">This website does not provide financial advice, trading services, or sell securities directly. Our role is limited to introducing you to regulated and authorized third-party brokers who may assist you.</p>
               </div>
 
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Guarantee of Allocation</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">Submitting information does not guarantee IPO allocation. Final eligibility and terms are determined by the regulated broker.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">Submitting your information does not guarantee allocation or access to IPO shares. Final eligibility, investment terms, and allocations are determined solely by the regulated broker and subject to their requirements.</p>
               </div>
 
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Not Affiliated with Revolut</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">This site is independent and not endorsed by Revolut Ltd. All trademarks belong to their respective owners.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">This site is not owned, operated, or endorsed by Revolut Ltd. Any mention of Revolut is for informational purposes only. All trademarks and brand names belong to their respective owners.</p>
               </div>
 
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Regulated Broker Partners</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">All brokers are regulated by appropriate financial authorities. You are responsible for conducting your own due diligence.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">All brokers we may introduce you to are regulated by appropriate financial authorities in their respective jurisdictions. You are responsible for reviewing their terms and conducting your own due diligence.</p>
               </div>
 
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Accuracy of Information</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">You confirm information provided is accurate and complete. You consent to being contacted by a regulated broker representative.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">You confirm that the information you provide is accurate and complete. By submitting your details, you consent to being contacted by a representative of the regulated broker for investment discussions.</p>
               </div>
 
               <div className="touch-manipulation">
                 <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Liability</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">We are not liable for financial loss or missed opportunities. All investment decisions are made at your own risk.</p>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">We are not liable for any financial loss, missed opportunities, or other outcomes resulting from introductions made via this site. All investment decisions are made at your own risk and discretion.</p>
               </div>
 
               <div className="md:col-span-2 touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Privacy Policy</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">We only share your details with verified financial partners for introduction purposes. Your data is protected according to applicable privacy laws.</p>
+                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Privacy</h3>
+                <p className="text-[9px] md:text-[7px] leading-relaxed">Privacy Policy. We will only share your details with verified financial partners for the purpose of facilitating an introduction. Your data is protected according to applicable privacy laws.</p>
               </div>
             </div>
           </div>
