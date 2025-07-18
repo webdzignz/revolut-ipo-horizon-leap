@@ -327,9 +327,9 @@ const Index: React.FC = () => {
       <section className="relative overflow-hidden bg-white pt-4 pb-12 sm:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Top Content - Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mb-8">
             {/* Left Content */}
-            <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-6 sm:space-y-8 h-full flex flex-col justify-center">
               <div className="w-full max-w-lg space-y-4 sm:space-y-6">
                 
                 
@@ -373,7 +373,7 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Content - Investment Form */}
-            <div className="w-full mt-4" id="form-section" style={{ marginTop: '1cm' }}>
+            <div className="w-full mt-4 h-full flex flex-col justify-center" id="form-section" style={{ marginTop: '1cm' }}>
               <div>
                 <div className="bg-black p-6 pb-24 rounded-2xl shadow-lg border border-gray-800 w-full max-w-5xl">{/* Increased to max-w-5xl for even wider form */}
                   <div className="mb-6">
@@ -527,9 +527,9 @@ const Index: React.FC = () => {
         </div>
 
         {/* Bottom Content - Steps and Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8 sm:mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mt-8 sm:mt-16">
           {/* Left Content - Registration Steps */}
-          <div className="space-y-4 flex flex-col">
+          <div className="space-y-4 flex flex-col h-full justify-center">
             
             {/* Step 1 */}
             <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 border-l-4 border-black">
@@ -572,7 +572,7 @@ const Index: React.FC = () => {
           </div>
 
           {/* Right Content - Hero Image Slideshow */}
-          <div className="flex justify-center lg:justify-end order-first lg:order-last">
+          <div className="flex justify-center lg:justify-end order-first lg:order-last h-full items-center">
             <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
               <img 
                 src={heroImages[currentImageIndex].src}
