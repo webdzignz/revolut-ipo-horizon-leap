@@ -616,9 +616,9 @@ const Index: React.FC = () => {
                         <SelectTrigger className="w-full border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm">
                           <SelectValue placeholder="Select time" />
                         </SelectTrigger>
-                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50" side="bottom" align="start">
+                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50 max-h-64 overflow-y-auto" side="bottom" align="start" sideOffset={4}>
                           {['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'].map((time) => (
-                            <SelectItem key={time} value={time} className="hover:bg-gray-100 cursor-pointer">
+                            <SelectItem key={time} value={time} className="hover:bg-gray-100 cursor-pointer text-black px-3 py-2">
                               {time}
                             </SelectItem>
                           ))}
