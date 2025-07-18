@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X } from 'lucide-react';
+import { TrendingUp, Users, Globe, BarChart3, DollarSign, Calendar, MapPin, Target, Menu, X, CalendarIcon } from 'lucide-react';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Calendar as CalendarComponent } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +16,7 @@ const Index: React.FC = () => {
     appointment: ''
   });
 
+  const [appointmentDate, setAppointmentDate] = useState<Date | undefined>();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -557,16 +563,34 @@ const Index: React.FC = () => {
 
                 {/* Appointment Field */}
                 <div className="space-y-1">
-                  <label htmlFor="appointment" className="block text-xs font-medium text-white uppercase tracking-wide">
+                  <label className="block text-xs font-medium text-white uppercase tracking-wide">
                     Book Appointment with Expert
                   </label>
-                  <input
-                    type="datetime-local"
-                    id="appointment"
-                    name="appointment"
-                    className="w-full px-3 py-3 border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 focus:outline-none transition-all text-sm"
-                  />
-                  <p className="text-xs text-gray-400">Optional: Book a specific time for your expert call</p>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          "w-full justify-start text-left font-normal border-2 border-gray-600 bg-white text-black rounded-lg hover:bg-gray-50 focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm",
+                          !appointmentDate && "text-gray-500"
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {appointmentDate ? format(appointmentDate, "PPP") : <span>Pick a date</span>}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <CalendarComponent
+                        mode="single"
+                        selected={appointmentDate}
+                        onSelect={setAppointmentDate}
+                        disabled={(date) => date < new Date()}
+                        initialFocus
+                        className="p-3 pointer-events-auto"
+                      />
+                    </PopoverContent>
+                  </Popover>
+                  <p className="text-xs text-gray-400">Optional: Pick a preferred date for your expert call</p>
                 </div>
 
                 {/* Submit Button */}
