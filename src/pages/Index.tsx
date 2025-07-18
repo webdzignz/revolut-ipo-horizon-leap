@@ -427,8 +427,8 @@ const Index: React.FC = () => {
               <ul className="space-y-0 text-gray-700 text-sm sm:text-base list-none ml-[52px]">
                 <li>- Expect a call within 48 hours of submitting</li>
                 <li>- Prepare questions for the expert</li>
-                <li>- Expert will provide overview and tailored strategy</li>
               </ul>
+              <p className="text-gray-700 text-sm sm:text-base ml-[52px]">Expert will provide overview and tailored strategy</p>
             </div>
           </div>
 
