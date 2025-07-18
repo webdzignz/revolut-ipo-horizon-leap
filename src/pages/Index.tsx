@@ -341,12 +341,11 @@ const Index: React.FC = () => {
                   />
                 </div>
                 
-                <div className="text-lg sm:text-xl text-black font-medium mb-4 sm:mb-8">
-                  IPO Announcement • Expected 2025
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase tracking-tight mb-4 sm:mb-8">
+                  Revolut IPO 2025
                 </div>
                 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-black uppercase tracking-tight mb-4 sm:mb-8">
-                  Revolut IPO 2025<br />
                   Banking On The Future<br />
                   Invest In The Next Financial<br />
                   Revolution Today
