@@ -907,47 +907,47 @@ const Index: React.FC = () => {
       
       {/* Terms and Conditions section */}
       <div id="terms-conditions" className="bg-white w-full">
-        <div className="py-6 px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="text-xs text-black leading-relaxed space-y-4">
-            <div className="mb-6">
-              <h2 className="text-lg font-bold mb-4">Terms and Conditions</h2>
-              <p className="text-sm mb-4">By submitting your information on this page, you acknowledge and agree to the following:</p>
+        <div className="py-2 px-4 md:px-6 max-w-7xl mx-auto">
+          <div className="text-[8px] md:text-[7px] text-black leading-tight space-y-1">
+            <div className="mb-2">
+              <h2 className="text-[10px] md:text-[9px] font-bold mb-1">Terms and Conditions</h2>
+              <p className="text-[8px] md:text-[7px] mb-1">By submitting your information on this page, you acknowledge and agree to the following:</p>
             </div>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 md:gap-y-0.5">
               <div>
-                <h3 className="font-semibold mb-2 text-sm">Introduction Only</h3>
-                <p className="text-sm leading-relaxed">We are a financial intermediary. Our role is strictly limited to introducing interested individuals to regulated financial partners who may provide investment services related to the Revolut IPO or other opportunities.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Introduction Only</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">We are a financial intermediary. Our role is strictly limited to introducing interested individuals to regulated financial partners who may provide investment services related to the Revolut IPO or other opportunities.</p>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2 text-sm">No Financial Advice</h3>
-                <p className="text-sm leading-relaxed">We do not offer investment advice, endorse specific investments, or recommend financial products. You should consider seeking independent financial advice before making any investment decisions.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">No Financial Advice</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">We do not offer investment advice, endorse specific investments, or recommend financial products. You should consider seeking independent financial advice before making any investment decisions.</p>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2 text-sm">Regulated Partners</h3>
-                <p className="text-sm leading-relaxed">Any investment opportunity or financial service discussed with you will be offered solely by a third-party firm that is authorized and regulated by the appropriate financial authority (e.g. FCA, SEC, etc.). You will be informed of the partner's credentials prior to any further engagement.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Regulated Partners</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">Any investment opportunity or financial service discussed with you will be offered solely by a third-party firm that is authorized and regulated by the appropriate financial authority (e.g. FCA, SEC, etc.). You will be informed of the partner's credentials prior to any further engagement.</p>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2 text-sm">Call and Contact Disclosure</h3>
-                <p className="text-sm leading-relaxed">You may be contacted by a licensed investment representative within 48 hours. Calls will originate from a UK number beginning with +44 20. By submitting your contact details, you consent to be contacted for this purpose.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Call and Contact Disclosure</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">You may be contacted by a licensed investment representative within 48 hours. Calls will originate from a UK number beginning with +44 20. By submitting your contact details, you consent to be contacted for this purpose.</p>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2 text-sm">Data Handling</h3>
-                <p className="text-sm leading-relaxed">Your information will be securely handled in accordance with our privacy policy and only shared with our regulated partners for the purpose of investor introduction. We do not sell or misuse your data.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Data Handling</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">Your information will be securely handled in accordance with our privacy policy and only shared with our regulated partners for the purpose of investor introduction. We do not sell or misuse your data.</p>
               </div>
 
               <div>
-                <h3 className="font-semibold mb-2 text-sm">Risk Disclaimer</h3>
-                <p className="text-sm leading-relaxed">Investing in IPOs and financial products carries risk. Past performance is not indicative of future results. You may lose part or all of your investment. Ensure you fully understand the risks before proceeding.</p>
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Risk Disclaimer</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">Investing in IPOs and financial products carries risk. Past performance is not indicative of future results. You may lose part or all of your investment. Ensure you fully understand the risks before proceeding.</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-2 text-sm">Eligibility</h3>
-                <p className="text-sm leading-relaxed">This service is intended only for individuals who are eligible to invest in regulated financial products in their jurisdiction. You may be required to complete additional verification to confirm suitability.</p>
+              <div className="md:col-span-2">
+                <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Eligibility</h3>
+                <p className="text-[8px] md:text-[7px] leading-tight">This service is intended only for individuals who are eligible to invest in regulated financial products in their jurisdiction. You may be required to complete additional verification to confirm suitability.</p>
               </div>
             </div>
           </div>
