@@ -878,9 +878,9 @@ const Index: React.FC = () => {
             <div className="flex flex-col gap-4">
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
-                onClick={() => scrollToSection('fundamental-data')}
+                onClick={() => scrollToSection('form-section')}
               >
-                Fundamental Data
+                Request Info
               </button>
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
@@ -890,6 +890,7 @@ const Index: React.FC = () => {
               </button>
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
+                onClick={() => scrollToSection('form-section')}
               >
                 Terms & Conditions
               </button>
