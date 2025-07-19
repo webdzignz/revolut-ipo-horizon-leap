@@ -74,7 +74,21 @@ const Index: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Reset form after submission
+    
+    // Collect all form data
+    const submissionData = {
+      ...formData,
+      appointmentDate: appointmentDate ? format(appointmentDate, 'PPP') : '',
+      appointmentTime: formData.appointment.includes('at ') ? formData.appointment.split('at ')[1] : ''
+    };
+    
+    // Log the submission (in a real app, you'd send this to your backend)
+    console.log('Form submitted:', submissionData);
+    
+    // Show success message
+    alert('Thank you! Your investment interest has been registered. We will contact you soon.');
+    
+    // Reset form after successful submission
     setFormData({
       name: '',
       numbers: '',
@@ -83,6 +97,7 @@ const Index: React.FC = () => {
       notes: '',
       appointment: ''
     });
+    setAppointmentDate(undefined);
   };
 
   return (
@@ -469,7 +484,7 @@ const Index: React.FC = () => {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 {/* Name and Numbers on same row */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
