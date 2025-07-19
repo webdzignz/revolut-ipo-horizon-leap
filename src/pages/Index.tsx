@@ -68,13 +68,15 @@ const Index: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
     // Close mobile menu after navigation
     setIsMobileMenuOpen(false);
   };
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setShowPopup(true);
     // Collect all form data
     const submissionData = {
       ...formData,
@@ -985,6 +987,19 @@ const Index: React.FC = () => {
         </div>
       </div>
 
+      
+      <Dialog open={showPopup} onOpenChange={setShowPopup}>
+        <DialogContent className="bg-black border-gray-800 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-white text-center">Thank You!</DialogTitle>
+          </DialogHeader>
+          <div className="text-center py-4">
+            <p className="text-gray-300">
+              Thanks for your interest in the Revolut IPO. We'll keep you updated!
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
