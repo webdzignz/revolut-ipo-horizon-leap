@@ -613,10 +613,10 @@ const Index: React.FC = () => {
                         value={formData.appointment.includes('at ') ? formData.appointment.split('at ')[1] : ''} 
                         onValueChange={(time) => setFormData({...formData, appointment: `${format(appointmentDate, "MMM d")} at ${time}`})}
                       >
-                        <SelectTrigger className="w-full border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm">
+                        <SelectTrigger className="w-full border-2 border-gray-600 bg-white text-black rounded-lg focus:border-white focus:ring-1 focus:ring-gray-400 px-3 py-3 h-auto text-sm" data-side="bottom" data-align="start">
                           <SelectValue placeholder="Select time" />
                         </SelectTrigger>
-                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50 max-h-64 overflow-y-auto" side="bottom" align="start" sideOffset={4}>
+                        <SelectContent className="bg-white border border-gray-300 shadow-lg z-50 max-h-64 overflow-y-auto" position="item-aligned" side="bottom" align="start" sideOffset={8} avoidCollisions={false}>
                           {['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'].map((time) => (
                             <SelectItem key={time} value={time} className="hover:bg-gray-100 cursor-pointer text-black px-3 py-2">
                               {time}
