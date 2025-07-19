@@ -917,37 +917,37 @@ const Index: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 md:gap-y-0.5">
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Introduction Only</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">We are a financial intermediary. Our role is strictly limited to introducing interested individuals to regulated financial partners who may provide investment services related to the Revolut IPO or other opportunities.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">We are a financial intermediary providing introduction services to regulated partners for Revolut IPO opportunities.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">No Financial Advice</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">We do not offer investment advice, endorse specific investments, or recommend financial products. You should consider seeking independent financial advice before making any investment decisions.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">We do not offer investment advice or recommend products. Seek independent financial advice before investing.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Regulated Partners</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">Any investment opportunity or financial service discussed with you will be offered solely by a third-party firm that is authorized and regulated by the appropriate financial authority (e.g. FCA, SEC, etc.). You will be informed of the partner's credentials prior to any further engagement.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">Investment opportunities offered by authorized third-party firms regulated by FCA, SEC or appropriate authorities.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Call and Contact Disclosure</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">You may be contacted by a licensed investment representative within 48 hours. Calls will originate from a UK number beginning with +44 20. By submitting your contact details, you consent to be contacted for this purpose.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">Licensed representatives may contact you within 48 hours from UK numbers beginning with +44 20.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Data Handling</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">Your information will be securely handled in accordance with our privacy policy and only shared with our regulated partners for the purpose of investor introduction. We do not sell or misuse your data.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">Your information is securely handled and shared only with regulated partners for introduction purposes.</p>
               </div>
 
               <div>
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Risk Disclaimer</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">Investing in IPOs and financial products carries risk. Past performance is not indicative of future results. You may lose part or all of your investment. Ensure you fully understand the risks before proceeding.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">IPO investments carry risk. Past performance does not indicate future results. You may lose your investment.</p>
               </div>
 
               <div className="md:col-span-2">
                 <h3 className="font-semibold mb-0.5 text-[9px] md:text-[8px]">Eligibility</h3>
-                <p className="text-[8px] md:text-[7px] leading-tight">This service is intended only for individuals who are eligible to invest in regulated financial products in their jurisdiction. You may be required to complete additional verification to confirm suitability.</p>
+                <p className="text-[8px] md:text-[7px] leading-tight">Service intended for eligible investors only. Additional verification may be required to confirm suitability for regulated products.</p>
               </div>
             </div>
           </div>
