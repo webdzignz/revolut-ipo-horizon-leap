@@ -11,7 +11,7 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-blue-600">IPOWIKI</div>
+            <div className="text-2xl font-bold text-blue-600">REVOLUT</div>
             <Button 
               onClick={() => setShowRegisterDialog(true)}
               className="bg-blue-600 hover:bg-blue-700"
@@ -26,10 +26,10 @@ const Index = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Welcome to IPOWIKI
+            Welcome to REVOLUT
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Your comprehensive IPO information resource
+            Register your interest for early access
           </p>
         </div>
       </main>
