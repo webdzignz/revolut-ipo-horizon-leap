@@ -868,27 +868,21 @@ const Index: React.FC = () => {
             {/* Top Left corner - Revolut Logo */}
             <div className="flex items-start">
               <img 
-              <div className="text-center mb-6">
-                <div className="text-5xl font-bold mb-4">REVOLUT</div>
-                <h3 className="text-4xl font-bold mb-4">Interest Registered Successfully!</h3>
-                <p className="text-xl mb-6">
+                src="/lovable-uploads/d2432a1e-2721-45ca-9a43-ebb2eb5a8859.png" 
+                alt="Revolut Logo" 
+                className="h-16 w-auto"
+              />
             </div>
             
             {/* Right side - Navigation Links */}
-                <div className="text-left mb-6">
-                  <p className="font-semibold mb-3 text-xl">What happens next:</p>
+            <div className="flex flex-col gap-4">
+              <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
-                    <li className="flex items-start text-lg">
-                      <span className="text-blue-400 mr-2">•</span>
-                      <span>We'll notify you when the IPO date is announced</span>
-              </button>
-                    <li className="flex items-start text-lg">
-                      <span className="text-blue-400 mr-2">•</span>
-                      <span>You'll receive priority access to purchase shares</span>
+                onClick={() => scrollToSection('fundamental-data')}
               >
-                    <li className="flex items-start text-lg">
-                      <span className="text-blue-400 mr-2">•</span>
-                      <span>Get exclusive updates on Revolut's IPO journey</span>
+                Fundamental Data
+              </button>
+              <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
                 onClick={() => scrollToSection('form-section')}
               >
@@ -896,7 +890,6 @@ const Index: React.FC = () => {
               </button>
               <button 
                 className="text-gray-400 hover:text-white transition-colors text-lg"
-                className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
               >
                 Terms & Conditions
               </button>
