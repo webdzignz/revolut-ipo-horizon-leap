@@ -907,46 +907,47 @@ const Index: React.FC = () => {
       
       {/* Terms and Conditions section */}
       <div id="terms-conditions" className="bg-white w-full">
-        <div className="py-4 px-4 md:px-6 max-w-7xl mx-auto">
-          <div className="text-[9px] md:text-[7px] text-black leading-relaxed space-y-3 md:space-y-1">
-            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2 md:mb-1 justify-start">
-              <h2 className="text-[12px] md:text-[10px] font-bold">Terms and Conditions</h2>
-              <p className="text-[9px] md:text-[7px]">By using this website and submitting your personal details, you agree to the following terms:</p>
+        <div className="py-6 px-4 md:px-6 max-w-7xl mx-auto">
+          <div className="text-xs text-black leading-relaxed space-y-4">
+            <div className="mb-6">
+              <h2 className="text-lg font-bold mb-4">Terms and Conditions</h2>
+              <p className="text-sm mb-4">By submitting your information on this page, you acknowledge and agree to the following:</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 md:gap-y-2">
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Introduction Services Only</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">This website provides introduction services only. We do not offer financial advice or sell securities directly to clients.</p>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Introduction Only</h3>
+                <p className="text-sm leading-relaxed">We are a financial intermediary. Our role is strictly limited to introducing interested individuals to regulated financial partners who may provide investment services related to the Revolut IPO or other opportunities.</p>
               </div>
 
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Guarantee of Allocation</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">Submitting information does not guarantee IPO allocation. Final eligibility and terms are determined by the regulated broker.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">No Financial Advice</h3>
+                <p className="text-sm leading-relaxed">We do not offer investment advice, endorse specific investments, or recommend financial products. You should consider seeking independent financial advice before making any investment decisions.</p>
               </div>
 
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Not Affiliated with Revolut</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">This site is independent and not endorsed by Revolut Ltd. All trademarks belong to their respective owners.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Regulated Partners</h3>
+                <p className="text-sm leading-relaxed">Any investment opportunity or financial service discussed with you will be offered solely by a third-party firm that is authorized and regulated by the appropriate financial authority (e.g. FCA, SEC, etc.). You will be informed of the partner's credentials prior to any further engagement.</p>
               </div>
 
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Regulated Broker Partners</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">All brokers are regulated by appropriate financial authorities. You are responsible for conducting your own due diligence.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Call and Contact Disclosure</h3>
+                <p className="text-sm leading-relaxed">You may be contacted by a licensed investment representative within 48 hours. Calls will originate from a UK number beginning with +44 20. By submitting your contact details, you consent to be contacted for this purpose.</p>
               </div>
 
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Accuracy of Information</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">You confirm information provided is accurate and complete. You consent to being contacted by a regulated broker representative.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Data Handling</h3>
+                <p className="text-sm leading-relaxed">Your information will be securely handled in accordance with our privacy policy and only shared with our regulated partners for the purpose of investor introduction. We do not sell or misuse your data.</p>
               </div>
 
-              <div className="touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">No Liability</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">We are not liable for financial loss or missed opportunities. All investment decisions are made at your own risk.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Risk Disclaimer</h3>
+                <p className="text-sm leading-relaxed">Investing in IPOs and financial products carries risk. Past performance is not indicative of future results. You may lose part or all of your investment. Ensure you fully understand the risks before proceeding.</p>
               </div>
 
-              <div className="md:col-span-2 touch-manipulation">
-                <h3 className="font-semibold mb-1 md:mb-0 text-[10px] md:text-[8px]">Privacy Policy</h3>
-                <p className="text-[9px] md:text-[7px] leading-relaxed">We only share your details with verified financial partners for introduction purposes. Your data is protected according to applicable privacy laws.</p>
+              <div>
+                <h3 className="font-semibold mb-2 text-sm">Eligibility</h3>
+                <p className="text-sm leading-relaxed">This service is intended only for individuals who are eligible to invest in regulated financial products in their jurisdiction. You may be required to complete additional verification to confirm suitability.</p>
               </div>
             </div>
           </div>
